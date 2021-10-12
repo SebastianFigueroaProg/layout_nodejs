@@ -1,0 +1,77 @@
+body{
+    background-image: linear-gradient(30deg,rgb(56, 177, 224),rgb(207, 7, 207));
+    background-size: cover;
+    background-attachment: fixed;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+.conteiner{
+    width: 350px;
+    height: 350px;
+    background-color: white;
+    margin-top: 150px;
+    margin-left: 600px;
+    border-radius: 5%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.548);
+    
+}
+.form{
+    padding: 3px;
+}
+h2{
+    text-align: center;
+    font-size: 40px;
+    
+}
+input[type="text"],
+input[type="password"]{
+    font-size: 15px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+    margin-left: 9%;
+    outline: none;
+}
+.linea{
+    width: 288px;
+    height: 3px;    
+    margin-left: 8%;
+    background-image: linear-gradient(30deg,rgb(56, 177, 224),rgb(207, 7, 207));
+}
+.button{
+    width: 288px;
+    height: 30px;
+    margin: 8%;
+    margin-left: 8%;
+    background-image: linear-gradient(30deg,rgb(56, 177, 224),rgb(207, 7, 207));
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+.button2, .button3{
+    width: 288px;
+    height: 30px;
+    margin-left: 8%;
+    background-image: linear-gradient(30deg,rgb(56, 177, 224),rgb(207, 7, 207));
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+.button:hover{
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.548);
+}
+.button2:hover{
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.548);
+}
+.button3:hover{
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.548);
+}

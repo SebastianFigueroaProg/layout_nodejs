@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styleLogin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Login Layout</title>
+</head>
+<body>
+
+    <section>
+        <div class="conteiner">
+            <form class="form" action="/login" method="POST">
+
+                <h2>LOGIN</h2>
+                <div>
+                    <input type="text" name="usuario" id="usuario" placeholder="Correo">
+                    <div class="linea">
+                    </div>
+                </div>
+                <div>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                </div>
+                <div class="linea">
+                </div>
+
+                <div>
+                    <div>
+                        <input type="submit" value="CONECTAR" class="button">
+                    </div>
+                </div>
+                </form>
+
+                <div>
+                    <div>
+                        <a href="/invitado"><button class="button2">INVITADO</button></a>
+                    </div>
+                </div>
+
+
+                    <!-- <div class="btnsec">
+                        <a href="Index.html"><button class="button2">LIDERES</button></a>
+                        <a href="Index.html"><button class="button2">AGENTES</button></a>
+                    </div> -->
+
+
+        </div>
+    </section>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <% if(alert) { %>
+    <script>
+      Swal.fire({
+        title: '<%= alertTitle %>',
+        text:'<%= alertMessage %>',
+        icon:'<%= alertIcon %>',
+        showConfirmButton: <%= showConfirmButton %>,
+        timer: <%= timer %>
+      }).then(()=>{
+        window.location = '/<%= ruta %>'
+      })
+    </script>
+  <% } %>
+
+
+</body>
+</html>
