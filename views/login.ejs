@@ -25,6 +25,9 @@
                 </div>
                 <div class="linea">
                 </div>
+                <div class="eyes">
+                    <input class="input" type="checkbox" onclick="myFuntion()"><span class="ver">Ver Password</span></i> <br>
+                </div>
 
                 <div>
                     <div>
@@ -48,6 +51,18 @@
 
         </div>
     </section>
+
+    <script>
+        function myFuntion(){
+            const x = document.getElementById("password");            
+            if (x.type=="password") {
+                x.type = "text"
+            } else {
+                x.type = "password"                
+            }
+            
+        }    
+    </script>
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <% if(alert) { %>

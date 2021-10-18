@@ -5,6 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Usamos BOXIcons -->
+    <!-- <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'> -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -15,6 +17,7 @@
 
     <title>CRUD</title>
     <style>
+      
       section{
         margin-left: 1%;
         margin-right: 3%;
@@ -46,42 +49,63 @@
         .btn-group-verticalp{
           position: absolute !important;
         }
-        #mapaChaco{
-          margin-top: 7px;
-          font-weight: bold;
-        }
         #logout{
           text-decoration: none;
           right: 1%;
           position: absolute;
-          margin-top: 6px;
-          
+          margin-top: 9px;
         }
+        #mapaChaco{
+          margin-top: 7px;
+          margin-left: 5px;
+          font-weight: bold;
+        }
+        .callP{
+          margin-left: 5px;
+          margin-top: 5px;
+        }
+        .callT{
+          color: #0A58CA;
+          font-weight: bold;
+        }
+        .valorC{
+          background-color: #ccc5c5;
+          border-radius: 7px;
+        }        
     </style>
   </head>
   <body>
     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"></nav> -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Konecta</a>
+          <a class="navbar-brand">Konecta</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <div class="callP">
+          <label for="callT" class="callT">CALL</label>
+                  <select name="call" id="call" class="call" aria-label="Default select example">                      
+                      <option value="calla" selected>Call A</option>
+                      <option value="callb" selected>Call B</option>                      
+                  </select>
+                  <button class="valorC">Buscar</button>
+          </div>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" id="mapaChaco" aria-current="page" href="/chaco/chacoCallB-invitado.html">Mapas site</a>
+                <a class="nav-link active" id="mapaChaco" aria-current="page" href="/chaco/chacoCallB-invitado.html">Mapa Chaco</a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item">                
                 <a href="logout" id="logout" class="btn btn-outline-info"><i class="fas fa-sign-out-alt"></i></a>
-              </li>                 
-            </ul>
-           
+              </li>              
+            </ul>           
           </div>
         </div>
       </nav>
 
-     
+      <!-- <div class="container">
+          <a href="/mapa.html" class="btn btn-outline-primary mt-4"><i class='bx bx-sitemap'></i></a>
+      </div> -->
   <section>    
     <table id="user" class="table table-bordered table-striped text-center mt-4 " >
         <thead class="bg-primary text-white">
@@ -92,7 +116,7 @@
             <th scope="col">DNI</th>
             <th scope="col">AGENTE</th>
             <th scope="col">INGRESO</th>
-            <th scope="col">EGRESO</th>            
+            <th scope="col">EGRESO</th>
             <th scope="col">LIDER</th>
             <th scope="col">JEFE</th>
             <th scope="col">SITE</th>
@@ -123,10 +147,25 @@
 
     <script >
 
+      const boton = document.querySelector('.valorC');
+      let valor = "callb";
+      
+      boton.onclick = ()=>{
+        
+        const call = document.getElementById('call').value
+
+        
+        valor = call;
+        console.log(valor)
+      
+      
+
+
       $(document).ready(function() {
         $('#user').DataTable({
+          destroy:true,
           ajax:{
-            url:"/data",
+            url:`/data/${valor}`,
             dataSrc:""
           },
           columns:[
@@ -142,7 +181,7 @@
             {data: "jefe"},
             {data: "sitio"},
             {data: "servicio"},
-            {data: "modalidadTT"},
+            {data: "modalidadTT"}            
           ],
           pageLength: 10,
           lengthMenu:[[10,20,50,100,-1],[10,20,50,100,'Todos']],
@@ -178,6 +217,7 @@
 
         });
       } );
+    }
 
 
     </script>

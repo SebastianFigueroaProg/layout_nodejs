@@ -17,6 +17,7 @@
 
     <title>CRUD</title>
     <style>
+      
       section{
         margin-left: 1%;
         margin-right: 3%;
@@ -56,25 +57,46 @@
         }
         #mapaChaco{
           margin-top: 7px;
+          margin-left: 5px;
           font-weight: bold;
         }
+        .callP{
+          margin-left: 5px;
+          margin-top: 5px;
+        }
+        .callT{
+          color: #0A58CA;
+          font-weight: bold;
+        }
+        .valorC{
+          background-color: #ccc5c5;
+          border-radius: 7px;
+        }        
     </style>
   </head>
   <body>
     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"></nav> -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand"><% if ( user ) { %>
+          <a class="navbar-brand" href="/pass"><% if ( user ) { %>
             <span><%= user.name %></span>
             <% } %>
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <div class="callP">
+          <label for="callT" class="callT">CALL</label>
+                  <select name="call" id="call" class="call" aria-label="Default select example">                      
+                      <option value="calla" selected>Call A</option>
+                      <option value="callb" selected>Call B</option>                      
+                  </select>
+                  <button class="valorC">Buscar</button>
+          </div>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" id="mapaChaco" aria-current="page" href="/chaco/chacoCallB.html">Mapas site</a>
+                <a class="nav-link active" id="mapaChaco" aria-current="page" href="/chaco/chacoCallB.html">Mapa Chaco</a>
               </li>
               <li class="nav-item">                
                 <a href="logout" id="logout" class="btn btn-outline-info"><i class="fas fa-sign-out-alt"></i></a>
@@ -129,10 +151,25 @@
 
     <script >
 
+      const boton = document.querySelector('.valorC');
+      let valor = "callb";
+      
+      boton.onclick = ()=>{
+        
+        const call = document.getElementById('call').value
+
+        
+        valor = call;
+        console.log(valor)
+      
+      
+
+
       $(document).ready(function() {
         $('#user').DataTable({
+          destroy:true,
           ajax:{
-            url:"/data",
+            url:`/data/${valor}`,
             dataSrc:""
           },
           columns:[
@@ -151,8 +188,13 @@
             {data: "modalidadTT"},
             {data: null,
             "render":function(data){
-              return '<a href="/edit/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'
+              if (valor == 'calla') {
+                return '<a href="/edita/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
+              }else{
+                return '<a href="/edit/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
+              }
             }}
+            
           ],
           pageLength: 10,
           lengthMenu:[[10,20,50,100,-1],[10,20,50,100,'Todos']],
@@ -188,6 +230,7 @@
 
         });
       } );
+    }
 
 
     </script>

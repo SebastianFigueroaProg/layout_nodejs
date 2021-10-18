@@ -1,1581 +1,1430 @@
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    width: 130%;
-    height: 900px;
-}
-#boton{
-    background-color: aqua;
-    color: rgb(17, 17, 17);
-    padding: 4px;
-    margin: 5px;
-    position: relative;
-}
-.h51{
-    font-weight: bold;
-    margin-left: 295px;
-}
-.cuadro{    
+.vam{
     position: absolute;
-    /* border: 2px #000 solid; */
-    width: 400px;
-    height: 100px;
-    margin-top: 20px;
-    left: 290px;    
+    left: 60px;
+    width: 200px;
+    height: 150px;
+    margin-top: 50px;
 }
-.pl1{
-    position: absolute;
-    left: 250px;
-    top: 0px;
-    font-size: small;
-    font-family: 'Times New Roman', Times, serif;
-
-}
-.pl2{
-    position: absolute;
-    left: 250px;
-    top: 32px;
-    font-size: small;
-    font-family: 'Times New Roman', Times, serif;
-
-}
-.pl3{
-    position: absolute;
-    left: 250px;
-    top: 70px;
-    font-size: small;
-    font-family: 'Times New Roman', Times, serif;
-
-}
-.h52{
-    font-weight: bold;
-    margin-left: 705px;
-    margin-top: -30px;
-}
-
-.descripcion{
-    background-color: rgb(168, 168, 168);
-    border: 2px #000 solid;
-    width: 380px;
-    height: 100px;
-    margin-left: 700px;
-    margin-top: 20px;    
-}
-.h53{
-    font-weight: bold;
-    position: absolute;
-    margin-left: 1105px;
-    margin-top: -145px;
-}
-.descripcion2{
-    background-color: rgb(168, 168, 168);
-    position: absolute;
-    border: 2px #000 solid;
-    width: 380px;
-    height: 100px;
-    margin-left: 1100px;
-    margin-top: -100px;   
-}
-.p1, .p2, .p3{
-    font-weight: bold;
-    color: #000;
-    margin-left: 5px;
-    margin-bottom: 10px;
-}
-span{
-    color: rgb(15, 54, 226);
-}
-.p{
-    font-size: small;
-    font-family: 'Times New Roman', Times, serif;
-    position: relative;
-    left: 40px;
-    bottom: 16px;    
-}
-.ref1{
-    outline: 2px solid #000;
-    left: 10px;
-    top: 0;
-    position: relative;
-    width: 15px;
-    height: 15px;
-    background-color: rgb(187, 20, 20);
-
-}
-.ref2{
-    outline: 2px solid #000;
-    left: 10px;
-    bottom: 50px;    
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: rgb(19, 173, 27);
-}
-.ref3{
-    outline: 2px solid #000;
-    left: 10px;
-    bottom: 15px;    
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: rgb(21, 122, 168);
-}
-.ref4{
-    outline: 2px solid #000;
-    left: 220px;
-    top: 0;
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: rgb(151, 76, 14);
-
-}
-.ref5{
-    outline: 2px solid #000;
-    left: 220px;
-    bottom: 50px;    
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: rgb(182, 166, 19);
-}
-.ref6{
-    outline: 2px solid #000;
-    left: 220px;
-    bottom: 15px;    
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: rgb(76, 77, 85);
-}
-main{
-    width: 100%;
-    padding: 50px; 
-    display: flex; 
-    flex-direction: column;       
-    overflow: auto;
-}
-.conteiner{
+.conteiner2{
     background-color: rgb(224, 222, 222);
     outline: 2px solid #000;
     margin: 10px;
     width: 100%;
-    height: 35%;  
+    height: 35%;
     display: grid;
     grid-template-columns: repeat(40, 1fr);
     grid-template-rows: repeat(28, 1fr);
-    gap: 3px;
+    gap: 2px;
 }
-
-.element{
+.elementA{
     font-size: 9px;
     color: #fff;
     font-family: sans-serif;
     text-align: center;   
     padding-top: 3px;
-    /* background-size: cover;
-    background-position: center bottom; */
 }
-.staff{
-    font-size: small;
+.staffA{    
     color: #fff;
     font-family: sans-serif;
     text-align: center;
-    /* background-size: cover;
-    background-position: center bottom; */
 }
-.element1{
+.elementA1{
     background-color: rgb(21, 9, 134);
     grid-column: 1/3;
-    grid-row: 1/19;
-    padding-top: 180px;
+    grid-row: 1/29;
+    padding-top: 260px;
+    font-size: 13px;
 }
-.element2{
-    background-color: rgb(33, 153, 233);
-    grid-column: 1/3;
-    grid-row: 19/29;
-    padding-top: 90px;
+/* Columna 6/8 */
+.elementA5{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/8;
+    grid-row: 3/4;
 }
-.element3{
-    background-color: rgb(33, 153, 233);
-    grid-column: 3/8;
-    grid-row: 1/3;
-    padding-top: 9px;
+.elementA6{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/8;
+    grid-row: 4/5;
 }
-.element4{
-    background-color: rgb(33, 153, 233);
-    grid-column: 3/8;
-    grid-row: 3/19;
-    padding-top: 140px;
+.elementA7{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/8;
+    grid-row: 5/6;
 }
-/* box-Segunda parte Columna 6/8*/
-.element5{
+.elementA8{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/8;
+    grid-row: 6/7;
+}
+.elementA9{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/8;
+    grid-row: 7/8;
+}
+.elementA10{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/8;
+    grid-row: 8/9;
+}
+.elementA11{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/8;
+    grid-row: 9/10;
+}
+.elementA12{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/8;
+    grid-row: 10/11;
+}
+.elementA13{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/8;
+    grid-row: 11/12;
+}
+.elementA14{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/8;
+    grid-row: 12/13;
+}
+.elementA15{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/8;
+    grid-row: 13/14;
+}
+.elementA276{
+    background-color: rgb(18, 27, 155);
+    grid-column: 6/8;
+    grid-row: 14/15;
+}
+.elementA275{
+    background-color: rgb(18, 27, 155);
+    grid-column: 6/8;
+    grid-row: 15/16;
+}
+.elementA16{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/8;
+    grid-row: 16/17;
+}
+.elementA17{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/8;
+    grid-row: 17/18;
+}
+.elementA18{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/8;
+    grid-row: 18/19;
+}
+.elementA19{
     background-color: rgb(128, 16, 16);
     grid-column: 6/8;
     grid-row: 19/20;
 }
-.element6{
+.elementA20{
     background-color: rgb(128, 16, 16);
     grid-column: 6/8;
     grid-row: 20/21;
 }
-.element7{
+.elementA21{
     background-color: rgb(128, 16, 16);
     grid-column: 6/8;
     grid-row: 21/22;
 }
-.element8{
+.elementA22{
     background-color: rgb(128, 16, 16);
     grid-column: 6/8;
     grid-row: 22/23;
 }
-.element9{
+.elementA23{
     background-color: rgb(128, 16, 16);
     grid-column: 6/8;
     grid-row: 23/24;
 }
-.element10{
+.elementA24{
     background-color: rgb(128, 16, 16);
     grid-column: 6/8;
     grid-row: 24/25;
 }
-.element11{
+.elementA25{
     background-color: rgb(128, 16, 16);
     grid-column: 6/8;
     grid-row: 25/26;
 }
+.elementA26{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/8;
+    grid-row: 26/27;
+}
 /* Columna 8/10 */
-.element12{
+.elementA48{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 3/4;
+}
+.elementA47{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 4/5;
+}
+.elementA46{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 5/6;
+}
+.elementA45{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 6/7;
+}
+.elementA44{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 7/8;
+}
+.elementA43{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 8/9;
+}
+.elementA42{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 9/10;
+}
+.elementA41{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 10/11;
+}
+.elementA40{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 11/12;
+}
+.elementA39{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 12/13;
+}
+.elementA38{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 13/14;
+}
+.elementA274{
+    background-color: rgb(18, 27, 155);
+    grid-column: 8/10;
+    grid-row: 14/15;
+}
+.elementA273{
+    background-color: rgb(18, 27, 155);
+    grid-column: 8/10;
+    grid-row: 15/16;
+}
+.elementA37{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 16/17;
+}
+.elementA36{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 17/18;
+}
+.elementA35{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 18/19;
+}
+.elementA34{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 19/20;
+}
+.elementA33{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 20/21;
+}
+.elementA32{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 21/22;
+}
+.elementA31{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 22/23;
+}
+.elementA30{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 23/24;
+}
+.elementA29{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 24/25;
+}
+.elementA28{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 25/26;
+}
+.elementA27{
     background-color: rgb(128, 16, 16);
     grid-column: 8/10;
     grid-row: 26/27;
 }
-.element12{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 25/26;
-}
-.element13{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 24/25;
-}
-.element14{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 23/24;
-}
-.element15{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 22/23;
-}
-.element16{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 21/22;
-}
-.element17{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 20/21;
-}
-.element18{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 19/20;
-}
-.element19{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 18/19;
-}
-.element20{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 17/18;
-}
-.element21{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 16/17;
-}
-.element274{
-    background-color: rgb(16, 18, 128);
-    grid-column: 8/10;
-    grid-row: 15/16;
-}
-.element273{
-    background-color: rgb(23, 16, 128);
-    grid-column: 8/10;
-    grid-row: 14/15;
-}
-.element22{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 13/14;
-}
-.element23{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 12/13;
-}
-.element24{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 11/12;
-}
-.element25{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 10/11;
-}
-.element26{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 9/10;
-}
-.element27{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 8/9;
-}
-.element28{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 7/8;
-}
-.element29{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 6/7;
-}
-.element30{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 5/6;
-}
-.element31{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 4/5;
-}
-.element32{
-    background-color: rgb(128, 16, 16);
-    grid-column: 8/10;
-    grid-row: 3/4;
-}
 /* Columna 12/14 */
-.element33{
+.elementA49{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 3/4;
 }
-.element34{
+.elementA50{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 4/5;
 }
-.element35{
+.elementA51{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 5/6;
 }
-.element36{
+.elementA52{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 6/7;
 }
-.element37{
+.elementA53{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 7/8;
 }
-.element38{
+.elementA54{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 8/9;
 }
-.element39{
+.elementA55{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 9/10;
 }
-.element40{
+.elementA56{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 10/11;
 }
-.element41{
+.elementA57{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 11/12;
 }
-.element42{
+.elementA58{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 12/13;
 }
-.element43{
+.elementA59{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 13/14;
 }
-.element272{
-    background-color: rgb(27, 16, 128);
+.elementA272{
+    background-color: rgb(18, 27, 155);
     grid-column: 12/14;
     grid-row: 14/15;
-}.element271{
-    background-color: rgb(33, 16, 128);
+}
+.elementA271{
+    background-color: rgb(18, 27, 155);
     grid-column: 12/14;
     grid-row: 15/16;
 }
-.element44{
+.elementA60{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 16/17;
 }
-.element45{
+.elementA61{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 17/18;
 }
-.element46{
+.elementA62{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 18/19;
 }
-.element47{
+.elementA63{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 19/20;
 }
-.element48{
+.elementA64{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 20/21;
 }
-.element49{
+.elementA65{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 21/22;
 }
-.element50{
+.elementA66{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 22/23;
 }
-.element51{
+.elementA67{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 23/24;
 }
-.element52{
+.elementA68{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 24/25;
 }
-.element53{
+.elementA69{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 25/26;
 }
-.element54{
+.elementA70{
     background-color: rgb(128, 16, 16);
     grid-column: 12/14;
     grid-row: 26/27;
 }
 /* Columna 14/16 */
-.element76{
+.elementA92{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 3/4;
 }
-.element75{
+.elementA91{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 4/5;
 }
-.element74{
+.elementA90{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 5/6;
 }
-.element73{
+.elementA89{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 6/7;
 }
-.element72{
+.elementA88{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 7/8;
 }
-.element71{
+.elementA87{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 8/9;
 }
-.element70{
+.elementA86{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 9/10;
 }
-.element69{
+.elementA85{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 10/11;
 }
-.element68{
+.elementA84{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 11/12;
 }
-.element67{
+.elementA83{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 12/13;
 }
-.element66{
+.elementA82{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 13/14;
 }
-.element269{
-    background-color: rgb(27, 16, 128);
+.elementA269{
+    background-color: rgb(18, 27, 155);
     grid-column: 14/16;
     grid-row: 14/15;
 }
-.element270{
-    background-color: rgb(33, 16, 128);
+.elementA270{
+    background-color: rgb(18, 27, 155);
     grid-column: 14/16;
-    grid-row: 15/16
+    grid-row: 15/16;
 }
-.element65{
+.elementA81{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
-    grid-row: 16/17
+    grid-row: 16/17;
 }
-.element64{
+.elementA80{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
-    grid-row: 17/18
+    grid-row: 17/18;
 }
-.element63{
+.elementA79{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 18/19;
 }
-.element62{
+.elementA78{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 19/20;
 }
-.element61{
+.elementA77{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 20/21;
 }
-.element60{
+.elementA76{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 21/22;
 }
-.element59{
+.elementA75{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 22/23;
 }
-.element58{
+.elementA74{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 23/24;
 }
-.element57{
+.elementA73{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 24/25;
 }
-.element56{
+.elementA72{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 25/26;
 }
-.element55{
+.elementA71{
     background-color: rgb(128, 16, 16);
     grid-column: 14/16;
     grid-row: 26/27;
 }
 /* Columna 18/20 */
-.element77{
+.elementA93{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 3/4;
 }
-.element78{
+.elementA94{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 4/5;
 }
-.element79{
+.elementA95{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 5/6;
 }
-.element80{
+.elementA96{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 6/7;
 }
-.element81{
+.elementA97{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 7/8;
 }
-.element82{
+.elementA98{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 8/9;
 }
-.element83{
+.elementA99{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 9/10;
 }
-.element84{
+.elementA100{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 10/11;
 }
-.element85{
+.elementA101{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 11/12;
 }
-.element86{
+.elementA102{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 12/13;
 }
-.element87{
+.elementA103{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 13/14;
 }
-.element268{
-    background-color: rgb(27, 16, 128);
+.elementA268{
+    background-color: rgb(18, 27, 155);
     grid-column: 18/20;
     grid-row: 14/15;
 }
-.element267{
-    background-color: rgb(33, 16, 128);
+.elementA267{
+    background-color: rgb(18, 27, 155);
     grid-column: 18/20;
-    grid-row: 15/16
+    grid-row: 15/16;
 }
-.element88{
+.elementA104{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
-    grid-row: 16/17
+    grid-row: 16/17;
 }
-.element89{
+.elementA105{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
-    grid-row: 17/18
+    grid-row: 17/18;
 }
-.element90{
+.elementA106{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 18/19;
 }
-.element91{
+.elementA107{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 19/20;
 }
-.element92{
+.elementA108{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 20/21;
 }
-.element93{
+.elementA109{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 21/22;
 }
-.element94{
+.elementA110{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 22/23;
 }
-.element95{
+.elementA111{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 23/24;
 }
-.element96{
+.elementA112{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 24/25;
 }
-.element97{
+.elementA113{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 25/26;
 }
-.element98{
+.elementA114{
     background-color: rgb(128, 16, 16);
     grid-column: 18/20;
     grid-row: 26/27;
 }
 /* Columna 20/22 */
-.element120{
+.elementA136{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 3/4;
 }
-.element119{
+.elementA135{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 4/5;
 }
-.element118{
+.elementA134{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 5/6;
 }
-.element117{
+.elementA133{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 6/7;
 }
-.element116{
+.elementA132{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 7/8;
 }
-.element115{
+.elementA131{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 8/9;
 }
-.element114{
+.elementA130{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 9/10;
 }
-.element113{
+.elementA129{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 10/11;
 }
-.element112{
+.elementA128{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 11/12;
 }
-.element111{
+.elementA127{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 12/13;
 }
-.element110{
+.elementA126{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 13/14;
 }
-.element265{
-    background-color: rgb(27, 16, 128);
+.elementA265{
+    background-color: rgb(18, 27, 155);
     grid-column: 20/22;
     grid-row: 14/15;
 }
-.element266{
-    background-color: rgb(33, 16, 128);
+.elementA266{
+    background-color: rgb(18, 27, 155);
     grid-column: 20/22;
-    grid-row: 15/16
+    grid-row: 15/16;
 }
-.element109{
+.elementA125{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
-    grid-row: 16/17
+    grid-row: 16/17;
 }
-.element108{
+.elementA124{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
-    grid-row: 17/18
+    grid-row: 17/18;
 }
-.element107{
+.elementA123{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 18/19;
 }
-.element106{
+.elementA122{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 19/20;
 }
-.element105{
+.elementA121{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 20/21;
 }
-.element104{
+.elementA120{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 21/22;
 }
-.element103{
+.elementA119{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 22/23;
 }
-.element102{
+.elementA118{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 23/24;
 }
-.element101{
+.elementA117{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 24/25;
 }
-.element100{
+.elementA116{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 25/26;
 }
-.element99{
+.elementA115{
     background-color: rgb(128, 16, 16);
     grid-column: 20/22;
     grid-row: 26/27;
 }
 /* Columna 24/26 */
-.element121{
+.elementA137{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 3/4;
 }
-.element122{
+.elementA138{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 4/5;
 }
-.element123{
+.elementA139{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 5/6;
 }
-.element124{
+.elementA140{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 6/7;
 }
-.element125{
+.elementA141{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 7/8;
 }
-.element126{
+.elementA142{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 8/9;
 }
-.element127{
+.elementA143{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 9/10;
 }
-.element128{
+.elementA144{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 10/11;
 }
-.element129{
+.elementA145{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 11/12;
 }
-.element130{
+.elementA146{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 12/13;
 }
-.element131{
+.elementA147{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 13/14;
 }
-.element264{
-    background-color: rgb(27, 16, 128);
+.elementA264{
+    background-color: rgb(18, 27, 155);
     grid-column: 24/26;
     grid-row: 14/15;
 }
-.element263{
-    background-color: rgb(33, 16, 128);
+.elementA263{
+    background-color: rgb(18, 27, 155);
     grid-column: 24/26;
-    grid-row: 15/16
+    grid-row: 15/16;
 }
-.element132{
+.elementA148{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
-    grid-row: 16/17
+    grid-row: 16/17;
 }
-.element133{
+.elementA149{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
-    grid-row: 17/18
+    grid-row: 17/18;
 }
-.element134{
+.elementA150{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 18/19;
 }
-.element135{
+.elementA151{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 19/20;
 }
-.element136{
+.elementA152{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 20/21;
 }
-.element137{
+.elementA153{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 21/22;
 }
-.element138{
+.elementA154{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 22/23;
 }
-.element139{
+.elementA155{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 23/24;
 }
-.element140{
+.elementA156{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 24/25;
 }
-.element141{
+.elementA157{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 25/26;
 }
-.element142{
+.elementA158{
     background-color: rgb(128, 16, 16);
     grid-column: 24/26;
     grid-row: 26/27;
 }
 /* Columna 26/28 */
-.element164{
+.elementA180{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 3/4;
 }
-.element163{
+.elementA179{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 4/5;
 }
-.element162{
+.elementA178{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 5/6;
 }
-.element161{
+.elementA177{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 6/7;
 }
-.element160{
+.elementA176{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 7/8;
 }
-.element159{
+.elementA175{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 8/9;
 }
-.element158{
+.elementA174{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 9/10;
 }
-.element157{
+.elementA173{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 10/11;
 }
-.element156{
+.elementA172{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 11/12;
 }
-.element155{
+.elementA171{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 12/13;
 }
-.element154{
+.elementA170{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 13/14;
 }
-.element261{
-    background-color: rgb(27, 16, 128);
+.elementA261{
+    background-color: rgb(18, 27, 155);
     grid-column: 26/28;
     grid-row: 14/15;
 }
-.element262{
-    background-color: rgb(33, 16, 128);
+.elementA262{
+    background-color: rgb(18, 27, 155);
     grid-column: 26/28;
-    grid-row: 15/16
+    grid-row: 15/16;
 }
-.element153{
+.elementA169{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
-    grid-row: 16/17
+    grid-row: 16/17;
 }
-.element152{
+.elementA168{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
-    grid-row: 17/18
+    grid-row: 17/18;
 }
-.element151{
+.elementA167{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 18/19;
 }
-.element150{
+.elementA166{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 19/20;
 }
-.element149{
+.elementA165{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 20/21;
 }
-.element148{
+.elementA164{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 21/22;
 }
-.element147{
+.elementA163{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 22/23;
 }
-.element146{
+.elementA162{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 23/24;
 }
-.element145{
+.elementA161{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 24/25;
 }
-.element144{
+.elementA160{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 25/26;
 }
-.element143{
+.elementA159{
     background-color: rgb(128, 16, 16);
     grid-column: 26/28;
     grid-row: 26/27;
 }
-/* Calumna 30/32 */
-.element165{
+/* Columna 30/32 */
+.elementA181{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 3/4;
 }
-.element166{
+.elementA182{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 4/5;
 }
-.element167{
+.elementA183{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 5/6;
 }
-.element168{
+.elementA184{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 6/7;
 }
-.element169{
+.elementA185{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 7/8;
 }
-.element170{
+.elementA186{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 8/9;
 }
-.element171{
+.elementA187{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 9/10;
 }
-.element172{
+.elementA188{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 10/11;
 }
-.element173{
+.elementA189{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 11/12;
 }
-.element174{
+.elementA190{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 12/13;
 }
-.element175{
+.elementA191{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 13/14;
 }
-.element260{
-    background-color: rgb(27, 16, 128);
+.elementA260{
+    background-color: rgb(18, 27, 155);
     grid-column: 30/32;
     grid-row: 14/15;
 }
-.element259{
-    background-color: rgb(33, 16, 128);
+.elementA259{
+    background-color: rgb(18, 27, 155);
     grid-column: 30/32;
-    grid-row: 15/16
+    grid-row: 15/16;
 }
-.element176{
+.elementA192{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
-    grid-row: 16/17
+    grid-row: 16/17;
 }
-.element177{
+.elementA193{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
-    grid-row: 17/18
+    grid-row: 17/18;
 }
-.element178{
+.elementA194{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 18/19;
 }
-.element179{
+.elementA195{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 19/20;
 }
-.element180{
+.elementA196{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 20/21;
 }
-.element181{
+.elementA197{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 21/22;
 }
-.element182{
+.elementA198{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 22/23;
 }
-.element183{
+.elementA199{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 23/24;
 }
-.element184{
+.elementA200{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 24/25;
 }
-.element185{
+.elementA201{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 25/26;
 }
-.element186{
+.elementA202{
     background-color: rgb(128, 16, 16);
     grid-column: 30/32;
     grid-row: 26/27;
 }
 /* Columna 32/34 */
-.element208{
+.elementA224{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 3/4;
 }
-.element207{
+.elementA223{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 4/5;
 }
-.element206{
+.elementA222{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 5/6;
 }
-.element205{
+.elementA221{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 6/7;
 }
-.element204{
+.elementA220{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 7/8;
 }
-.element203{
+.elementA219{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 8/9;
 }
-.element202{
+.elementA218{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 9/10;
 }
-.element201{
+.elementA217{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 10/11;
 }
-.element200{
+.elementA216{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 11/12;
 }
-.element199{
+.elementA215{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 12/13;
 }
-.element198{
+.elementA214{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 13/14;
 }
-.element257{
-    background-color: rgb(27, 16, 128);
+.elementA257{
+    background-color: rgb(18, 27, 155);
     grid-column: 32/34;
     grid-row: 14/15;
 }
-.element258{
-    background-color: rgb(33, 16, 128);
+.elementA258{
+    background-color: rgb(18, 27, 155);
     grid-column: 32/34;
-    grid-row: 15/16
+    grid-row: 15/16;
 }
-.element197{
+.elementA213{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
-    grid-row: 16/17
+    grid-row: 16/17;
 }
-.element196{
+.elementA212{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
-    grid-row: 17/18
+    grid-row: 17/18;
 }
-.element195{
+.elementA211{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 18/19;
 }
-.element194{
+.elementA210{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 19/20;
 }
-.element193{
+.elementA209{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 20/21;
 }
-.element192{
+.elementA208{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 21/22;
 }
-.element191{
+.elementA207{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 22/23;
 }
-.element190{
+.elementA206{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 23/24;
 }
-.element189{
+.elementA205{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 24/25;
 }
-.element188{
+.elementA204{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 25/26;
 }
-.element187{
+.elementA203{
     background-color: rgb(128, 16, 16);
     grid-column: 32/34;
     grid-row: 26/27;
 }
-
+/* Columna 36/38 */
+.elementA225{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 3/4;
+}
+.elementA226{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 4/5;
+}
+.elementA227{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 5/6;
+}
+.elementA228{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 6/7;
+}
+.elementA229{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 7/8;
+}
+.elementA230{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 8/9;
+}
+.elementA231{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 9/10;
+}
+.elementA232{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 10/11;
+}
+.elementA233{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 11/12;
+}
+.elementA234{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 12/13;
+}
+.elementA235{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 13/14;
+}
+.elementA256{
+    background-color: rgb(18, 27, 155);
+    grid-column: 36/38;
+    grid-row: 14/15;
+}
+.elementA255{
+    background-color: rgb(18, 27, 155);
+    grid-column: 36/38;
+    grid-row: 15/16;
+}
+.elementA236{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 16/17;
+}
+.elementA237{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 17/18;
+}
+.elementA238{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 18/19;
+}
+.elementA239{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 19/20;
+}
+.elementA240{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 20/21;
+}
+.elementA241{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 21/22;
+}
+.elementA242{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 22/23;
+}
+.elementA243{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 23/24;
+}
+.elementA244{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 24/25;
+}
+.elementA245{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 25/26;
+}
+.elementA246{
+    background-color: rgb(128, 16, 16);
+    grid-column: 36/38;
+    grid-row: 26/27;
+}
 /* Columna 38/40 */
-.element252{
-    background-color: rgb(16, 141, 22);
-    grid-column: 38/40;
-    grid-row: 3/4;
-}
-.element251{
-    background-color: rgb(16, 141, 22);
-    grid-column: 38/40;
-    grid-row: 4/5;
-}
-.element250{
-    background-color: rgb(16, 141, 22);
-    grid-column: 38/40;
-    grid-row: 5/6;
-}
-.element249{
-    background-color: rgb(16, 141, 22);
-    grid-column: 38/40;
-    grid-row: 6/7;
-}
-.element248{
-    background-color: rgb(16, 141, 22);
-    grid-column: 38/40;
-    grid-row: 7/8;
-}
-.element247{
-    background-color: rgb(16, 141, 22);
-    grid-column: 38/40;
-    grid-row: 8/9;
-}
-.element246{
-    background-color: rgb(16, 141, 22);
-    grid-column: 38/40;
-    grid-row: 9/10;
-}
-.element245{
-    background-color: rgb(16, 141, 22);
-    grid-column: 38/40;
-    grid-row: 10/11;
-}
-.element244{
-    background-color: rgb(16, 141, 22);
-    grid-column: 38/40;
-    grid-row: 11/12;
-}
-.element243{
-    background-color: rgb(16, 141, 22);
-    grid-column: 38/40;
-    grid-row: 12/13;
-}
-.element242{
-    background-color: rgb(16, 141, 22);
-    grid-column: 38/40;
-    grid-row: 13/14;
-}
-.element254{
-    background-color: rgb(30, 10, 139);
-    grid-column: 38/40;
-    grid-row: 14/15;
-}
-.element253{
-    background-color: rgb(30, 10, 139);
-    grid-column: 38/40;
-    grid-row: 15/16;
-}
-.element241{
-    background-color: rgb(16, 141, 22);
-    grid-column: 38/40;
-    grid-row: 16/17;
-}
-.element240{
-    background-color: rgb(16, 141, 22);
-    grid-column: 38/40;
-    grid-row: 17/18;
-}
-.element239{
-    background-color: rgb(16, 141, 22);
-    grid-column: 38/40;
-    grid-row: 18/19;
-}
-.element238{
-    background-color: rgb(16, 141, 22);
+.elementA254{
+    background-color: rgb(128, 16, 16);
     grid-column: 38/40;
     grid-row: 19/20;
 }
-.element237{
-    background-color: rgb(16, 141, 22);
+.elementA253{
+    background-color: rgb(128, 16, 16);
     grid-column: 38/40;
     grid-row: 20/21;
 }
-.element236{
-    background-color: rgb(16, 141, 22);
+.elementA252{
+    background-color: rgb(128, 16, 16);
     grid-column: 38/40;
     grid-row: 21/22;
 }
-.element235{
-    background-color: rgb(16, 141, 22);
+.elementA251{
+    background-color: rgb(128, 16, 16);
     grid-column: 38/40;
     grid-row: 22/23;
 }
-.element234{
-    background-color: rgb(16, 141, 22);
+.elementA250{
+    background-color: rgb(128, 16, 16);
     grid-column: 38/40;
     grid-row: 23/24;
 }
-.element233{
-    background-color: rgb(16, 141, 22);
+.elementA249{
+    background-color: rgb(128, 16, 16);
     grid-column: 38/40;
     grid-row: 24/25;
 }
-.element232{
-    background-color: rgb(16, 141, 22);
+.elementA248{
+    background-color: rgb(128, 16, 16);
     grid-column: 38/40;
     grid-row: 25/26;
 }
-.element231{
-    background-color: rgb(16, 141, 22);
+.elementA247{
+    background-color: rgb(128, 16, 16);
     grid-column: 38/40;
     grid-row: 26/27;
 }
-/* Columna de la 36/38 */
-.element209{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 3/4;
+.elementA2{
+    background-color: rgb(33, 153, 233);
+    grid-column: 40/41;
+    grid-row: 19/29;
+    font-size: 8px;
+    padding-top: 80px;
 }
-.element210{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 4/5;
+.elementA3{
+    background-color: rgb(33, 153, 233);
+    grid-column: 38/41;
+    grid-row: 1/3;
+    font-size: 10px;
+    padding-top: 10px;    
 }
-.element211{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 5/6;
-}
-.element212{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 6/7;
-}
-.element213{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 7/8;
-}
-.element214{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 8/9;
-}
-.element215{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 9/10;
-}
-.element216{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 10/11;
-}
-.element217{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 11/12;
-}
-.element218{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 12/13;
-}
-.element219{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 13/14;
-}
-.element256{
-    background-color: rgb(30, 10, 139);
-    grid-column: 36/38;
-    grid-row: 14/15;
-}
-.element255{
-    background-color: rgb(30, 10, 139);
-    grid-column: 36/38;
-    grid-row: 15/16;
-}
-.element220{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 16/17;
-}
-.element221{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 17/18;
-}
-.element222{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 18/19;
-}
-.element223{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 19/20;
-}
-.element224{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 20/21;
-}
-.element225{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 21/22;
-}
-.element226{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 22/23;
-}
-.element227{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 23/24;
-}
-.element228{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 24/25;
-}
-.element229{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 25/26;
-}
-.element230{
-    background-color: rgb(16, 141, 22);
-    grid-column: 36/38;
-    grid-row: 26/27;
+.elementA4{
+    background-color: rgb(33, 153, 233);
+    grid-column: 38/41;
+    grid-row: 3/19;
+    font-size: 10px;
+    padding-top: 135px;  
 }

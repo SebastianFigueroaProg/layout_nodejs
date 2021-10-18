@@ -18,9 +18,22 @@ router.get('/',authControllers.isAuthenticated,(req,res)=>{
     })    
 })
 
-router.get('/data',(req,res)=>{
+router.get('/data/callb',(req,res)=>{
 
     conexion.query('SELECT * from agentes_call', (error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            data = JSON.stringify(result);
+            res.send(data);
+        }
+
+    })    
+})
+router.get('/data/calla',(req,res)=>{
+
+    conexion.query('SELECT * from agentes_calla', (error,result)=>{
     
         if(error){
             throw error;
@@ -63,14 +76,38 @@ router.get('/edit/:boxId',authControllers.isAuthenticated,(req, res)=>{
     })   
 
 })
+router.get('/edita/:boxId',authControllers.isAuthenticated,(req, res)=>{
+    const box = req.params.boxId;   
+        
+    conexion.query('SELECT * FROM agentes_calla WHERE boxId=?',[box],(error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            res.render('edita',{boxId:result[0],user:req.user});
+        }
 
+    })   
+
+})
+
+
+//Login
 router.get('/login',(req, res)=>{
     res.render('login',{alert:false});
 })
+
+// registrar page oculta
 router.get('/register',(req, res)=>{
     res.render('register');
 })
+// Cambiar contraseña
+router.get('/pass', authControllers.isAuthenticated,(req, res)=>{
+    res.render('changePass', {user:req.user} );        
+})
 
+
+// pagina invitado
 router.get('/invitado',(req,res)=>{
 
     conexion.query('SELECT * from agentes_call', (error,result)=>{
@@ -85,13 +122,20 @@ router.get('/invitado',(req,res)=>{
 })
 
 
-
+//Ruta Edicion de datos
 router.post('/update', crud.update);
+router.post('/editar', crud.editar);
 
+//Ruta de registro de usuario
 router.post('/register',authControllers.register);
 
+//Ruta Cambiar Contraseña
+router.post('/pass',authControllers.changePass);
+
+//Ruta login Usuario
 router.post('/login',authControllers.login);
 
+//ruta deslogueo Usuario
 router.get('/logout', authControllers.logout);
 
 

@@ -53,19 +53,7 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a id="volver" class="nav-link active" aria-current="page" href="/">Volver</a>
-              </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li> -->
-              
-            <!-- <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li> -->
-            </ul>
-            <!-- <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form> -->
+              </li>              
           </div>
         </div>
       </nav>
@@ -79,16 +67,9 @@
           <div class="card border-secondary">
               <div class="card-header">Editar Registro</div>
               <div class="card-body">
-                  <form action="/update" method="POST">
+                  <form action="/editar" method="POST">
                     <input id="boxId" name="boxId" value="<%= boxId.boxId %>" hidden>
-                
-                <!-- <div class="mb-3">
-                    <label for="boxId" class="form-label">JORNADA</label>
-                    <select name="jornada" id="jornada" class="form-select" aria-label="Default select example">
-                        <option <%= boxId.jornada=='TM' ? "selected" : '' %> value="TM" selected>TM</option>
-                        <option <%= boxId.jornada=='TT' ? "selected" : '' %> value="TT" selected>TT</option>
-                    </select>
-                </div> -->
+                                
                 <div class="mb-3">
                   <label for="user" class="form-label">ESTADO PC</label>
                   <select name="estadoPc" id="estadoPc" class="form-select" aria-label="Default select example">                      
@@ -99,7 +80,7 @@
                   </select>
               </div>
               <div class="mb-3">
-                <label for="boxId" class="form-label">Oblea Pc</label>
+                <label for="boxId" class="form-label">Oble Pc</label>
                 <input type="text" class="form-control" id="obleaPc" name="obleaPc" value="<%= boxId.obleaPc %>" tabindex="1">
             </div>
                 <div class="mb-3">

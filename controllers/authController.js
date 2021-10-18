@@ -85,6 +85,32 @@ exports.login = async (req,res)=>{
 
 }
 
+exports.changePass =  async (req, res)=>{
+
+    try {
+        const user = req.body.user; 
+        const passnew = req.body.passnew;
+        const pass = req.body.pass;
+
+        if (pass === passnew) {
+            let passHash = await bcryptjs.hash(pass, 8)
+            
+            conexion.query('UPDATE user SET ? WHERE user = ? ',[{pass:passHash},user],(error,result)=>{
+                if (error) {console.log(error)}
+                res.redirect('/login')
+            })
+            
+        }else{
+            res.redirect('/pass')
+        }
+        
+    }catch (error) {
+        console.log(error)               
+    }
+}
+
+
+
 
 exports.isAuthenticated = async (req, res, next)=>{
     if (req.cookies.jwt) {
