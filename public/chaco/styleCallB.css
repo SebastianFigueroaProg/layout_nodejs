@@ -6,7 +6,6 @@
 }
 body{
     width: 130%;
-    height: 900px;
 }
 #boton{
     background-color: aqua;
@@ -60,7 +59,7 @@ body{
 .descripcion{
     background-color: rgb(168, 168, 168);
     border: 2px #000 solid;
-    width: 380px;
+    width: 400px;
     height: 100px;
     margin-left: 700px;
     margin-top: 20px;    
@@ -68,16 +67,16 @@ body{
 .h53{
     font-weight: bold;
     position: absolute;
-    margin-left: 1105px;
+    margin-left: 1125px;
     margin-top: -145px;
 }
 .descripcion2{
     background-color: rgb(168, 168, 168);
     position: absolute;
     border: 2px #000 solid;
-    width: 380px;
+    width: 400px;
     height: 100px;
-    margin-left: 1100px;
+    margin-left: 1120px;
     margin-top: -100px;   
 }
 .p1, .p2, .p3{
@@ -153,10 +152,9 @@ span{
     background-color: rgb(76, 77, 85);
 }
 main{
-    width: 100%;
-    padding: 50px; 
+    padding: 30px; 
     display: flex; 
-    flex-direction: column;       
+    flex-direction: column-reverse;       
     overflow: auto;
 }
 .conteiner{

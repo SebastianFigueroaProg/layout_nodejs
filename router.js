@@ -4,7 +4,7 @@ const conexion = require('./database/db');
 const crud = require('.//controllers/crud');
 const authControllers = require('./controllers/authController');
 
-
+//index
 router.get('/',authControllers.isAuthenticated,(req,res)=>{
 
     conexion.query('SELECT * from agentes_call', (error,result)=>{
@@ -17,7 +17,7 @@ router.get('/',authControllers.isAuthenticated,(req,res)=>{
 
     })    
 })
-
+//Data Call B
 router.get('/data/callb',(req,res)=>{
 
     conexion.query('SELECT * from agentes_call', (error,result)=>{
@@ -31,6 +31,7 @@ router.get('/data/callb',(req,res)=>{
 
     })    
 })
+//Data Call A
 router.get('/data/calla',(req,res)=>{
 
     conexion.query('SELECT * from agentes_calla', (error,result)=>{
@@ -45,6 +46,8 @@ router.get('/data/calla',(req,res)=>{
     })    
 })
 
+
+//Usuarios Registrados
 router.get('/user',(req,res)=>{
 
     conexion.query('SELECT * from user', (error,result)=>{

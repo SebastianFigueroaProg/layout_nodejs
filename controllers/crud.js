@@ -15,6 +15,7 @@ const conexion = require('../database/db');
 // }
 
 exports.update = (req, res)=>{
+    let fecha = new Date();
     const id          = req.body.id;
     const boxId       = req.body.boxId
     const box         = req.body.box;
@@ -30,10 +31,12 @@ exports.update = (req, res)=>{
     const sitio       = req.body.sitio;
     const servicio    = req.body.servicio;
     const modalidadTT = req.body.modalidadTT;
+    const editor      = req.body.editor;
+    const fechaEdicion= `${fecha.getDate()}/${fecha.getMonth()+1}/${fecha.getFullYear()} -- ${fecha.getHours()}:${fecha.getMinutes()}`
     
 
     conexion.query('UPDATE agentes_call SET ? WHERE boxId = ?', [{estadoPc:estadoPc, obleaPC:obleaPc,DNI:dni,nombre:nombre,ingreso:ingreso,egreso:egreso,lider:lider,
-    jefe:jefe, sitio:sitio,servicio:servicio,modalidadTT:modalidadTT},boxId],(error, results)=>{
+    jefe:jefe, sitio:sitio,servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
 
         if(error){
             console.log(error);
@@ -47,6 +50,7 @@ exports.update = (req, res)=>{
 
 
 exports.editar = (req, res)=>{
+    let fecha = new Date();
     const id          = req.body.id;
     const boxId       = req.body.boxId
     const box         = req.body.box;
@@ -62,10 +66,12 @@ exports.editar = (req, res)=>{
     const sitio       = req.body.sitio;
     const servicio    = req.body.servicio;
     const modalidadTT = req.body.modalidadTT;
+    const editor      = req.body.editor;
+    const fechaEdicion= `${fecha.getDate()}/${fecha.getMonth()+1}/${fecha.getFullYear()} -- ${fecha.getHours()}:${fecha.getMinutes()}`
     
 
     conexion.query('UPDATE agentes_calla SET ? WHERE boxId = ?', [{estadoPc:estadoPc, obleaPC:obleaPc,DNI:dni,nombre:nombre,ingreso:ingreso,egreso:egreso,lider:lider,
-    jefe:jefe, sitio:sitio,servicio:servicio,modalidadTT:modalidadTT},boxId],(error, results)=>{
+    jefe:jefe, sitio:sitio,servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
 
         if(error){
             console.log(error);

@@ -79,16 +79,10 @@
           <div class="card border-secondary">
               <div class="card-header">Editar Registro</div>
               <div class="card-body">
-                  <form action="/update" method="POST">
+                  <form action="/update" method="POST" name="formulario" id="formulario">
                     <input id="boxId" name="boxId" value="<%= boxId.boxId %>" hidden>
                 
-                <!-- <div class="mb-3">
-                    <label for="boxId" class="form-label">JORNADA</label>
-                    <select name="jornada" id="jornada" class="form-select" aria-label="Default select example">
-                        <option <%= boxId.jornada=='TM' ? "selected" : '' %> value="TM" selected>TM</option>
-                        <option <%= boxId.jornada=='TT' ? "selected" : '' %> value="TT" selected>TT</option>
-                    </select>
-                </div> -->
+                
                 <div class="mb-3">
                   <label for="user" class="form-label">ESTADO PC</label>
                   <select name="estadoPc" id="estadoPc" class="form-select" aria-label="Default select example">                      
@@ -138,7 +132,12 @@
       <label for="boxId" class="form-label">Modalidad TT</label>
       <input type="text" class="form-control" id="modalidadTT" name="modalidadTT" value="<%= boxId.modalidadTT %>" tabindex="1">
   </div>
- 
+  <div class="user-edit">
+    <% if ( user ) { %>
+      <input type="text" class="form-control" id="editor" name="editor" value="<%= user.name %>" tabindex="1" hidden>
+      <% } %> 
+  </div>
+
                 <button type="submit" class="btn btn-primary" tabindex="5">Guardar</button>
                 <a href="/" class="btn btn-secondary">Cancelar</a>
             </form>
@@ -148,15 +147,9 @@
       <% } %>
 
 
-    
-
-  
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-
+    
     
   </body>
 </html>

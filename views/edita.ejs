@@ -119,6 +119,12 @@
       <label for="boxId" class="form-label">Modalidad TT</label>
       <input type="text" class="form-control" id="modalidadTT" name="modalidadTT" value="<%= boxId.modalidadTT %>" tabindex="1">
   </div>
+  <div class="user-edit">
+    <% if ( user ) { %>
+      <input type="text" class="form-control" id="editor" name="editor" value="<%= user.name %>" tabindex="1" hidden>
+      <% } %>
+    </a>
+  </div>
  
                 <button type="submit" class="btn btn-primary" tabindex="5">Guardar</button>
                 <a href="/" class="btn btn-secondary">Cancelar</a>
@@ -129,9 +135,6 @@
       <% } %>
 
 
-    
-
-  
 
 
 

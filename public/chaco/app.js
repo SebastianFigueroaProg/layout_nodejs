@@ -317,9 +317,9 @@ const porcentajeCallB = (data)=>{
     let resSuti = porSuti.toFixed(2);
 
     // Modifica etiqueta pra mostras Ocupacion Call B
-    p4.innerHTML = ` TM: ${resulTm}% - TT: ${resulTt}% - Tot: ${resul}`
-    p5.innerHTML = ` TM: ${resDisTm}% - TT: ${resDisTt}% - Tot: ${resDis}`
-    p6.innerHTML = ` TM: ${resSutiTm}% - TT: ${resSutiTt}% - Tot: ${resSuti}`  
+    p4.innerHTML = ` TM: ${resulTm}% - TT: ${resulTt}% - Tot: ${resul}%`
+    p5.innerHTML = ` TM: ${resDisTm}% - TT: ${resDisTt}% - Tot: ${resDis}%`
+    p6.innerHTML = ` TM: ${resSutiTm}% - TT: ${resSutiTt}% - Tot: ${resSuti}%`  
     
 }
 
@@ -401,8 +401,8 @@ const porcentajeCallA = (data)=>{
     let resSuti = porSuti.toFixed(2);
 
     // Modifica etiqueta pra mostras Ocupacion Call B
-    p1.innerHTML = ` TM: ${resulTm}% - TT: ${resulTt}% - Tot: ${resul}`
-    p2.innerHTML = ` TM: ${resDisTm}% - TT: ${resDisTt} - Tot: ${resDis}%`
+    p1.innerHTML = ` TM: ${resulTm}% - TT: ${resulTt}% - Tot: ${resul}%`
+    p2.innerHTML = ` TM: ${resDisTm}% - TT: ${resDisTt}% - Tot: ${resDis}%`
     p3.innerHTML = ` TM: ${resSutiTm}% - TT: ${resSutiTt}% - Tot: ${resSuti}%`  
     
 }
