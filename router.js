@@ -7,7 +7,7 @@ const authControllers = require('./controllers/authController');
 //index
 router.get('/',authControllers.isAuthenticated,(req,res)=>{
 
-    conexion.query('SELECT * from agentes_call', (error,result)=>{
+    conexion.query('SELECT * from agentes_callb', (error,result)=>{
     
         if(error){
             throw error;
@@ -20,7 +20,7 @@ router.get('/',authControllers.isAuthenticated,(req,res)=>{
 //Data Call B
 router.get('/data/callb',(req,res)=>{
 
-    conexion.query('SELECT * from agentes_call', (error,result)=>{
+    conexion.query('SELECT * from agentes_callb', (error,result)=>{
     
         if(error){
             throw error;
@@ -45,7 +45,90 @@ router.get('/data/calla',(req,res)=>{
 
     })    
 })
+//Data Call F
+router.get('/data/callf',(req,res)=>{
 
+    conexion.query('SELECT * from agentes_callf', (error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            data = JSON.stringify(result);
+            res.send(data);
+        }
+
+    })    
+})
+//Data Call L
+router.get('/data/calll',(req,res)=>{
+
+    conexion.query('SELECT * from agentes_calll', (error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            data = JSON.stringify(result);
+            res.send(data);
+        }
+
+    })    
+})
+//Data Call M
+router.get('/data/callm',(req,res)=>{
+
+    conexion.query('SELECT * from agentes_callm', (error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            data = JSON.stringify(result);
+            res.send(data);
+        }
+
+    })    
+})
+//Data Call N
+router.get('/data/calln',(req,res)=>{
+
+    conexion.query('SELECT * from agentes_calln', (error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            data = JSON.stringify(result);
+            res.send(data);
+        }
+
+    })    
+})
+//Data Call O
+router.get('/data/callo',(req,res)=>{
+
+    conexion.query('SELECT * from agentes_callo', (error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            data = JSON.stringify(result);
+            res.send(data);
+        }
+
+    })    
+})
+//Data Call P
+router.get('/data/callp',(req,res)=>{
+
+    conexion.query('SELECT * from agentes_callp', (error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            data = JSON.stringify(result);
+            res.send(data);
+        }
+
+    })    
+})
 
 //Usuarios Registrados
 router.get('/user',(req,res)=>{
@@ -62,13 +145,12 @@ router.get('/user',(req,res)=>{
     })    
 })
 
-
-
 // //Editar Registros
+//Call B
 router.get('/edit/:boxId',authControllers.isAuthenticated,(req, res)=>{
     const box = req.params.boxId;   
         
-    conexion.query('SELECT * FROM agentes_call WHERE boxId=?',[box],(error,result)=>{
+    conexion.query('SELECT * FROM agentes_callb WHERE boxId=?',[box],(error,result)=>{
     
         if(error){
             throw error;
@@ -79,6 +161,7 @@ router.get('/edit/:boxId',authControllers.isAuthenticated,(req, res)=>{
     })   
 
 })
+//Call A
 router.get('/edita/:boxId',authControllers.isAuthenticated,(req, res)=>{
     const box = req.params.boxId;   
         
@@ -93,41 +176,123 @@ router.get('/edita/:boxId',authControllers.isAuthenticated,(req, res)=>{
     })   
 
 })
-
+//Call F
+router.get('/editf/:boxId',authControllers.isAuthenticated,(req, res)=>{
+    const box = req.params.boxId;   
+        
+    conexion.query('SELECT * FROM agentes_callf WHERE boxId=?',[box],(error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            res.render('editf',{boxId:result[0],user:req.user});
+        }
+    })   
+})
+//Call L
+router.get('/editl/:boxId',authControllers.isAuthenticated,(req, res)=>{
+    const box = req.params.boxId;   
+        
+    conexion.query('SELECT * FROM agentes_calll WHERE boxId=?',[box],(error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            res.render('editl',{boxId:result[0],user:req.user});
+        }
+    })   
+})
+//Call M
+router.get('/editm/:boxId',authControllers.isAuthenticated,(req, res)=>{
+    const box = req.params.boxId;   
+        
+    conexion.query('SELECT * FROM agentes_callm WHERE boxId=?',[box],(error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            res.render('editm',{boxId:result[0],user:req.user});
+        }
+    })   
+})
+//Call N
+router.get('/editn/:boxId',authControllers.isAuthenticated,(req, res)=>{
+    const box = req.params.boxId;   
+        
+    conexion.query('SELECT * FROM agentes_calln WHERE boxId=?',[box],(error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            res.render('editn',{boxId:result[0],user:req.user});
+        }
+    })   
+})
+//Call O
+router.get('/edito/:boxId',authControllers.isAuthenticated,(req, res)=>{
+    const box = req.params.boxId;   
+        
+    conexion.query('SELECT * FROM agentes_callo WHERE boxId=?',[box],(error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            res.render('edito',{boxId:result[0],user:req.user});
+        }
+    })   
+})
+//Call P
+router.get('/editp/:boxId',authControllers.isAuthenticated,(req, res)=>{
+    const box = req.params.boxId;   
+        
+    conexion.query('SELECT * FROM agentes_callp WHERE boxId=?',[box],(error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            res.render('editp',{boxId:result[0],user:req.user});
+        }
+    })   
+})
 
 //Login
 router.get('/login',(req, res)=>{
     res.render('login',{alert:false});
 })
 
-// registrar page oculta
+// registrar pagina oculta
 router.get('/register',(req, res)=>{
     res.render('register');
 })
+
 // Cambiar contraseña
 router.get('/pass', authControllers.isAuthenticated,(req, res)=>{
     res.render('changePass', {user:req.user} );        
 })
 
-
 // pagina invitado
-router.get('/invitado',(req,res)=>{
+router.get('/invitado',authControllers.isAuthenticated,(req,res)=>{
 
-    conexion.query('SELECT * from agentes_call', (error,result)=>{
+    conexion.query('SELECT * from agentes_callb', (error,result)=>{
     
         if(error){
             throw error;
         }else{
-            res.render('invitado',{result:result});
+            res.render('invitado',{result:result,user:req.user});
         }
 
     })    
 })
 
-
 //Ruta Edicion de datos
-router.post('/update', crud.update);
-router.post('/editar', crud.editar);
+router.post('/update', crud.update); // call-B 
+router.post('/editar', crud.editar); // call-A
+router.post('/editarf', crud.editarF); // call-F
+router.post('/editarl', crud.editarL); // call-L
+router.post('/editarm', crud.editarM); // call-M
+router.post('/editarn', crud.editarN); // call-M
+router.post('/editarp', crud.editarP); // call-P
+router.post('/editaro', crud.editarO); // call-O
 
 //Ruta de registro de usuario
 router.post('/register',authControllers.register);
@@ -140,7 +305,5 @@ router.post('/login',authControllers.login);
 
 //ruta deslogueo Usuario
 router.get('/logout', authControllers.logout);
-
-
 
 module.exports = router;

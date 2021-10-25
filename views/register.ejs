@@ -37,9 +37,20 @@
                     <input id="name" name="name" type="text" class="form-control">
                 </div>
                 <div class="mb-3">
+                  <label for="callT" class="callT">ESTATUS</label>
+                          <select name="statu" id="statu" class="statu" aria-label="Default select example">                      
+                              <option value="SUPER_ADMIN" selected>SUPER_ADMIN</option>
+                              <option value="ADMIN" selected>ADMIN</option>
+                              <option value="INVITADO" selected>INVITADO</option>                                                     
+                          </select>
+                </div>            
+                <div class="mb-3">
                     <label for="pass" class="form-label">Password</label>
                     <input id="pass" name="pass" type="password" class="form-control">
-                </div>                            
+                </div> 
+                <div class="eyes">
+                  <input class="input" type="checkbox" onclick="myFuntion()"><span class="ver">Ver Password</span></i> <br>
+              </div>                           
             </div>
             <div class="card-footer bg-transparent border-primary">
               <a href="/" type="button" class="btn btn-secondary">Cancelar</a>
@@ -50,10 +61,24 @@
     
         </div>
     </div>
-</div>
-
- 
+</div> 
     
     <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script> 
+    
+        function myFuntion(){
+            const x = document.getElementById("pass");            
+            if (x.type=="password") {
+                x.type = "text"
+            } else {
+                x.type = "password"                
+            }
+            
+        }    
+    
+    </script>  
+
+
   </body>
 </html>

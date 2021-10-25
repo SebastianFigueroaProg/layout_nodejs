@@ -7,13 +7,15 @@ const {promisify} = require('util');
 exports.register =  async (req, res)=>{
 
     try {
-        const user = req.body.user;
-        const name = req.body.name;
-        const pass = req.body.pass;
+        const user  = req.body.user;
+        const name  = req.body.name;
+        const pass  = req.body.pass;
+        const statu = req.body.statu;
+
     
         let passHash = await bcryptjs.hash(pass, 8)
     
-        conexion.query('INSERT INTO user SET ?',{user:user, name:name, pass:passHash},(error,result)=>{
+        conexion.query('INSERT INTO user SET ?',{user:user, name:name, pass:passHash, statu:statu},(error,result)=>{
             if (error) {console.log(error)}
             res.redirect('/')
         })
@@ -27,7 +29,8 @@ exports.login = async (req,res)=>{
 
     try {
         const user = req.body.usuario;
-        const pass = req.body.password;
+        const pass = req.body.password;   
+        let rut;
         
         if (!user || !pass) {
             res.render('login',{
@@ -62,7 +65,15 @@ exports.login = async (req,res)=>{
                         expires: new Date(Date.now()+process.env.JWT_COOKIE_EXPIRES *24 *60* 60*1000),
                         httpOnly: true
                     }
+                    
+                    // console.log(results[0].statu)
 
+                    if (results[0].statu == 'SUPER_ADMIN' || results[0].statu == 'ADMIN') {
+                        rut = ''
+                    } else {
+                        rut = 'invitado'
+                    }
+                    
                     res.cookie('jwt',token,cookieOptions)
                     res.render('login',{
                         alert: true,
@@ -71,7 +82,7 @@ exports.login = async (req,res)=>{
                         alertIcon: 'success',
                         showConfirmButton: false,
                         timer: 800,
-                        ruta: ''
+                        ruta: rut
                     })
                 }
             })
@@ -109,9 +120,6 @@ exports.changePass =  async (req, res)=>{
     }
 }
 
-
-
-
 exports.isAuthenticated = async (req, res, next)=>{
     if (req.cookies.jwt) {
         try {
@@ -130,7 +138,6 @@ exports.isAuthenticated = async (req, res, next)=>{
         res.redirect('/login')        
     }
 }
-
 
 exports.logout = (req,res)=>{
     res.clearCookie('jwt')
