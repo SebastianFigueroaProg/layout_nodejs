@@ -139,105 +139,6 @@ const estadoBoxCallB=(data)=>{
         }
     }            
 }
-
-//Funcion para poner titulo a los elemento para mostrar datos del Box posicionado Call A
-const tituloBoxCallA = (data)=>{
-    
-    const arrayBoxDom = [];
-    const arrayBoxDataTm = [];
-    const arrayBoxDataTt = [];
-    const nombreTm = [];
-    const ingresoTm = [];
-    const egresoTm = [];
-    const nombreTt = [];
-    const ingresoTt = [];
-    const egresoTt = [];
-
-    for (let i = 5; i < 255; i++) {        
-        arrayBoxDom.push(document.getElementById(`elementA${i}`).textContent)                
-    } 
-    
-    for (let i = 0; i < data.length; i++) {
-        if(data[i].jornada === 'TM'){
-            arrayBoxDataTm.push(data[i].box);
-            nombreTm.push(data[i].nombre);
-            ingresoTm.push(data[i].ingreso);
-            egresoTm.push(data[i].egreso);    
-        }else{
-            arrayBoxDataTt.push(data[i].box);
-            nombreTt.push(data[i].nombre);
-            ingresoTt.push(data[i].ingreso);
-            egresoTt.push(data[i].egreso);    
-        }   
-    }
-    //Buble para comparar conidencia de box y agregar los titulos a los elementos Call A
-    for (let  i= 0; i < arrayBoxDom.length ; i++){
-
-        if (arrayBoxDataTm[i] == arrayBoxDom[i] && arrayBoxDataTt[i] == arrayBoxDom[i]) {
-
-            divBoxA[i].setAttribute('title',`${arrayBoxDataTm[i]}
-            Turno M.: 
-            Agente: ${nombreTm[i]}
-            Ingreso: ${ingresoTm[i]}--Egreso:${egresoTm[i]}
-            Turno T.:
-            Agente: ${nombreTt[i]}
-            Ingreso: ${ingresoTt[i]} Egreso:${egresoTt[i]}`)
-            
-        }    
-    }
-}
-
-
-//Funcion para pintar la situacion de los BOX del Call A
-const estadoBoxCallA=(data)=>{
-    
-    const arrayBoxDom = [];
-    const arrayBoxDataTm = [];
-    const arrayBoxDataTt = [];
-    const arrayEstadoTm = [];
-    const arrayEstadoTt = [];
-    const arrayNombreTm = [];
-    const arrayNombreTt = [];
-
-    for (let i = 5; i < 255; i++) {        
-        arrayBoxDom.push(document.getElementById(`elementA${i}`).textContent)                
-    }    
-    for (let i = 0; i < data.length; i++) {
-        if(data[i].jornada === 'TM'){
-            arrayBoxDataTm.push(data[i].box);
-            arrayEstadoTm.push(data[i].estadoPc); 
-            arrayNombreTm.push(data[i].nombre);               
-        }else{
-            arrayBoxDataTt.push(data[i].box);
-            arrayEstadoTt.push(data[i].estadoPc)
-            arrayNombreTt.push(data[i].nombre);  
-        }
-        
-    }
-    //Bucle donde se compara la coicidencia de BOX para pintar correctamente dependiendo el estado del mismo
-    for (let i = 0; i < arrayBoxDom.length; i++) {
-        
-        if (arrayBoxDataTm[i] == arrayBoxDom[i] && arrayBoxDataTt[i] == arrayBoxDom[i]) {
-            if(arrayEstadoTt[i] === 'Ocupado' && arrayEstadoTm[i] === 'Ocupado'){
-                divBoxA[i].style.backgroundColor=ocupadoTlT;
-            }else if(arrayEstadoTt[i] === 'Ocupado' && arrayEstadoTm[i] != 'Ocupado'){
-                divBoxA[i].style.backgroundColor=ocupadoTt;
-            }else if(arrayEstadoTt[i] != 'Ocupado' && arrayEstadoTm[i] === 'Ocupado'){
-                divBoxA[i].style.backgroundColor=ocupadoTm;
-            }else if(arrayEstadoTt[i] === 'Disponible' && arrayEstadoTm[i] === 'Disponible'){
-                divBoxA[i].style.backgroundColor=disponible;
-            }else if(arrayEstadoTt[i] === 'Disponible sin PC' && arrayEstadoTm[i] === 'Disponible sin PC'){
-                    divBoxA[i].style.backgroundColor=DisponibleSinPC;
-            }else if (arrayEstadoTt[i] === 'Por Ordenanza' && arrayEstadoTm[i] === 'Por Ordenanza'){
-                    divBoxA[i].style.backgroundColor=porOrdenanza;                        
-                    }
-            
-        }else{
-            console.log("error en pintar DIV")
-        }
-    }            
-}
-
 //Funcion para mostrar Ocupacion del Call B
 const porcentajeCallB = (data)=>{
 
@@ -321,6 +222,104 @@ const porcentajeCallB = (data)=>{
     p5.innerHTML = ` TM: ${resDisTm}% - TT: ${resDisTt}% - Tot: ${resDis}%`
     p6.innerHTML = ` TM: ${resSutiTm}% - TT: ${resSutiTt}% - Tot: ${resSuti}%`  
     
+}
+
+
+//Funcion para poner titulo a los elemento para mostrar datos del Box posicionado Call A
+const tituloBoxCallA = (data)=>{
+    
+    const arrayBoxDom = [];
+    const arrayBoxDataTm = [];
+    const arrayBoxDataTt = [];
+    const nombreTm = [];
+    const ingresoTm = [];
+    const egresoTm = [];
+    const nombreTt = [];
+    const ingresoTt = [];
+    const egresoTt = [];
+
+    for (let i = 5; i < 255; i++) {        
+        arrayBoxDom.push(document.getElementById(`elementA${i}`).textContent)                
+    } 
+    
+    for (let i = 0; i < data.length; i++) {
+        if(data[i].jornada === 'TM'){
+            arrayBoxDataTm.push(data[i].box);
+            nombreTm.push(data[i].nombre);
+            ingresoTm.push(data[i].ingreso);
+            egresoTm.push(data[i].egreso);    
+        }else{
+            arrayBoxDataTt.push(data[i].box);
+            nombreTt.push(data[i].nombre);
+            ingresoTt.push(data[i].ingreso);
+            egresoTt.push(data[i].egreso);    
+        }   
+    }
+    //Buble para comparar conidencia de box y agregar los titulos a los elementos Call A
+    for (let  i= 0; i < arrayBoxDom.length ; i++){
+
+        if (arrayBoxDataTm[i] == arrayBoxDom[i] && arrayBoxDataTt[i] == arrayBoxDom[i]) {
+
+            divBoxA[i].setAttribute('title',`${arrayBoxDataTm[i]}
+            Turno M.: 
+            Agente: ${nombreTm[i]}
+            Ingreso: ${ingresoTm[i]}--Egreso:${egresoTm[i]}
+            Turno T.:
+            Agente: ${nombreTt[i]}
+            Ingreso: ${ingresoTt[i]} Egreso:${egresoTt[i]}`)
+            
+        }    
+    }
+}
+
+//Funcion para pintar la situacion de los BOX del Call A
+const estadoBoxCallA=(data)=>{
+    
+    const arrayBoxDom = [];
+    const arrayBoxDataTm = [];
+    const arrayBoxDataTt = [];
+    const arrayEstadoTm = [];
+    const arrayEstadoTt = [];
+    const arrayNombreTm = [];
+    const arrayNombreTt = [];
+
+    for (let i = 5; i < 255; i++) {        
+        arrayBoxDom.push(document.getElementById(`elementA${i}`).textContent)                
+    }    
+    for (let i = 0; i < data.length; i++) {
+        if(data[i].jornada === 'TM'){
+            arrayBoxDataTm.push(data[i].box);
+            arrayEstadoTm.push(data[i].estadoPc); 
+            arrayNombreTm.push(data[i].nombre);               
+        }else{
+            arrayBoxDataTt.push(data[i].box);
+            arrayEstadoTt.push(data[i].estadoPc)
+            arrayNombreTt.push(data[i].nombre);  
+        }
+        
+    }
+    //Bucle donde se compara la coicidencia de BOX para pintar correctamente dependiendo el estado del mismo
+    for (let i = 0; i < arrayBoxDom.length; i++) {
+        
+        if (arrayBoxDataTm[i] == arrayBoxDom[i] && arrayBoxDataTt[i] == arrayBoxDom[i]) {
+            if(arrayEstadoTt[i] === 'Ocupado' && arrayEstadoTm[i] === 'Ocupado'){
+                divBoxA[i].style.backgroundColor=ocupadoTlT;
+            }else if(arrayEstadoTt[i] === 'Ocupado' && arrayEstadoTm[i] != 'Ocupado'){
+                divBoxA[i].style.backgroundColor=ocupadoTt;
+            }else if(arrayEstadoTt[i] != 'Ocupado' && arrayEstadoTm[i] === 'Ocupado'){
+                divBoxA[i].style.backgroundColor=ocupadoTm;
+            }else if(arrayEstadoTt[i] === 'Disponible' && arrayEstadoTm[i] === 'Disponible'){
+                divBoxA[i].style.backgroundColor=disponible;
+            }else if(arrayEstadoTt[i] === 'Disponible sin PC' && arrayEstadoTm[i] === 'Disponible sin PC'){
+                    divBoxA[i].style.backgroundColor=DisponibleSinPC;
+            }else if (arrayEstadoTt[i] === 'Por Ordenanza' && arrayEstadoTm[i] === 'Por Ordenanza'){
+                    divBoxA[i].style.backgroundColor=porOrdenanza;                        
+                    }
+            
+        }else{
+            console.log("error en pintar DIV")
+        }
+    }            
 }
 
 //Funcion para mostrar Ocupacion del Call A

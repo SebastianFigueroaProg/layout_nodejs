@@ -79,7 +79,7 @@
     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"></nav> -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/passInv"><% if ( user ) { %>
+          <a class="navbar-brand" href="/pass"><% if ( user ) { %>
             <span ><%= user.name %></span>
             <% } %>
           </a>
@@ -103,16 +103,19 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" id="mapaChaco" aria-current="page" href="/chaco/chacoCallB-invitado.html">Mapa Chaco</a>
+                <a class="nav-link active" id="mapaChaco" aria-current="page" href="/chaco/chacoCallB-rol.html">Mapa Chaco</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" id="mapaChaco" aria-current="page" href="/cordoba/cordobaCall-invitado.html">Mapa Cordóba</a>
+                <a class="nav-link active" id="mapaChaco" aria-current="page" href="/cordoba/cordobaCall-rol.html">Mapa Cordóba</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" id="mapaChaco" aria-current="page" href="#">Mapa Cordóba SM</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" id="mapaChaco" aria-current="page" href="#">Mapa Rosario</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" id="mapaChaco" aria-current="page" href="/register">Registrar Usuario</a>
               </li>
               <li class="nav-item">                
                 <a href="logout" id="logout" class="btn btn-outline-info"><i class="fas fa-sign-out-alt"></i></a>
@@ -141,6 +144,7 @@
             <th scope="col">SITE</th>
             <th scope="col">SERVICIO</th>
             <th scope="col">MODALIDAD</th>
+            <th scope="col">ACCION</th>
         </thead>
         <tbody>
             
@@ -174,7 +178,7 @@
         const call = document.getElementById('call').value
         
         valor = call;
-        
+
       $(document).ready(function() {
         $('#user').DataTable({
           destroy:true,
@@ -195,11 +199,33 @@
             {data: "jefe"},
             {data: "sitio"},
             {data: "servicio"},
-            {data: "modalidadTT"}            
+            {data: "modalidadTT"},
+            {data: null,
+            "render":function(data){
+              if (valor == 'calla') {
+                return '<a href="/edita/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
+              }else if(valor == 'callb' ){
+                return '<a href="/edit/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
+              }else if(valor == 'callf' ){
+                return '<a href="/editf/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
+              }else if(valor == 'calll' ){
+                return '<a href="/editl/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
+              }else if(valor == 'callm' ){
+                return '<a href="/editm/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
+              }else if(valor == 'calln' ){
+                return '<a href="/editn/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
+              }else if(valor == 'callo' ){
+                return '<a href="/edito/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
+              }else if(valor == 'callp' ){
+                return '<a href="/editp/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
+              } 
+            }
+          }
+            
           ],
           pageLength: 10,
           lengthMenu:[[10,20,50,100,-1],[10,20,50,100,'Todos']],
-          
+
           //Dar lenguaje a Datatables
           "language": {
             "lengthMenu": "Mostrar _MENU_ registros",
@@ -227,7 +253,7 @@
               className: 'btn btn-success'
             }
                     
-          ],
+          ]
 
         });
       } );

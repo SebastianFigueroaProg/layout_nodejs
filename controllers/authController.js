@@ -66,11 +66,11 @@ exports.login = async (req,res)=>{
                         httpOnly: true
                     }
                     
-                    // console.log(results[0].statu)
-
-                    if (results[0].statu == 'SUPER_ADMIN' || results[0].statu == 'ADMIN') {
+                    if ( results[0].statu == 'SUPER_ADMIN' ) {
+                        rut = 'superUser'
+                    } else if( results[0].statu == 'ADMIN' ){
                         rut = ''
-                    } else {
+                    }else {
                         rut = 'invitado'
                     }
                     
@@ -113,6 +113,30 @@ exports.changePass =  async (req, res)=>{
             
         }else{
             res.redirect('/pass')
+        }
+        
+    }catch (error) {
+        console.log(error)               
+    }
+}
+
+exports.changePassInv =  async (req, res)=>{
+
+    try {
+        const user = req.body.user; 
+        const passnew = req.body.passnew;
+        const pass = req.body.pass;
+
+        if (pass === passnew) {
+            let passHash = await bcryptjs.hash(pass, 8)
+            
+            conexion.query('UPDATE user SET ? WHERE user = ? ',[{pass:passHash},user],(error,result)=>{
+                if (error) {console.log(error)}
+                res.redirect('/login')
+            })
+            
+        }else{
+            res.redirect('/passInv')
         }
         
     }catch (error) {

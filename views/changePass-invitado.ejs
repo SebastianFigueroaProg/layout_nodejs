@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+    body {  
+      /* display: flex; */
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color:rgba(255,255,255,0.95);
+    }
+    .usuario{
+        font-weight: bold;
+    }
+    .check{
+        margin-left: 15px;
+        margin-bottom: 15px;
+    }    
+    </style>
+    <title>Cambiar Contraseña</title>
+  </head>
+  <body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 shadow-lg p-3 mb-5">
+
+          <div class="card border-primary">
+              <div class="card-header bg-primary text-white">Cambiar Contrasena Usuario:
+                  <% if ( user ) { %>
+                <span class="usuario"> <%= user.name %></span>
+                <% } %>
+            </div>
+            <div class="card-body text-primary">
+                <% if ( user ) { %>                        
+            <form action="/passInv" method="POST">  
+                <input id="user" name="user" value="<%= user.user %>" hidden>    
+                <% } %>
+                <div class="mb-3"hidden>
+                    <label for="passold" class="form-label">Contraseña Nueva</label>
+                    <input id="passold" name="passnold" type="password" class="form-control" placeholder="Contraseña">
+                </div>
+                <div class="mb-3">
+                    <label for="passnew" class="form-label">Contraseña Nueva</label>
+                    <input id="passnew" name="passnew" type="password" class="form-control" placeholder="Contraseña">
+                </div>
+                <div class="mb-3">
+                    <label for="pass" class="form-label">Repetir Contraseña</label>
+                    <input id="pass" name="pass" type="password" class="form-control" placeholder="Contraseña">
+                </div>                            
+            </div>
+            <div class="check">
+                <input class="input" type="checkbox" onclick="myFuntion()"> Ver Password <br> 
+            </div>
+            <div class="card-footer bg-transparent border-primary">
+              <a href="/invitado" type="button" class="btn btn-secondary">Cancelar</a>
+              <button type="submit" class="btn btn-primary">Aceptar</button>
+            </div>
+            </form>
+            
+          </div>   
+    
+        </div>
+    </div>
+</div>
+
+ 
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        
+        function myFuntion(){
+            const x = document.getElementById("pass");
+            const y = document.getElementById("passnew")
+            if (x.type=="password" && y.type=="password") {
+                x.type = "text"
+                y.type = "text"
+            } else {
+                x.type = "password"
+                y.type = "password"
+            }
+            
+        }    
+    </script>
+ 
+
+  </body>
+</html>

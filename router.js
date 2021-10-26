@@ -17,6 +17,20 @@ router.get('/',authControllers.isAuthenticated,(req,res)=>{
 
     })    
 })
+// SUPER USER
+router.get('/superUser',authControllers.isAuthenticated,(req,res)=>{
+
+    conexion.query('SELECT * from agentes_callb', (error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            res.render('superUser',{result:result,user:req.user});
+        }
+
+    })    
+})
+
 //Data Call B
 router.get('/data/callb',(req,res)=>{
 
@@ -260,14 +274,18 @@ router.get('/login',(req, res)=>{
     res.render('login',{alert:false});
 })
 
-// registrar pagina oculta
-router.get('/register',(req, res)=>{
-    res.render('register');
+// registrar usuario
+router.get('/register',authControllers.isAuthenticated,(req, res)=>{
+    res.render('register',{user:req.user});
 })
 
-// Cambiar contraseña
+// Cambiar contraseña ADMIN
 router.get('/pass', authControllers.isAuthenticated,(req, res)=>{
     res.render('changePass', {user:req.user} );        
+})
+// Cambiar contraseña Invitado
+router.get('/passInv', authControllers.isAuthenticated,(req, res)=>{
+    res.render('changePass-invitado', {user:req.user} );        
 })
 
 // pagina invitado
@@ -299,6 +317,8 @@ router.post('/register',authControllers.register);
 
 //Ruta Cambiar Contraseña
 router.post('/pass',authControllers.changePass);
+//Ruta Cambiar Contraseña Invitado
+router.post('/passInv',authControllers.changePassInv);
 
 //Ruta login Usuario
 router.post('/login',authControllers.login);
