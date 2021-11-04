@@ -96,7 +96,8 @@
                       <option value="callm" selected>Call M S.1</option> 
                       <option value="calln" selected>Call N S.1</option> 
                       <option value="callo" selected>Call O S.1</option> 
-                      <option value="callp" selected>Call P S.1</option>                       
+                      <option value="callp" selected>Call P S.1</option>
+                      <option value="callsm" selected>Call SM S.1</option>                       
                   </select>
                   <button class="valorC">Buscar</button>
           </div>
@@ -109,11 +110,11 @@
                 <a class="nav-link active" id="mapaChaco" aria-current="page" href="/cordoba/cordobaCall-rol.html">Mapa Cordóba</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" id="mapaChaco" aria-current="page" href="#">Mapa Cordóba SM</a>
+                <a class="nav-link active" id="mapaChaco" aria-current="page" href="/SM-Cordoba/smCordoba-rol.html">Mapa Cordóba SM</a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link active" id="mapaChaco" aria-current="page" href="#">Mapa Rosario</a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a class="nav-link active" id="mapaChaco" aria-current="page" href="/register">Registrar Usuario</a>
               </li>
@@ -218,7 +219,9 @@
                 return '<a href="/edito/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
               }else if(valor == 'callp' ){
                 return '<a href="/editp/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
-              } 
+              }else if(valor == 'callsm' ){
+                return '<a href="/editsm/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
+              }   
             }
           }
             

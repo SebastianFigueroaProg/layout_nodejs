@@ -4,7 +4,7 @@ const conexion = require('./database/db');
 const crud = require('.//controllers/crud');
 const authControllers = require('./controllers/authController');
 
-//index
+//index ADMIN
 router.get('/',authControllers.isAuthenticated,(req,res)=>{
 
     conexion.query('SELECT * from agentes_callb', (error,result)=>{
@@ -30,11 +30,25 @@ router.get('/superUser',authControllers.isAuthenticated,(req,res)=>{
 
     })    
 })
-
-//Data Call B
-router.get('/data/callb',(req,res)=>{
+// pagina invitado
+router.get('/invitado',authControllers.isAuthenticated,(req,res)=>{
 
     conexion.query('SELECT * from agentes_callb', (error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            res.render('invitado',{result:result,user:req.user});
+        }
+
+    })    
+})
+
+
+//Data Call A
+router.get('/data/calla',(req,res)=>{
+
+    conexion.query('SELECT * from agentes_calla', (error,result)=>{
     
         if(error){
             throw error;
@@ -45,10 +59,10 @@ router.get('/data/callb',(req,res)=>{
 
     })    
 })
-//Data Call A
-router.get('/data/calla',(req,res)=>{
+//Data Call B
+router.get('/data/callb',(req,res)=>{
 
-    conexion.query('SELECT * from agentes_calla', (error,result)=>{
+    conexion.query('SELECT * from agentes_callb', (error,result)=>{
     
         if(error){
             throw error;
@@ -143,8 +157,22 @@ router.get('/data/callp',(req,res)=>{
 
     })    
 })
+//Data Call SM
+router.get('/data/callsm',(req,res)=>{
 
-//Usuarios Registrados
+    conexion.query('SELECT * from agentes_callsm', (error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            data = JSON.stringify(result);
+            res.send(data);
+        }
+
+    })    
+})
+
+//Usuarios Registrados 
 router.get('/user',(req,res)=>{
 
     conexion.query('SELECT * from user', (error,result)=>{
@@ -160,21 +188,6 @@ router.get('/user',(req,res)=>{
 })
 
 // //Editar Registros
-//Call B
-router.get('/edit/:boxId',authControllers.isAuthenticated,(req, res)=>{
-    const box = req.params.boxId;   
-        
-    conexion.query('SELECT * FROM agentes_callb WHERE boxId=?',[box],(error,result)=>{
-    
-        if(error){
-            throw error;
-        }else{
-            res.render('edit',{boxId:result[0],user:req.user});
-        }
-
-    })   
-
-})
 //Call A
 router.get('/edita/:boxId',authControllers.isAuthenticated,(req, res)=>{
     const box = req.params.boxId;   
@@ -185,6 +198,21 @@ router.get('/edita/:boxId',authControllers.isAuthenticated,(req, res)=>{
             throw error;
         }else{
             res.render('edita',{boxId:result[0],user:req.user});
+        }
+
+    })   
+
+})
+//Call B
+router.get('/edit/:boxId',authControllers.isAuthenticated,(req, res)=>{
+    const box = req.params.boxId;   
+        
+    conexion.query('SELECT * FROM agentes_callb WHERE boxId=?',[box],(error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            res.render('edit',{boxId:result[0],user:req.user});
         }
 
     })   
@@ -268,6 +296,19 @@ router.get('/editp/:boxId',authControllers.isAuthenticated,(req, res)=>{
         }
     })   
 })
+//Call SM
+router.get('/editsm/:boxId',authControllers.isAuthenticated,(req, res)=>{
+    const box = req.params.boxId;   
+        
+    conexion.query('SELECT * FROM agentes_callsm WHERE boxId=?',[box],(error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            res.render('editsm',{boxId:result[0],user:req.user});
+        }
+    })   
+})
 
 //Login
 router.get('/login',(req, res)=>{
@@ -288,19 +329,6 @@ router.get('/passInv', authControllers.isAuthenticated,(req, res)=>{
     res.render('changePass-invitado', {user:req.user} );        
 })
 
-// pagina invitado
-router.get('/invitado',authControllers.isAuthenticated,(req,res)=>{
-
-    conexion.query('SELECT * from agentes_callb', (error,result)=>{
-    
-        if(error){
-            throw error;
-        }else{
-            res.render('invitado',{result:result,user:req.user});
-        }
-
-    })    
-})
 
 //Ruta Edicion de datos
 router.post('/update', crud.update); // call-B 
@@ -311,6 +339,7 @@ router.post('/editarm', crud.editarM); // call-M
 router.post('/editarn', crud.editarN); // call-M
 router.post('/editarp', crud.editarP); // call-P
 router.post('/editaro', crud.editarO); // call-O
+router.post('/editarsm', crud.editarSm); // call-SM
 
 //Ruta de registro de usuario
 router.post('/register',authControllers.register);

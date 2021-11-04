@@ -1,0 +1,1109 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.vam{
+    position: absolute;
+    left: 120px;
+    width: 200px;
+    height: 150px;
+    margin-top: 55px;
+}
+#boton{
+    background-color: aqua;
+    color: rgb(17, 17, 17);
+    padding: 4px;
+    margin: 5px;
+    position: relative;
+}
+.h51{
+    font-weight: bold;
+    margin-left: 385px;
+}
+.cuadro{    
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    margin-top: 20px;
+    left: 380px;    
+}
+.pl1{
+    position: absolute;
+    left: 250px;
+    top: 0px;
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.pl2{
+    position: absolute;
+    left: 250px;
+    top: 32px;
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.pl3{
+    position: absolute;
+    left: 250px;
+    top: 70px;
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.h52{
+    font-weight: bold;
+    margin-left: 820px;
+    margin-top: -30px;
+}
+
+.descripcion{
+    background-color: rgb(168, 168, 168);
+    border: 2px #000 solid;
+    width: 400px;
+    height: 100px;
+    margin-left: 820px;
+    margin-top: 20px;    
+}
+.p1, .p2, .p3{
+    font-weight: bold;
+    color: #000;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+span{
+    color: rgb(15, 54, 226);
+}
+.p{
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    left: 40px;
+    bottom: 16px;    
+}
+.ref1{
+    outline: 2px solid #000;
+    left: 10px;
+    top: 0;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(187, 20, 20);
+
+}
+.ref2{
+    outline: 2px solid #000;
+    left: 10px;
+    bottom: 50px;    
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(19, 173, 27);
+}
+.ref3{
+    outline: 2px solid #000;
+    left: 10px;
+    bottom: 15px;    
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(21, 122, 168);
+}
+.ref4{
+    outline: 2px solid #000;
+    left: 220px;
+    top: 0;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(151, 76, 14);
+
+}
+.ref5{
+    outline: 2px solid #000;
+    left: 220px;
+    bottom: 50px;    
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(182, 166, 19);
+}
+.ref6{
+    outline: 2px solid #000;
+    left: 220px;
+    bottom: 15px;    
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(76, 77, 85);
+}
+main{
+    padding-top: 40PX;
+    padding-left: 120PX;
+    padding-right: 120PX;
+    display: flex;   
+    flex-direction: column;       
+    overflow: auto;
+}
+.conteiner{
+    background-color: rgb(224, 222, 222);
+    outline: 2px solid #000;
+    margin: 10px;
+    width: 98.5%;
+    height: 1300px; 
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: repeat(70, 1fr);
+    gap: 3px
+}
+.element{
+    font-size: 10px;
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;   
+    padding-top: 4px;    
+}
+.staff{
+    font-size: small;
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;    
+}
+.pJefes3{
+    margin-top: 11px;
+}
+.pJefes6{
+    margin-top: 11px;
+}
+.pJefes{
+    margin-top: 7px;
+}
+
+/* STAFF */
+.monitor{
+    background-color: rgb(248, 172, 86);
+    grid-column: 3/5;
+    grid-row: 24/25;
+}
+.puestoCap{
+    background-color: rgb(248, 172, 86);
+    grid-column: 5/9;
+    grid-row: 24/25;
+}
+.puestoCal{
+    background-color: rgb(248, 172, 86);
+    grid-column: 9/14;
+    grid-row: 24/25;
+}
+.pasillo{
+    background-color: rgb(224, 222, 222);
+    color: #000;
+    margin-top: 6px;
+    grid-column: 1/14;
+    grid-row: 22/24;
+}
+.lock{
+    background-color: rgb(199, 139, 11);
+    padding-top: 80px;
+    grid-column: 9/14;
+    grid-row: 12/22;
+}
+.oficinaRuy{
+    background-color: rgb(28, 110, 187);
+    padding-top: 80px;
+    grid-column: 9/14;
+    grid-row: 1/12;
+}
+.sala{
+    background-color: rgb(28, 110, 187);
+    padding-top: 110px;
+    grid-column: 1/4;
+    grid-row: 1/15;
+}
+.oficina1{
+    background-color: rgb(13, 87, 59);
+    font-size: 8px;
+    grid-column: 5/6;
+    grid-row: 10/12;
+}
+.oficina2{
+    background-color: rgb(13, 87, 59);
+    font-size: 8px;
+    grid-column: 5/6;
+    grid-row: 8/10;
+}
+.oficina3{
+    background-color: rgb(13, 87, 59);
+    font-size: 8px;
+    grid-column: 5/6;
+    grid-row: 6/8;
+}
+.oficina4{
+    background-color: rgb(13, 87, 59);
+    font-size: 8px;
+    grid-column: 5/6;
+    grid-row: 4/6;
+}
+.oficina7{
+    background-color: rgb(13, 87, 59);
+    font-size: 8px;
+    grid-column: 6/7;
+    grid-row: 10/12;
+}
+.oficina6{
+    background-color: rgb(13, 87, 59);
+    font-size: 8px;
+    grid-column: 6/7;
+    grid-row: 8/10;
+}
+.oficina5{
+    background-color: rgb(13, 87, 59);
+    font-size: 8px;
+    grid-column: 6/7;
+    grid-row: 6/8;
+}
+.oficina8{
+    background-color: rgb(13, 87, 59);
+    font-size: 8px;
+    grid-column: 6/7;
+    grid-row: 4/6;
+}
+.oficinaJefes{
+    background-color: rgb(238, 201, 245);
+    font-size: 20px;
+    padding-top: 35px;
+    padding-left: 40px;
+    color: #000;
+    grid-column: 1/9;
+    grid-row: 15/22;
+}
+.oficinaJefes1{
+    background-color: rgb(238, 201, 245);
+    grid-column: 4/5;
+    grid-row: 1/15;
+}
+.oficinaJefes2{
+    background-color: rgb(238, 201, 245);
+    grid-column: 5/7;
+    grid-row: 1/4;
+}
+.oficinaJefes3{
+    background-color: rgb(238, 201, 245);
+    grid-column: 7/9;
+    grid-row: 1/12;
+}
+.oficinaJefes4{
+    background-color: rgb(238, 201, 245);
+    grid-column: 5/9;
+    grid-row: 7/15;
+}
+
+
+
+
+
+
+/* Boxes SM */
+/* Filas 69/71 */
+.element134{
+    background-color: rgb(128, 16, 16);
+    grid-column: 13/14;
+    grid-row: 69/71;
+}
+.element133{
+    background-color: rgb(128, 16, 16);
+    grid-column: 12/13;
+    grid-row: 69/71;
+}
+.element132{
+    background-color: rgb(128, 16, 16);
+    grid-column: 11/12;
+    grid-row: 69/71;
+}
+.element131{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/11;
+    grid-row: 69/71;
+}
+.element130{
+    background-color: rgb(128, 16, 16);
+    grid-column: 9/10;
+    grid-row: 69/71;
+}
+.element129{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/9;
+    grid-row: 69/71;
+}
+.element128{
+    background-color: rgb(128, 16, 16);
+    grid-column: 7/8;
+    grid-row: 69/71;
+}
+.element127{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/7;
+    grid-row: 69/71;
+}
+.element126{
+    background-color: rgb(128, 16, 16);
+    grid-column: 5/6;
+    grid-row: 69/71;
+}
+.element125{
+    background-color: rgb(128, 16, 16);
+    grid-column: 4/5;
+    grid-row: 69/71;
+}
+/* Filas 65/67 */
+.element114{
+    background-color: rgb(128, 16, 16);
+    grid-column: 13/14;
+    grid-row: 65/67;
+}
+.element115{
+    background-color: rgb(128, 16, 16);
+    grid-column: 12/13;
+    grid-row: 65/67;
+}
+.element116{
+    background-color: rgb(128, 16, 16);
+    grid-column: 11/12;
+    grid-row: 65/67;
+}
+.element117{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/11;
+    grid-row: 65/67;
+}
+.element118{
+    background-color: rgb(128, 16, 16);
+    grid-column: 9/10;
+    grid-row: 65/67;
+}
+.element119{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/9;
+    grid-row: 65/67;
+}
+.element120{
+    background-color: rgb(128, 16, 16);
+    grid-column: 7/8;
+    grid-row: 65/67;
+}
+.element121{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/7;
+    grid-row: 65/67;
+}
+.element122{
+    background-color: rgb(128, 16, 16);
+    grid-column: 5/6;
+    grid-row: 65/67;
+}
+.element123{
+    background-color: rgb(128, 16, 16);
+    grid-column: 4/5;
+    grid-row: 65/67;
+}
+.element124{
+    background-color: rgb(128, 16, 16);
+    grid-column: 3/4;
+    grid-row: 65/67;
+}
+/* Filas 63/65 */
+.element113{
+    background-color: rgb(128, 16, 16);
+    grid-column: 13/14;
+    grid-row: 63/65;
+}
+.element112{
+    background-color: rgb(128, 16, 16);
+    grid-column: 12/13;
+    grid-row: 63/65;
+}
+.element111{
+    background-color: rgb(128, 16, 16);
+    grid-column: 11/12;
+    grid-row: 63/65;
+}
+.element110{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/11;
+    grid-row: 63/65;
+}
+.element109{
+    background-color: rgb(128, 16, 16);
+    grid-column: 9/10;
+    grid-row: 63/65;
+}
+.element108{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/9;
+    grid-row: 63/65;
+}
+.element107{
+    background-color: rgb(128, 16, 16);
+    grid-column: 7/8;
+    grid-row: 63/65;
+}
+.element106{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/7;
+    grid-row: 63/65;
+}
+.element105{
+    background-color: rgb(128, 16, 16);
+    grid-column: 5/6;
+    grid-row: 63/65;
+}
+.element104{
+    background-color: rgb(128, 16, 16);
+    grid-column: 4/5;
+    grid-row: 63/65;
+}
+.element103{
+    background-color: rgb(128, 16, 16);
+    grid-column: 3/4;
+    grid-row: 63/65;
+}
+/* Filas 59/61 */
+.col4{
+    background-color: rgb(126, 122, 122);
+    font-size: 15px;
+    padding-top: 25px;
+    grid-column: 13/14;
+    grid-row: 57/61;
+}
+.element94{
+    background-color: rgb(128, 16, 16);
+    grid-column: 12/13;
+    grid-row: 59/61;
+}
+.element95{
+    background-color: rgb(128, 16, 16);
+    grid-column: 11/12;
+    grid-row: 59/61;
+}
+.element96{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/11;
+    grid-row: 59/61;
+}
+.element97{
+    background-color: rgb(128, 16, 16);
+    grid-column: 9/10;
+    grid-row: 59/61;
+}
+.element98{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/9;
+    grid-row: 59/61;
+}
+.element99{
+    background-color: rgb(128, 16, 16);
+    grid-column: 7/8;
+    grid-row: 59/61;
+}
+.element100{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/7;
+    grid-row: 59/61;
+}
+.element101{
+    background-color: rgb(128, 16, 16);
+    grid-column: 5/6;
+    grid-row: 59/61;
+}
+.col5{
+    background-color: rgb(126, 122, 122);
+    font-size: 15px;
+    padding-top: 25px;
+    grid-column: 4/5;
+    grid-row: 57/61;
+}
+.element102{
+    background-color: rgb(128, 16, 16);
+    grid-column: 3/4;
+    grid-row: 59/61;
+}
+/* Filas 57/59 */
+.element93{
+    background-color: rgb(128, 16, 16);
+    grid-column: 12/13;
+    grid-row: 57/59;
+}
+.element92{
+    background-color: rgb(128, 16, 16);
+    grid-column: 11/12;
+    grid-row: 57/59;
+}
+.element91{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/11;
+    grid-row: 57/59;
+}
+.element90{
+    background-color: rgb(128, 16, 16);
+    grid-column: 9/10;
+    grid-row: 57/59;
+}
+.element89{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/9;
+    grid-row: 57/59;
+}
+.element88{
+    background-color: rgb(128, 16, 16);
+    grid-column: 7/8;
+    grid-row: 57/59;
+}
+.element87{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/7;
+    grid-row: 57/59;
+}
+.element86{
+    background-color: rgb(128, 16, 16);
+    grid-column: 5/6;
+    grid-row: 57/59;
+}
+.element85{
+    background-color: rgb(128, 16, 16);
+    grid-column: 3/4;
+    grid-row: 57/59;
+}
+/* Filas 53/55 */
+.element74{
+    background-color: rgb(128, 16, 16);
+    grid-column: 13/14;
+    grid-row: 53/55;
+}
+.element75{
+    background-color: rgb(128, 16, 16);
+    grid-column: 12/13;
+    grid-row: 53/55;
+}
+.element76{
+    background-color: rgb(128, 16, 16);
+    grid-column: 11/12;
+    grid-row: 53/55;
+}
+.element77{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/11;
+    grid-row: 53/55;
+}
+.element78{
+    background-color: rgb(128, 16, 16);
+    grid-column: 9/10;
+    grid-row: 53/55;
+}
+.element79{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/9;
+    grid-row: 53/55;
+}
+.element80{
+    background-color: rgb(128, 16, 16);
+    grid-column: 7/8;
+    grid-row: 53/55;
+}
+.element81{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/7;
+    grid-row: 53/55;
+}
+.element82{
+    background-color: rgb(128, 16, 16);
+    grid-column: 5/6;
+    grid-row: 53/55;
+}
+.element83{
+    background-color: rgb(128, 16, 16);
+    grid-column: 4/5;
+    grid-row: 53/55;
+}
+.element84{
+    background-color: rgb(128, 16, 16);
+    grid-column: 3/4;
+    grid-row: 53/55;
+}
+/* Filas 51/53 */
+.element73{
+    background-color: rgb(128, 16, 16);
+    grid-column: 13/14;
+    grid-row: 51/53;
+}
+.element72{
+    background-color: rgb(128, 16, 16);
+    grid-column: 12/13;
+    grid-row: 51/53;
+}
+.element71{
+    background-color: rgb(128, 16, 16);
+    grid-column: 11/12;
+    grid-row: 51/53;
+}
+.element70{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/11;
+    grid-row: 51/53;
+}
+.element69{
+    background-color: rgb(128, 16, 16);
+    grid-column: 9/10;
+    grid-row: 51/53;
+}
+.element68{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/9;
+    grid-row: 51/53;
+}
+.element67{
+    background-color: rgb(128, 16, 16);
+    grid-column: 7/8;
+    grid-row: 51/53;
+}
+.element66{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/7;
+    grid-row: 51/53;
+}
+.element65{
+    background-color: rgb(128, 16, 16);
+    grid-column: 5/6;
+    grid-row: 51/53;
+}
+.element64{
+    background-color: rgb(128, 16, 16);
+    grid-column: 4/5;
+    grid-row: 51/53;
+}
+.element63{
+    background-color: rgb(128, 16, 16);
+    grid-column: 3/4;
+    grid-row: 51/53;
+}
+/* Filas 47/49 */
+/* Lideres */
+.lid7{
+    background-color: rgb(114, 10, 134);
+    padding-top: 10px;
+    grid-column: 11/12;
+    grid-row: 47/49;
+}
+.lid8{
+    background-color: rgb(114, 10, 134);
+    padding-top: 10px;
+    grid-column: 10/11;
+    grid-row: 47/49;
+}
+.lid9{
+    background-color: rgb(114, 10, 134);
+    padding-top: 10px;
+    padding-top: 10px;
+    grid-column: 9/10;
+    grid-row: 47/49;
+}
+.lid10{
+    background-color: rgb(114, 10, 134);
+    padding-top: 10px;
+    grid-column: 8/9;
+    grid-row: 47/49;
+}
+.lid11{
+    background-color: rgb(114, 10, 134);
+    padding-top: 10px;
+    grid-column: 7/8;
+    grid-row: 47/49;
+}
+.lid12{
+    background-color: rgb(114, 10, 134);
+    padding-top: 10px;
+    grid-column: 6/7;
+    grid-row: 47/49;
+}
+.impres{
+    background-color: rgb(15, 153, 111);
+    font-size: 12px;
+    padding-top: 8px;
+    grid-column: 5/6;
+    grid-row: 47/49;
+}
+/* Filas 45/47 */
+.lid6{
+    background-color: rgb(114, 10, 134);
+    padding-top: 10px;
+    grid-column: 11/12;
+    grid-row: 45/47;
+}
+.lid5{
+    background-color: rgb(114, 10, 134);
+    padding-top: 10px;
+    grid-column: 10/11;
+    grid-row: 45/47;
+}
+.lid4{
+    background-color: rgb(114, 10, 134);
+    padding-top: 10px;
+    grid-column: 9/10;
+    grid-row: 45/47;
+}
+.lid3{
+    background-color: rgb(114, 10, 134);
+    padding-top: 10px;
+    grid-column: 8/9;
+    grid-row: 45/47;
+}
+.lid2{
+    background-color: rgb(114, 10, 134);
+    padding-top: 10px;
+    grid-column: 7/8;
+    grid-row: 45/47;
+}
+.lid1{
+    background-color: rgb(114, 10, 134);
+    padding-top: 10px;
+    grid-column: 6/7;
+    grid-row: 45/47;
+}
+.col3{
+    background-color: rgb(126, 122, 122);
+    padding-top: 8px;
+    font-size: 12px;
+    grid-column: 5/6;
+    grid-row: 45/47;
+}
+/* Filas 41/43 */
+.element52{
+    background-color: rgb(128, 16, 16);
+    grid-column: 13/14;
+    grid-row: 41/43;
+}
+.element53{
+    background-color: rgb(128, 16, 16);
+    grid-column: 12/13;
+    grid-row: 41/43;
+}
+.element54{
+    background-color: rgb(128, 16, 16);
+    grid-column: 11/12;
+    grid-row: 41/43;
+}
+.element55{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/11;
+    grid-row: 41/43;
+}
+.element56{
+    background-color: rgb(128, 16, 16);
+    grid-column: 9/10;
+    grid-row: 41/43;
+}
+.element57{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/9;
+    grid-row: 41/43;
+}
+.element58{
+    background-color: rgb(128, 16, 16);
+    grid-column: 7/8;
+    grid-row: 41/43;
+}
+.element59{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/7;
+    grid-row: 41/43;
+}
+.element60{
+    background-color: rgb(128, 16, 16);
+    grid-column: 5/6;
+    grid-row: 41/43;
+}
+.element61{
+    background-color: rgb(128, 16, 16);
+    grid-column: 4/5;
+    grid-row: 41/43;
+}
+.element62{
+    background-color: rgb(128, 16, 16);
+    grid-column: 3/4;
+    grid-row: 41/43;
+}
+/* Filas 39/41 */
+.element51{
+    background-color: rgb(128, 16, 16);
+    grid-column: 13/14;
+    grid-row: 39/41;
+}
+.element50{
+    background-color: rgb(128, 16, 16);
+    grid-column: 12/13;
+    grid-row: 39/41;
+}
+.element49{
+    background-color: rgb(128, 16, 16);
+    grid-column: 11/12;
+    grid-row: 39/41;
+}
+.element48{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/11;
+    grid-row: 39/41;
+}
+.element47{
+    background-color: rgb(128, 16, 16);
+    grid-column: 9/10;
+    grid-row: 39/41;
+}
+.element46{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/9;
+    grid-row: 39/41;
+}
+.element45{
+    background-color: rgb(128, 16, 16);
+    grid-column: 7/8;
+    grid-row: 39/41;
+}
+.element44{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/7;
+    grid-row: 39/41;
+}
+.element43{
+    background-color: rgb(128, 16, 16);
+    grid-column: 5/6;
+    grid-row: 39/41;
+}
+.element42{
+    background-color: rgb(128, 16, 16);
+    grid-column: 4/5;
+    grid-row: 39/41;
+}
+.element41{
+    background-color: rgb(128, 16, 16);
+    grid-column: 3/4;
+    grid-row: 39/41;
+}
+/* Filas 35/37 */
+.col1{
+    background-color: rgb(126, 122, 122);
+    font-size: 15px;
+    padding-top: 25px;
+    grid-column: 13/14;
+    grid-row: 33/37;
+}
+.element32{
+    background-color: rgb(128, 16, 16);
+    grid-column: 12/13;
+    grid-row: 35/37;
+}
+.element33{
+    background-color: rgb(128, 16, 16);
+    grid-column: 11/12;
+    grid-row: 35/37;
+}
+.element34{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/11;
+    grid-row: 35/37;
+}
+.element35{
+    background-color: rgb(128, 16, 16);
+    grid-column: 9/10;
+    grid-row: 35/37;
+}
+.element36{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/9;
+    grid-row: 35/37;
+}
+.element37{
+    background-color: rgb(128, 16, 16);
+    grid-column: 7/8;
+    grid-row: 35/37;
+}
+.element38{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/7;
+    grid-row: 35/37;
+}
+.element39{
+    background-color: rgb(128, 16, 16);
+    grid-column: 5/6;
+    grid-row: 35/37;
+}
+.col2{
+    background-color: rgb(126, 122, 122);
+    font-size: 15px;
+    padding-top: 25px;
+    grid-column: 4/5;
+    grid-row: 33/37;
+}
+.element40{
+    background-color: rgb(128, 16, 16);
+    grid-column: 3/4;
+    grid-row: 35/37;
+}
+/* Filas 33/35 */
+.element31{
+    background-color: rgb(128, 16, 16);
+    grid-column: 12/13;
+    grid-row: 33/35;
+}
+.element30{
+    background-color: rgb(128, 16, 16);
+    grid-column: 11/12;
+    grid-row: 33/35;
+}
+.element29{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/11;
+    grid-row: 33/35;
+}
+.element28{
+    background-color: rgb(128, 16, 16);
+    grid-column: 9/10;
+    grid-row: 33/35;
+}
+.element27{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/9;
+    grid-row: 33/35;
+}
+.element26{
+    background-color: rgb(128, 16, 16);
+    grid-column: 7/8;
+    grid-row: 33/35;
+}
+.element25{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/7;
+    grid-row: 33/35;
+}
+.element24{
+    background-color: rgb(128, 16, 16);
+    grid-column: 5/6;
+    grid-row: 33/35;
+}
+.element23{
+    background-color: rgb(128, 16, 16);
+    grid-column: 3/4;
+    grid-row: 33/35;
+}
+/* Filas 29/31 */
+.element12{
+    background-color: rgb(128, 16, 16);
+    grid-column: 13/14;
+    grid-row: 29/31;
+}
+.element13{
+    background-color: rgb(128, 16, 16);
+    grid-column: 12/13;
+    grid-row: 29/31;
+}
+.element14{
+    background-color: rgb(128, 16, 16);
+    grid-column: 11/12;
+    grid-row: 29/31;
+}
+.element15{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/11;
+    grid-row: 29/31;
+}
+.element16{
+    background-color: rgb(128, 16, 16);
+    grid-column: 9/10;
+    grid-row: 29/31;
+}
+.element17{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/9;
+    grid-row: 29/31;
+}
+.element18{
+    background-color: rgb(128, 16, 16);
+    grid-column: 7/8;
+    grid-row: 29/31;
+}
+.element19{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/7;
+    grid-row: 29/31;
+}
+.element20{
+    background-color: rgb(128, 16, 16);
+    grid-column: 5/6;
+    grid-row: 29/31;
+}
+.element21{
+    background-color: rgb(128, 16, 16);
+    grid-column: 4/5;
+    grid-row: 29/31;
+}
+.element22{
+    background-color: rgb(128, 16, 16);
+    grid-column: 3/4;
+    grid-row: 29/31;
+}
+/* Filas 27/29 */
+.element11{
+    background-color: rgb(128, 16, 16);
+    grid-column: 13/14;
+    grid-row: 27/29;
+}
+.element10{
+    background-color: rgb(128, 16, 16);
+    grid-column: 12/13;
+    grid-row: 27/29;
+}
+.element9{
+    background-color: rgb(128, 16, 16);
+    grid-column: 11/12;
+    grid-row: 27/29;
+}
+.element8{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/11;
+    grid-row: 27/29;
+}
+.element7{
+    background-color: rgb(128, 16, 16);
+    grid-column: 9/10;
+    grid-row: 27/29;
+}
+.element6{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/9;
+    grid-row: 27/29;
+}
+.element5{
+    background-color: rgb(128, 16, 16);
+    grid-column: 7/8;
+    grid-row: 27/29;
+}
+.element4{
+    background-color: rgb(128, 16, 16);
+    grid-column: 6/7;
+    grid-row: 27/29;
+}
+.element3{
+    background-color: rgb(128, 16, 16);
+    grid-column: 5/6;
+    grid-row: 27/29;
+}
+.element2{
+    background-color: rgb(128, 16, 16);
+    grid-column: 4/5;
+    grid-row: 27/29;
+}
+.element1{
+    background-color: rgb(128, 16, 16);
+    grid-column: 3/4;
+    grid-row: 27/29;
+}
