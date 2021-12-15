@@ -171,6 +171,41 @@ router.get('/data/callsm',(req,res)=>{
 
     })    
 })
+//Data Rosario Call A
+router.get('/data/callr',(req,res)=>{
+
+    conexion.query('SELECT * from agentes_roscalla',(error, result)=>{
+
+        if(error){
+            throw error;
+        }else{
+            data= JSON.stringify(result);
+            res.send(data);
+        }
+    })
+})
+//Data Rosario Call B
+router.get('/data/callt',(req,res)=>{
+    conexion.query('SELECT * from agentes_roscallb',(error, result)=>{
+        if (error) {
+            throw error;
+        } else {
+            data = JSON.stringify(result);
+            res.send(data);
+        }
+    })
+})
+//Data Rosario Call C
+router.get('/data/callu',(req,res)=>{
+    conexion.query('SELECT * from agentes_roscallc',(error,result)=>{
+        if (error) {
+            throw error;
+        } else {
+            data = JSON.stringify(result);
+            res.send(data);            
+        }
+    })
+})
 
 //Usuarios Registrados 
 router.get('/user',(req,res)=>{
@@ -309,6 +344,45 @@ router.get('/editsm/:boxId',authControllers.isAuthenticated,(req, res)=>{
         }
     })   
 })
+//Call A rosario
+router.get('/editR/:boxId',authControllers.isAuthenticated,(req, res)=>{
+    const box = req.params.boxId;   
+        
+    conexion.query('SELECT * FROM agentes_roscalla WHERE boxId=?',[box],(error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            res.render('editR',{boxId:result[0],user:req.user});
+        }
+    })   
+})
+//Call B rosario
+router.get('/editT/:boxId',authControllers.isAuthenticated,(req, res)=>{
+    const box = req.params.boxId;   
+        
+    conexion.query('SELECT * FROM agentes_roscallb WHERE boxId=?',[box],(error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            res.render('editT',{boxId:result[0],user:req.user});
+        }
+    })   
+})
+//Call C rosario
+router.get('/editU/:boxId',authControllers.isAuthenticated,(req, res)=>{
+    const box = req.params.boxId;   
+        
+    conexion.query('SELECT * FROM agentes_roscallc WHERE boxId=?',[box],(error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            res.render('editU',{boxId:result[0],user:req.user});
+        }
+    })   
+})
 
 //Login
 router.get('/login',(req, res)=>{
@@ -340,6 +414,9 @@ router.post('/editarn', crud.editarN); // call-M
 router.post('/editarp', crud.editarP); // call-P
 router.post('/editaro', crud.editarO); // call-O
 router.post('/editarsm', crud.editarSm); // call-SM
+router.post('/editAros', crud.editAros); // call-A-Rosario
+router.post('/editBros', crud.editBros); // call-B-Rosario
+router.post('/editCros', crud.editCros); // call-C-Rosario
 
 //Ruta de registro de usuario
 router.post('/register',authControllers.register);

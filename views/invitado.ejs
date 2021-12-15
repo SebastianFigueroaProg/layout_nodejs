@@ -72,7 +72,7 @@
           background-color: #ccc5c5;
           border-radius: 7px;
           margin-right: 5px;
-        }             
+        }          
     </style>
   </head>
   <body>
@@ -87,10 +87,13 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="callP">
-          <label for="callT" class="callT">CALL</label>
+            <label for="callT" class="callT">Call</label>
                   <select name="call" id="call" class="call" aria-label="Default select example">                      
                       <option value="calla" selected>Call A S.8</option>
                       <option value="callb" selected>Call B S.8</option>
+                      <option value="callr" selected>Call A S.14</option>
+                      <option value="callt" selected>Call B S.14</option>
+                      <option value="callu" selected>Call C S.14</option>
                       <option value="callf" selected>Call F S.1</option> 
                       <option value="calll" selected>Call L S.1</option> 
                       <option value="callm" selected>Call M S.1</option> 
@@ -112,9 +115,9 @@
               <li class="nav-item">
                 <a class="nav-link active" id="mapaChaco" aria-current="page" href="/SM-Cordoba/smCordoba-invitado.html">Mapa Cordóba SM</a>
               </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link active" id="mapaChaco" aria-current="page" href="#">Mapa Rosario</a>
-              </li> -->
+              <li class="nav-item">
+                <a class="nav-link active" id="mapaChaco" aria-current="page" href="/rosario/rosario-invitado.html">Mapa Rosario</a>
+              </li>
               <li class="nav-item">                
                 <a href="logout" id="logout" class="btn btn-outline-info"><i class="fas fa-sign-out-alt"></i></a>
               </li>              
@@ -169,6 +172,9 @@
 
       const boton = document.querySelector('.valorC');
       let valor = "callb";
+
+      const botonRos = document.querySelector('.valorRos');
+      let valorRos = "rosa";
       
       boton.onclick = ()=>{
         
@@ -233,7 +239,6 @@
         });
       } );
     }
-
 
     </script>
     

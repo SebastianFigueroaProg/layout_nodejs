@@ -54,7 +54,6 @@
               <li class="nav-item">
                 <a id="volver" class="nav-link active" aria-current="page" href="/">Volver</a>
               </li>              
-            </ul>
           </div>
         </div>
       </nav>
@@ -68,10 +67,9 @@
           <div class="card border-secondary">
               <div class="card-header">Editar Registro</div>
               <div class="card-body">
-                  <form action="/editarf" method="POST" name="formulario" id="formulario">
+                  <form action="/editBros" method="POST">
                     <input id="boxId" name="boxId" value="<%= boxId.boxId %>" hidden>
-                
-                
+                                
                 <div class="mb-3">
                   <label for="user" class="form-label">ESTADO PC</label>
                   <select name="estadoPc" id="estadoPc" class="form-select" aria-label="Default select example">                      
@@ -82,7 +80,7 @@
                   </select>
               </div>
               <div class="mb-3">
-                <label for="boxId" class="form-label">Oblea Pc</label>
+                <label for="boxId" class="form-label">Oble Pc</label>
                 <input type="text" class="form-control" id="obleaPc" name="obleaPc" value="<%= boxId.obleaPc %>" tabindex="1">
             </div>
                 <div class="mb-3">
@@ -120,9 +118,10 @@
   <div class="user-edit">
     <% if ( user ) { %>
       <input type="text" class="form-control" id="editor" name="editor" value="<%= user.name %>" tabindex="1" hidden>
-      <% } %> 
+      <% } %>
+    </a>
   </div>
-
+ 
                 <button type="submit" class="btn btn-primary" tabindex="5">Guardar</button>
                 <a href="/" class="btn btn-secondary">Cancelar</a>
             </form>
@@ -133,8 +132,11 @@
 
 
 
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-    
+
     
   </body>
 </html>

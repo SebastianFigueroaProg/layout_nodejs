@@ -14,7 +14,7 @@ const conexion = require('../database/db');
 //     })
 // }
 
-// Editar Call B
+// Editar Call B Modificado
 exports.update = (req, res)=>{
     let fecha = new Date();
     const id          = req.body.id;
@@ -29,7 +29,6 @@ exports.update = (req, res)=>{
     const egreso      = req.body.egreso;
     const lider       = req.body.lider;
     const jefe        = req.body.jefe;
-    const sitio       = req.body.sitio;
     const servicio    = req.body.servicio;
     const modalidadTT = req.body.modalidadTT;
     const editor      = req.body.editor;
@@ -37,7 +36,7 @@ exports.update = (req, res)=>{
     
 
     conexion.query('UPDATE agentes_callb SET ? WHERE boxId = ?', [{estadoPc:estadoPc, obleaPC:obleaPc,DNI:dni,nombre:nombre,ingreso:ingreso,egreso:egreso,lider:lider,
-    jefe:jefe, sitio:sitio,servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
+    jefe:jefe, servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
 
         if(error){
             console.log(error);
@@ -48,7 +47,7 @@ exports.update = (req, res)=>{
     })
 
 }
-// Editar Call A
+// Editar Call A Modificado
 exports.editar = (req, res)=>{
     let fecha = new Date();
     const id          = req.body.id;
@@ -63,7 +62,6 @@ exports.editar = (req, res)=>{
     const egreso      = req.body.egreso;
     const lider       = req.body.lider;
     const jefe        = req.body.jefe;
-    const sitio       = req.body.sitio;
     const servicio    = req.body.servicio;
     const modalidadTT = req.body.modalidadTT;
     const editor      = req.body.editor;
@@ -71,7 +69,7 @@ exports.editar = (req, res)=>{
     
 
     conexion.query('UPDATE agentes_calla SET ? WHERE boxId = ?', [{estadoPc:estadoPc, obleaPC:obleaPc,DNI:dni,nombre:nombre,ingreso:ingreso,egreso:egreso,lider:lider,
-    jefe:jefe, sitio:sitio,servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
+    jefe:jefe, servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
 
         if(error){
             console.log(error);
@@ -80,7 +78,7 @@ exports.editar = (req, res)=>{
         }        
     })
 }
-// Editar Call F
+// Editar Call F Modificado
 exports.editarF = (req, res)=>{
     let fecha = new Date();
     const id          = req.body.id;
@@ -95,7 +93,6 @@ exports.editarF = (req, res)=>{
     const egreso      = req.body.egreso;
     const lider       = req.body.lider;
     const jefe        = req.body.jefe;
-    const sitio       = req.body.sitio;
     const servicio    = req.body.servicio;
     const modalidadTT = req.body.modalidadTT;
     const editor      = req.body.editor;
@@ -103,7 +100,7 @@ exports.editarF = (req, res)=>{
     
 
     conexion.query('UPDATE agentes_callf SET ? WHERE boxId = ?', [{estadoPc:estadoPc, obleaPC:obleaPc,DNI:dni,nombre:nombre,ingreso:ingreso,egreso:egreso,lider:lider,
-    jefe:jefe, sitio:sitio,servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
+    jefe:jefe,servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
 
         if(error){
             console.log(error);
@@ -112,7 +109,7 @@ exports.editarF = (req, res)=>{
         }        
     })
 }
-// Editar Call L
+// Editar Call L Modificado
 exports.editarL = (req, res)=>{
     let fecha = new Date();
     const id          = req.body.id;
@@ -127,7 +124,6 @@ exports.editarL = (req, res)=>{
     const egreso      = req.body.egreso;
     const lider       = req.body.lider;
     const jefe        = req.body.jefe;
-    const sitio       = req.body.sitio;
     const servicio    = req.body.servicio;
     const modalidadTT = req.body.modalidadTT;
     const editor      = req.body.editor;
@@ -135,7 +131,7 @@ exports.editarL = (req, res)=>{
     
 
     conexion.query('UPDATE agentes_calll SET ? WHERE boxId = ?', [{estadoPc:estadoPc, obleaPC:obleaPc,DNI:dni,nombre:nombre,ingreso:ingreso,egreso:egreso,lider:lider,
-    jefe:jefe, sitio:sitio,servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
+    jefe:jefe, servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
 
         if(error){
             console.log(error);
@@ -144,7 +140,7 @@ exports.editarL = (req, res)=>{
         }        
     })
 }
-// Editar Call M
+// Editar Call M Modificado
 exports.editarM = (req, res)=>{
     let fecha = new Date();
     const id          = req.body.id;
@@ -159,7 +155,6 @@ exports.editarM = (req, res)=>{
     const egreso      = req.body.egreso;
     const lider       = req.body.lider;
     const jefe        = req.body.jefe;
-    const sitio       = req.body.sitio;
     const servicio    = req.body.servicio;
     const modalidadTT = req.body.modalidadTT;
     const editor      = req.body.editor;
@@ -167,7 +162,7 @@ exports.editarM = (req, res)=>{
     
 
     conexion.query('UPDATE agentes_callm SET ? WHERE boxId = ?', [{estadoPc:estadoPc, obleaPC:obleaPc,DNI:dni,nombre:nombre,ingreso:ingreso,egreso:egreso,lider:lider,
-    jefe:jefe, sitio:sitio,servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
+    jefe:jefe, servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
 
         if(error){
             console.log(error);
@@ -176,7 +171,7 @@ exports.editarM = (req, res)=>{
         }        
     })
 }
-// Editar Call N
+// Editar Call N Modificado
 exports.editarN = (req, res)=>{
     let fecha = new Date();
     const id          = req.body.id;
@@ -191,7 +186,6 @@ exports.editarN = (req, res)=>{
     const egreso      = req.body.egreso;
     const lider       = req.body.lider;
     const jefe        = req.body.jefe;
-    const sitio       = req.body.sitio;
     const servicio    = req.body.servicio;
     const modalidadTT = req.body.modalidadTT;
     const editor      = req.body.editor;
@@ -199,7 +193,7 @@ exports.editarN = (req, res)=>{
     
 
     conexion.query('UPDATE agentes_calln SET ? WHERE boxId = ?', [{estadoPc:estadoPc, obleaPC:obleaPc,DNI:dni,nombre:nombre,ingreso:ingreso,egreso:egreso,lider:lider,
-    jefe:jefe, sitio:sitio,servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
+    jefe:jefe, servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
 
         if(error){
             console.log(error);
@@ -208,7 +202,7 @@ exports.editarN = (req, res)=>{
         }        
     })
 }
-// Editar Call O
+// Editar Call O Modificado
 exports.editarO = (req, res)=>{
     let fecha = new Date();
     const id          = req.body.id;
@@ -223,7 +217,6 @@ exports.editarO = (req, res)=>{
     const egreso      = req.body.egreso;
     const lider       = req.body.lider;
     const jefe        = req.body.jefe;
-    const sitio       = req.body.sitio;
     const servicio    = req.body.servicio;
     const modalidadTT = req.body.modalidadTT;
     const editor      = req.body.editor;
@@ -231,7 +224,7 @@ exports.editarO = (req, res)=>{
     
 
     conexion.query('UPDATE agentes_callo SET ? WHERE boxId = ?', [{estadoPc:estadoPc, obleaPC:obleaPc,DNI:dni,nombre:nombre,ingreso:ingreso,egreso:egreso,lider:lider,
-    jefe:jefe, sitio:sitio,servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
+    jefe:jefe, servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
 
         if(error){
             console.log(error);
@@ -240,7 +233,7 @@ exports.editarO = (req, res)=>{
         }        
     })
 }
-// Editar Call P
+// Editar Call P Modificado
 exports.editarP = (req, res)=>{
     let fecha = new Date();
     const id          = req.body.id;
@@ -255,7 +248,6 @@ exports.editarP = (req, res)=>{
     const egreso      = req.body.egreso;
     const lider       = req.body.lider;
     const jefe        = req.body.jefe;
-    const sitio       = req.body.sitio;
     const servicio    = req.body.servicio;
     const modalidadTT = req.body.modalidadTT;
     const editor      = req.body.editor;
@@ -263,7 +255,7 @@ exports.editarP = (req, res)=>{
     
 
     conexion.query('UPDATE agentes_callp SET ? WHERE boxId = ?', [{estadoPc:estadoPc, obleaPC:obleaPc,DNI:dni,nombre:nombre,ingreso:ingreso,egreso:egreso,lider:lider,
-    jefe:jefe, sitio:sitio,servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
+    jefe:jefe, servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
 
         if(error){
             console.log(error);
@@ -272,7 +264,7 @@ exports.editarP = (req, res)=>{
         }        
     })
 }
-// Editar Call SM
+// Editar Call SM Modificado
 exports.editarSm = (req, res)=>{
     let fecha = new Date();
     const id          = req.body.id;
@@ -287,7 +279,6 @@ exports.editarSm = (req, res)=>{
     const egreso      = req.body.egreso;
     const lider       = req.body.lider;
     const jefe        = req.body.jefe;
-    const sitio       = req.body.sitio;
     const servicio    = req.body.servicio;
     const modalidadTT = req.body.modalidadTT;
     const editor      = req.body.editor;
@@ -295,7 +286,101 @@ exports.editarSm = (req, res)=>{
     
 
     conexion.query('UPDATE agentes_callsm SET ? WHERE boxId = ?', [{estadoPc:estadoPc, obleaPC:obleaPc,DNI:dni,nombre:nombre,ingreso:ingreso,egreso:egreso,lider:lider,
-    jefe:jefe, sitio:sitio,servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
+    jefe:jefe, servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
+
+        if(error){
+            console.log(error);
+        }else{
+            res.redirect('/');
+        }        
+    })
+}
+//Editar Call A Rosario
+exports.editAros = (req, res)=>{
+    let fecha = new Date();
+    const id          = req.body.id;
+    const boxId       = req.body.boxId
+    const box         = req.body.box;
+    const jornada     = req.body.jornada;
+    const estadoPc    = req.body.estadoPc;
+    const obleaPc     = req.body.obleaPc;
+    const dni         = req.body.DNI;
+    const nombre      = req.body.nombre;
+    const ingreso     = req.body.ingreso;
+    const egreso      = req.body.egreso;
+    const lider       = req.body.lider;
+    const jefe        = req.body.jefe;
+    const servicio    = req.body.servicio;
+    const modalidadTT = req.body.modalidadTT;
+    const editor      = req.body.editor;
+    const fechaEdicion= `${fecha.getDate()}/${fecha.getMonth()+1}/${fecha.getFullYear()} -- ${fecha.getHours()}:${fecha.getMinutes()}`
+    
+
+    conexion.query('UPDATE agentes_roscalla SET ? WHERE boxId = ?', [{estadoPc:estadoPc, obleaPC:obleaPc,DNI:dni,nombre:nombre,ingreso:ingreso,egreso:egreso,lider:lider,
+    jefe:jefe, servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
+
+        if(error){
+            console.log(error);
+        }else{
+            res.redirect('/');
+        }        
+    })
+}
+//Editar Call B Rosario
+exports.editBros = (req, res)=>{
+    let fecha = new Date();
+    const id          = req.body.id;
+    const boxId       = req.body.boxId
+    const box         = req.body.box;
+    const jornada     = req.body.jornada;
+    const estadoPc    = req.body.estadoPc;
+    const obleaPc     = req.body.obleaPc;
+    const dni         = req.body.DNI;
+    const nombre      = req.body.nombre;
+    const ingreso     = req.body.ingreso;
+    const egreso      = req.body.egreso;
+    const lider       = req.body.lider;
+    const jefe        = req.body.jefe;
+    const servicio    = req.body.servicio;
+    const modalidadTT = req.body.modalidadTT;
+    const editor      = req.body.editor;
+    const fechaEdicion= `${fecha.getDate()}/${fecha.getMonth()+1}/${fecha.getFullYear()} -- ${fecha.getHours()}:${fecha.getMinutes()}`
+    
+
+    conexion.query('UPDATE agentes_roscallb SET ? WHERE boxId = ?', [{estadoPc:estadoPc, obleaPC:obleaPc,DNI:dni,nombre:nombre,ingreso:ingreso,egreso:egreso,lider:lider,
+    jefe:jefe, servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
+
+        if(error){
+            console.log(error);
+        }else{
+            res.redirect('/');
+        }        
+    })
+}
+
+//Editar Call C Rosario
+exports.editCros = (req, res)=>{
+    let fecha = new Date();
+    const id          = req.body.id;
+    const boxId       = req.body.boxId
+    const box         = req.body.box;
+    const jornada     = req.body.jornada;
+    const estadoPc    = req.body.estadoPc;
+    const obleaPc     = req.body.obleaPc;
+    const dni         = req.body.DNI;
+    const nombre      = req.body.nombre;
+    const ingreso     = req.body.ingreso;
+    const egreso      = req.body.egreso;
+    const lider       = req.body.lider;
+    const jefe        = req.body.jefe;
+    const servicio    = req.body.servicio;
+    const modalidadTT = req.body.modalidadTT;
+    const editor      = req.body.editor;
+    const fechaEdicion= `${fecha.getDate()}/${fecha.getMonth()+1}/${fecha.getFullYear()} -- ${fecha.getHours()}:${fecha.getMinutes()}`
+    
+
+    conexion.query('UPDATE agentes_roscallc SET ? WHERE boxId = ?', [{estadoPc:estadoPc, obleaPC:obleaPc,DNI:dni,nombre:nombre,ingreso:ingreso,egreso:egreso,lider:lider,
+    jefe:jefe, servicio:servicio,modalidadTT:modalidadTT,editor:editor,fechaEdicion},boxId],(error, results)=>{
 
         if(error){
             console.log(error);

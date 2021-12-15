@@ -1,13 +1,22 @@
-//Elemento DOM div
-const divBox =[];
+const divCallA = [];
+const arrayDomBoxA = [];
+const divCallB = [];
+const arrayDomBoxB = [];
+//Arrays Call A
+for (let i = 5; i < 255; i++) {    
+    divCallA.push(document.querySelector(`.elementA${i}`))    
+}
+for (let i = 5; i < 255; i++) {    
+    arrayDomBoxA.push(document.querySelector(`.elementA${i}`).textContent);       
+}
+//Arrays Call B
 for (let i = 5; i < 253; i++) {    
-    divBox.push(document.querySelector(`.element${i}`))    
+    divCallB.push(document.querySelector(`.element${i}`));
 }
-const divBoxA = [];
-for (let i = 5; i < 255; i++) {
-    divBoxA.push(document.querySelector(`.elementA${i}`))    
+for (let i = 5; i < 253; i++) {    
+    arrayDomBoxB.push(document.querySelector(`.element${i}`).textContent);       
 }
-
+console.log(arrayDomBoxB)
 //Colores box
 const rojo = [187, 20, 20];
 const verde = [19, 173, 27];
@@ -15,11 +24,19 @@ const celeste = [21, 122, 168];
 const marron = [151, 76, 14];
 const mostaza = [182, 166, 19];
 const gris = [76, 77, 85];
+const lila = [105,21,214];
+const naranja = [206, 136, 57];
+const rosa = [200, 53, 219];
+const cian = [42, 204, 204]; 
 const ocupadoTlT = `rgb(${rojo})`;
+const ocupadoTmt = `rgb(${naranja})`;  
+const ocupadoTmn = `rgb(${rosa})`;  
+const ocupadoTtn = `rgb(${cian})`; 
 const disponible = `rgb(${verde})`;
 const DisponibleSinPC = `rgb(${celeste})`;
 const ocupadoTm = `rgb(${marron})`;
 const ocupadoTt = `rgb(${mostaza})`;
+const ocupadoTn = `rgb(${lila})`;
 const porOrdenanza = `rgb(${gris})`;
 
 // Peticiones hacia el Backend Call B
@@ -40,104 +57,122 @@ fetch('/data/calla')
     
     estadoBoxCallA(resultado);
     tituloBoxCallA(resultado);
-    porcentajeCallA(resultado)
+    porcentajeCallA(resultado);
     
 })
 
 //Funcion para poner titulo a los elemento para mostrar datos del Box posicionado Call B
 const tituloBoxCallB = (data)=>{
     
-    const arrayBoxDom = [];
     const arrayBoxDataTm = [];
     const arrayBoxDataTt = [];
+    const arrayBoxDataTn = [];
     const nombreTm = [];
     const ingresoTm = [];
     const egresoTm = [];
     const nombreTt = [];
     const ingresoTt = [];
     const egresoTt = [];
+    const nombreTn = [];
+    const ingresoTn = [];
+    const egresoTn = [];
 
-    for (let i = 5; i < 253; i++) {        
-        arrayBoxDom.push(document.getElementById(`element${i}`).textContent)                
-    } 
     
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0; i < 743; i++) {
         if(data[i].jornada === 'TM'){
             arrayBoxDataTm.push(data[i].box);
             nombreTm.push(data[i].nombre);
             ingresoTm.push(data[i].ingreso);
             egresoTm.push(data[i].egreso);    
-        }else{
+        }else if(data[i].jornada === 'TT'){
             arrayBoxDataTt.push(data[i].box);
             nombreTt.push(data[i].nombre);
             ingresoTt.push(data[i].ingreso);
             egresoTt.push(data[i].egreso);    
-        }   
+        }else{
+            arrayBoxDataTn.push(data[i].box);
+            nombreTn.push(data[i].nombre);
+            ingresoTn.push(data[i].ingreso);
+            egresoTn.push(data[i].egreso);    
+        }     
     }
-    //Buble para comparar conidencia de box y agregar los titulos a los elementos
-    for (let  i= 0; i < arrayBoxDom.length ; i++){
+    // console.log(arrayDomBoxB)
+    console.log(arrayBoxDataTt)
+    console.log(arrayBoxDataTn)
+    
+    //Buble para comparar conidencia de box y agregar los titulos a los elementos Call A
+    for (let  i= 0; i < arrayDomBoxB.length ; i++){
+        
 
-        if (arrayBoxDataTm[i] == arrayBoxDom[i] && arrayBoxDataTt[i] == arrayBoxDom[i]) {
+        if (arrayBoxDataTm[i] == arrayDomBoxB[i] && arrayBoxDataTt[i] == arrayDomBoxB[i] && arrayBoxDataTn[i] == arrayDomBoxB[i]) {
 
-            divBox[i].setAttribute('title',`${arrayBoxDataTm[i]}
+            divCallB[i].setAttribute('title',`${arrayBoxDataTm[i]}
             Turno M.: 
             Agente: ${nombreTm[i]}
             Ingreso: ${ingresoTm[i]}--Egreso:${egresoTm[i]}
             Turno T.:
             Agente: ${nombreTt[i]}
-            Ingreso: ${ingresoTt[i]} Egreso:${egresoTt[i]}`)
+            Ingreso: ${ingresoTt[i]} Egreso:${egresoTt[i]}
+            Turno N.:
+            Agente: ${nombreTn[i]}
+            Ingreso: ${ingresoTn[i]} Egreso:${egresoTn[i]}`)
             
         }    
     }
 }
 //Funcion para pintar la situacion de los BOX del Call B
-const estadoBoxCallB=(data)=>{
-    
-    const arrayBoxDom = [];
+const estadoBoxCallB = (data)=>{
+
     const arrayBoxDataTm = [];
     const arrayBoxDataTt = [];
+    const arrayBoxDataTn = [];
     const arrayEstadoTm = [];
     const arrayEstadoTt = [];
-    const arrayNombreTm = [];
-    const arrayNombreTt = [];
+    const arrayEstadoTn = [];
 
-    for (let i = 5; i < 253; i++) {        
-        arrayBoxDom.push(document.getElementById(`element${i}`).textContent)                
-    }    
     for (let i = 0; i < data.length; i++) {
         if(data[i].jornada === 'TM'){
             arrayBoxDataTm.push(data[i].box);
-            arrayEstadoTm.push(data[i].estadoPc); 
-            arrayNombreTm.push(data[i].nombre);               
-        }else{
+            arrayEstadoTm.push(data[i].estadoPc);              
+        }else if(data[i].jornada === 'TT'){
             arrayBoxDataTt.push(data[i].box);
             arrayEstadoTt.push(data[i].estadoPc)
-            arrayNombreTt.push(data[i].nombre);  
+        }else{
+            arrayBoxDataTn.push(data[i].box);
+            arrayEstadoTn.push(data[i].estadoPc)
         }
         
     }
     //Bucle donde se compara la coicidencia de BOX para pintar correctamente dependiendo el estado del mismo
-    for (let i = 0; i < arrayBoxDom.length; i++) {
+    for (let i = 0; i < arrayDomBoxB.length; i++) {
         
-        if (arrayBoxDataTm[i] == arrayBoxDom[i] && arrayBoxDataTt[i] == arrayBoxDom[i]) {
-            if(arrayEstadoTt[i] === 'Ocupado' && arrayEstadoTm[i] === 'Ocupado'){
-                divBox[i].style.backgroundColor=ocupadoTlT;
-            }else if(arrayEstadoTt[i] === 'Ocupado' && arrayEstadoTm[i] != 'Ocupado'){
-                divBox[i].style.backgroundColor=ocupadoTt;
-            }else if(arrayEstadoTt[i] != 'Ocupado' && arrayEstadoTm[i] === 'Ocupado'){
-                divBox[i].style.backgroundColor=ocupadoTm;
+        if (arrayBoxDataTm[i] == arrayDomBoxB[i]  && arrayBoxDataTt[i] == arrayDomBoxB[i] && arrayBoxDataTn[i] == arrayDomBoxB[i]) {
+
+            if(arrayEstadoTt[i] == 'Ocupado' && arrayEstadoTm[i] == 'Ocupado' && arrayEstadoTn[i] == 'Ocupado'){
+                divCallB[i].style.backgroundColor=ocupadoTlT;
+            }else if(arrayEstadoTt[i] == 'Ocupado' && arrayEstadoTm[i] == 'Ocupado' && arrayEstadoTn[i] != 'Ocupado'){
+                divCallB[i].style.backgroundColor=ocupadoTmt;
+            }else if(arrayEstadoTt[i] == 'Ocupado' && arrayEstadoTm[i] != 'Ocupado' && arrayEstadoTn[i] == 'Ocupado'){
+                divCallB[i].style.backgroundColor=ocupadoTtn;
+            }else if(arrayEstadoTt[i] != 'Ocupado' && arrayEstadoTm[i] == 'Ocupado' && arrayEstadoTn[i] == 'Ocupado'){
+                divCallB[i].style.backgroundColor=ocupadoTmn;
+            }else if(arrayEstadoTt[i] == 'Ocupado' && arrayEstadoTm[i] != 'Ocupado' && arrayEstadoTn[i] != 'Ocupado'){
+                divCallB[i].style.backgroundColor=ocupadoTt;
+            }else if(arrayEstadoTt[i] != 'Ocupado' && arrayEstadoTm[i] == 'Ocupado'&& arrayEstadoTn[i] != 'Ocupado'){
+                divCallB[i].style.backgroundColor=ocupadoTm;
+            }else if(arrayEstadoTt[i] != 'Ocupado' && arrayEstadoTm[i] != 'Ocupado'&& arrayEstadoTn[i] == 'Ocupado'){
+                divCallB[i].style.backgroundColor=ocupadoTn;
             }else if(arrayEstadoTt[i] === 'Disponible' && arrayEstadoTm[i] === 'Disponible'){
-                divBox[i].style.backgroundColor=disponible;
+                divCallB[i].style.backgroundColor=disponible;
             }else if(arrayEstadoTt[i] === 'Disponible sin PC' && arrayEstadoTm[i] === 'Disponible sin PC'){
-                    divBox[i].style.backgroundColor=DisponibleSinPC;
+                divCallB[i].style.backgroundColor=DisponibleSinPC;
             }else if (arrayEstadoTt[i] === 'Por Ordenanza' && arrayEstadoTm[i] === 'Por Ordenanza'){
-                    divBox[i].style.backgroundColor=porOrdenanza;                        
-                    }
-            
+                divCallB[i].style.backgroundColor=porOrdenanza;                        
+            }           
         }else{
             console.log("error en pintar DIV")
         }
-    }            
+    }           
 }
 //Funcion para mostrar Ocupacion del Call B
 const porcentajeCallB = (data)=>{
@@ -155,6 +190,9 @@ const porcentajeCallB = (data)=>{
     let ocupacionTt = 0;
     let disponibilidadTt = 0; 
     let sinUtilizacionTt = 0;
+    let ocupacionTn = 0;
+    let disponibilidadTn = 0; 
+    let sinUtilizacionTn = 0;
 
     //Contadores de estados Call B
     for (let i = 0; i < data.length; i++) {
@@ -166,13 +204,21 @@ const porcentajeCallB = (data)=>{
             }else{
                 sinUtilizacionTm++;
             }
-        }else{
+        }else if(data[i].jornada === 'TT'){
             if (data[i].estadoPc === 'Ocupado') {
                 ocupacionTt++;
             } else if(data[i].estadoPc === 'Disponible'){
                 disponibilidadTt++;
             }else{
                 sinUtilizacionTt++;
+            }
+        }else{
+            if (data[i].estadoPc === 'Ocupado') {
+                ocupacionTn++;
+            } else if(data[i].estadoPc === 'Disponible'){
+                disponibilidadTn++;
+            }else{
+                sinUtilizacionTn++;
             }
         }
         
@@ -189,7 +235,6 @@ const porcentajeCallB = (data)=>{
         }
         
     }
-
     // Variables Turno Mañana Call B
     let sumaTm = ocupacionTm+disponibilidadTm+sinUtilizacionTm; 
     let porOcuTm = ocupacionTm * 100 / sumaTm; 
@@ -208,6 +253,15 @@ const porcentajeCallB = (data)=>{
     let porSutiTt = sinUtilizacionTt * 100 / sumaTt;
     let resSutiTt = porSutiTt.toFixed(2);
 
+    //  Variables Turno Noche Call B
+    let sumaTn = ocupacionTn+disponibilidadTn+sinUtilizacionTn; 
+    let porOcuTn = ocupacionTn * 100 / sumaTn; 
+    let resulTn = porOcuTn.toFixed(2);
+    let porDisTn = disponibilidadTn * 100 / sumaTn;
+    let resDisTn = porDisTn.toFixed(2);
+    let porSutiTn = sinUtilizacionTn * 100 / sumaTn;
+    let resSutiTn = porSutiTn.toFixed(2);
+
     // Variables para el Total Call B    
     let suma = ocupacion+disponibilidad+sinUtilizacion; 
     let porOcu = ocupacion * 100 / suma; 
@@ -218,9 +272,9 @@ const porcentajeCallB = (data)=>{
     let resSuti = porSuti.toFixed(2);
 
     // Modifica etiqueta pra mostras Ocupacion Call B
-    p4.innerHTML = ` TM: ${resulTm}% - TT: ${resulTt}% - Tot: ${resul}%`
-    p5.innerHTML = ` TM: ${resDisTm}% - TT: ${resDisTt}% - Tot: ${resDis}%`
-    p6.innerHTML = ` TM: ${resSutiTm}% - TT: ${resSutiTt}% - Tot: ${resSuti}%`  
+    p4.innerHTML = ` TM: ${resulTm}% - TT: ${resulTt}% - TN: ${resulTn}% - Tot: ${resul}%`
+    p5.innerHTML = ` TM: ${resDisTm}% - TT: ${resDisTt}% - TT: ${resDisTn}% - Tot: ${resDis}%`
+    p6.innerHTML = ` TM: ${resSutiTm}% - TT: ${resSutiTt}% - TT: ${resSutiTn}% - Tot: ${resSuti}%`  
     
 }
 
@@ -228,19 +282,19 @@ const porcentajeCallB = (data)=>{
 //Funcion para poner titulo a los elemento para mostrar datos del Box posicionado Call A
 const tituloBoxCallA = (data)=>{
     
-    const arrayBoxDom = [];
     const arrayBoxDataTm = [];
     const arrayBoxDataTt = [];
+    const arrayBoxDataTn = [];
     const nombreTm = [];
     const ingresoTm = [];
     const egresoTm = [];
     const nombreTt = [];
     const ingresoTt = [];
     const egresoTt = [];
+    const nombreTn = [];
+    const ingresoTn = [];
+    const egresoTn = [];
 
-    for (let i = 5; i < 255; i++) {        
-        arrayBoxDom.push(document.getElementById(`elementA${i}`).textContent)                
-    } 
     
     for (let i = 0; i < data.length; i++) {
         if(data[i].jornada === 'TM'){
@@ -248,78 +302,91 @@ const tituloBoxCallA = (data)=>{
             nombreTm.push(data[i].nombre);
             ingresoTm.push(data[i].ingreso);
             egresoTm.push(data[i].egreso);    
-        }else{
+        }else if(data[i].jornada === 'TT'){
             arrayBoxDataTt.push(data[i].box);
             nombreTt.push(data[i].nombre);
             ingresoTt.push(data[i].ingreso);
             egresoTt.push(data[i].egreso);    
-        }   
+        }else{
+            arrayBoxDataTn.push(data[i].box);
+            nombreTn.push(data[i].nombre);
+            ingresoTn.push(data[i].ingreso);
+            egresoTn.push(data[i].egreso);    
+        }     
     }
     //Buble para comparar conidencia de box y agregar los titulos a los elementos Call A
-    for (let  i= 0; i < arrayBoxDom.length ; i++){
+    for (let  i= 0; i < arrayDomBoxA.length ; i++){
 
-        if (arrayBoxDataTm[i] == arrayBoxDom[i] && arrayBoxDataTt[i] == arrayBoxDom[i]) {
+        if (arrayBoxDataTm[i] == arrayDomBoxA[i] && arrayBoxDataTt[i] == arrayDomBoxA[i] && arrayBoxDataTn[i] == arrayDomBoxA[i]) {
 
-            divBoxA[i].setAttribute('title',`${arrayBoxDataTm[i]}
+            divCallA[i].setAttribute('title',`${arrayBoxDataTm[i]}
             Turno M.: 
             Agente: ${nombreTm[i]}
             Ingreso: ${ingresoTm[i]}--Egreso:${egresoTm[i]}
             Turno T.:
             Agente: ${nombreTt[i]}
-            Ingreso: ${ingresoTt[i]} Egreso:${egresoTt[i]}`)
+            Ingreso: ${ingresoTt[i]} Egreso:${egresoTt[i]}
+            Turno N.:
+            Agente: ${nombreTn[i]}
+            Ingreso: ${ingresoTn[i]} Egreso:${egresoTn[i]}`)
             
         }    
     }
 }
 
 //Funcion para pintar la situacion de los BOX del Call A
-const estadoBoxCallA=(data)=>{
-    
-    const arrayBoxDom = [];
+const estadoBoxCallA = (data)=>{
+
     const arrayBoxDataTm = [];
     const arrayBoxDataTt = [];
+    const arrayBoxDataTn = [];
     const arrayEstadoTm = [];
     const arrayEstadoTt = [];
-    const arrayNombreTm = [];
-    const arrayNombreTt = [];
+    const arrayEstadoTn = [];
 
-    for (let i = 5; i < 255; i++) {        
-        arrayBoxDom.push(document.getElementById(`elementA${i}`).textContent)                
-    }    
     for (let i = 0; i < data.length; i++) {
         if(data[i].jornada === 'TM'){
             arrayBoxDataTm.push(data[i].box);
-            arrayEstadoTm.push(data[i].estadoPc); 
-            arrayNombreTm.push(data[i].nombre);               
-        }else{
+            arrayEstadoTm.push(data[i].estadoPc);              
+        }else if(data[i].jornada === 'TT'){
             arrayBoxDataTt.push(data[i].box);
             arrayEstadoTt.push(data[i].estadoPc)
-            arrayNombreTt.push(data[i].nombre);  
+        }else{
+            arrayBoxDataTn.push(data[i].box);
+            arrayEstadoTn.push(data[i].estadoPc)
         }
         
     }
     //Bucle donde se compara la coicidencia de BOX para pintar correctamente dependiendo el estado del mismo
-    for (let i = 0; i < arrayBoxDom.length; i++) {
+    for (let i = 0; i < arrayDomBoxA.length; i++) {
         
-        if (arrayBoxDataTm[i] == arrayBoxDom[i] && arrayBoxDataTt[i] == arrayBoxDom[i]) {
-            if(arrayEstadoTt[i] === 'Ocupado' && arrayEstadoTm[i] === 'Ocupado'){
-                divBoxA[i].style.backgroundColor=ocupadoTlT;
-            }else if(arrayEstadoTt[i] === 'Ocupado' && arrayEstadoTm[i] != 'Ocupado'){
-                divBoxA[i].style.backgroundColor=ocupadoTt;
-            }else if(arrayEstadoTt[i] != 'Ocupado' && arrayEstadoTm[i] === 'Ocupado'){
-                divBoxA[i].style.backgroundColor=ocupadoTm;
+        if (arrayBoxDataTm[i] == arrayDomBoxA[i]  && arrayBoxDataTt[i] == arrayDomBoxA[i] && arrayBoxDataTn[i] == arrayDomBoxA[i]) {
+
+            if(arrayEstadoTt[i] === 'Ocupado' && arrayEstadoTm[i] === 'Ocupado' && arrayEstadoTn[i] === 'Ocupado'){
+                divCallA[i].style.backgroundColor=ocupadoTlT;
+            }else if(arrayEstadoTt[i] === 'Ocupado' && arrayEstadoTm[i] === 'Ocupado' && arrayEstadoTn[i] != 'Ocupado'){
+                divCallA[i].style.backgroundColor=ocupadoTmt;
+            }else if(arrayEstadoTt[i] === 'Ocupado' && arrayEstadoTm[i] != 'Ocupado' && arrayEstadoTn[i] === 'Ocupado'){
+                divCallA[i].style.backgroundColor=ocupadoTtn;
+            }else if(arrayEstadoTt[i] != 'Ocupado' && arrayEstadoTm[i] === 'Ocupado' && arrayEstadoTn[i] === 'Ocupado'){
+                divCallA[i].style.backgroundColor=ocupadoTmn;
+            }else if(arrayEstadoTt[i] === 'Ocupado' && arrayEstadoTm[i] != 'Ocupado' && arrayEstadoTn[i] != 'Ocupado'){
+                divCallA[i].style.backgroundColor=ocupadoTt;
+            }else if(arrayEstadoTt[i] != 'Ocupado' && arrayEstadoTm[i] === 'Ocupado'&& arrayEstadoTn[i] != 'Ocupado'){
+                divCallA[i].style.backgroundColor=ocupadoTm;
+            }else if(arrayEstadoTt[i] != 'Ocupado' && arrayEstadoTm[i] != 'Ocupado'&& arrayEstadoTn[i] === 'Ocupado'){
+                divCallA[i].style.backgroundColor=ocupadoTn;
             }else if(arrayEstadoTt[i] === 'Disponible' && arrayEstadoTm[i] === 'Disponible'){
-                divBoxA[i].style.backgroundColor=disponible;
+                divCallA[i].style.backgroundColor=disponible;
             }else if(arrayEstadoTt[i] === 'Disponible sin PC' && arrayEstadoTm[i] === 'Disponible sin PC'){
-                    divBoxA[i].style.backgroundColor=DisponibleSinPC;
+                divCallA[i].style.backgroundColor=DisponibleSinPC;
             }else if (arrayEstadoTt[i] === 'Por Ordenanza' && arrayEstadoTm[i] === 'Por Ordenanza'){
-                    divBoxA[i].style.backgroundColor=porOrdenanza;                        
-                    }
-            
+                divCallA[i].style.backgroundColor=porOrdenanza;                        
+            }           
         }else{
             console.log("error en pintar DIV")
         }
-    }            
+    }    
 }
 
 //Funcion para mostrar Ocupacion del Call A
@@ -338,6 +405,9 @@ const porcentajeCallA = (data)=>{
     let ocupacionTt = 0;
     let disponibilidadTt = 0; 
     let sinUtilizacionTt = 0;
+    let ocupacionTn = 0;
+    let disponibilidadTn = 0; 
+    let sinUtilizacionTn = 0;
 
     //Contadores de estados Call A
     for (let i = 0; i < data.length; i++) {
@@ -349,13 +419,21 @@ const porcentajeCallA = (data)=>{
             }else{
                 sinUtilizacionTm++;
             }
-        }else{
+        }else if(data[i].jornada === 'TT'){
             if (data[i].estadoPc === 'Ocupado') {
                 ocupacionTt++;
             } else if(data[i].estadoPc === 'Disponible'){
                 disponibilidadTt++;
             }else{
                 sinUtilizacionTt++;
+            }
+        }else{
+            if (data[i].estadoPc === 'Ocupado') {
+                ocupacionTn++;
+            } else if(data[i].estadoPc === 'Disponible'){
+                disponibilidadTn++;
+            }else{
+                sinUtilizacionTn++;
             }
         }
         
@@ -390,6 +468,15 @@ const porcentajeCallA = (data)=>{
     let porSutiTt = sinUtilizacionTt * 100 / sumaTt;
     let resSutiTt = porSutiTt.toFixed(2);
 
+    //  Variables Turno Noche Call A
+    let sumaTn = ocupacionTn+disponibilidadTn+sinUtilizacionTn; 
+    let porOcuTn = ocupacionTn * 100 / sumaTn; 
+    let resulTn = porOcuTn.toFixed(2);
+    let porDisTn = disponibilidadTn * 100 / sumaTn;
+    let resDisTn = porDisTn.toFixed(2);
+    let porSutiTn = sinUtilizacionTn * 100 / sumaTn;
+    let resSutiTn = porSutiTn.toFixed(2);
+
     // Variables para el Total Call A    
     let suma = ocupacion+disponibilidad+sinUtilizacion; 
     let porOcu = ocupacion * 100 / suma; 
@@ -399,9 +486,9 @@ const porcentajeCallA = (data)=>{
     let porSuti = sinUtilizacion * 100 / suma;
     let resSuti = porSuti.toFixed(2);
 
-    // Modifica etiqueta pra mostras Ocupacion Call B
-    p1.innerHTML = ` TM: ${resulTm}% - TT: ${resulTt}% - Tot: ${resul}%`
-    p2.innerHTML = ` TM: ${resDisTm}% - TT: ${resDisTt}% - Tot: ${resDis}%`
-    p3.innerHTML = ` TM: ${resSutiTm}% - TT: ${resSutiTt}% - Tot: ${resSuti}%`  
+    // Modifica etiqueta pra mostras Ocupacion Call A
+    p1.innerHTML = ` TM: ${resulTm}% - TT: ${resulTt}% - TN: ${resulTn}% - Tot: ${resul}%`
+    p2.innerHTML = ` TM: ${resDisTm}% - TT: ${resDisTt}% - TT: ${resDisTn}% - Tot: ${resDis}%`
+    p3.innerHTML = ` TM: ${resSutiTm}% - TT: ${resSutiTt}% - TT: ${resSutiTn}% - Tot: ${resSuti}%`  
     
 }

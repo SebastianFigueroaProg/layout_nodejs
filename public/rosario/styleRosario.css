@@ -1,0 +1,1221 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#boton{
+    background-color: aqua;
+    color: rgb(17, 17, 17);
+    padding: 4px;
+    margin: 5px;
+    position: relative;
+}
+.vam{
+    position: absolute;
+    left: 22%;
+    width: 200px;
+    height: 150px;
+    margin-top: 50px;
+}
+.h51{
+    font-weight: bold;
+    margin-left: 49.5%;
+}
+.cuadro{    
+    position: absolute;
+    /* border: 2px #000 solid; */
+    width: 400px;
+    height: 100px;
+    margin-top: 20px;
+    left: 49%;    
+}
+.pl1{
+    position: absolute;
+    left: 250px;
+    top: 0px;
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.pl2{
+    position: absolute;
+    left: 250px;
+    top: 32px;
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.pl3{
+    position: absolute;
+    left: 250px;
+    top: 70px;
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.h52{
+    font-weight: bold;
+    margin-left: 42px;
+    margin-top: 150px;
+}
+
+.descripcion{
+    background-color: rgb(168, 168, 168);
+    border: 2px #000 solid;
+    width: 400px;
+    height: 100px;
+    margin-left: 40px;
+    margin-top: 10px;    
+}
+.h53{
+    font-weight: bold;
+    position: absolute;
+    margin-left: 483px;
+    margin-top: -135px;
+}
+.descripcion2{
+    background-color: rgb(168, 168, 168);
+    position: absolute;
+    border: 2px #000 solid;
+    width: 400px;
+    height: 100px;
+    margin-left: 483px;
+    margin-top: -100px;   
+}
+.h54{
+    font-weight: bold;
+    position: absolute;
+    margin-left: 928px;
+    margin-top: -135px;
+}
+.descripcion3{
+    background-color: rgb(168, 168, 168);
+    position: absolute;
+    border: 2px #000 solid;
+    width: 400px;
+    height: 100px;
+    margin-left: 925px;
+    margin-top: -100px;   
+}
+.p1, .p2, .p3{
+    font-weight: bold;
+    color: #000;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+span{
+    color: rgb(15, 54, 226);
+}
+
+.p{
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    left: 40px;
+    bottom: 16px;    
+}
+.ref1{
+    outline: 2px solid #000;
+    left: 10px;
+    top: 0;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(187, 20, 20);
+
+}
+.ref2{
+    outline: 2px solid #000;
+    left: 10px;
+    bottom: 50px;    
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(19, 173, 27);
+}
+.ref3{
+    outline: 2px solid #000;
+    left: 10px;
+    bottom: 15px;    
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(21, 122, 168);
+}
+.ref4{
+    outline: 2px solid #000;
+    left: 220px;
+    top: 0;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(151, 76, 14);
+
+}
+.ref5{
+    outline: 2px solid #000;
+    left: 220px;
+    bottom: 50px;    
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(182, 166, 19);
+}
+.ref6{
+    outline: 2px solid #000;
+    left: 220px;
+    bottom: 15px;    
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(76, 77, 85);
+}
+main{
+    margin-top: 10px;
+    padding: 30px; 
+    display: flex;   
+    flex-direction: column;       
+    overflow: auto;
+}
+.callARos{
+    background-color: rgb(224, 222, 222);
+    outline: 2px solid #000;
+    margin: 10px;
+    width: 100%;
+    height: 600px; 
+    display: grid;
+    grid-template-columns: repeat(69, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 2px
+}
+.element{
+    font-size: 8px;
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;   
+    padding-top: 3px;    
+}
+.staff{
+    font-size: small;
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;    
+}
+.sala{
+    border-top: #000 solid 1px;
+    border-left: #000 solid 1px;
+    background-color: rgb(224, 222, 222);
+    grid-column: 62/70;
+    grid-row: 14/17;
+}
+.espacio{
+    border-bottom: #000 solid 1px;
+    border-right: #000 solid 1px;
+    background-color: rgb(224, 222, 222);
+    grid-column: 1/32;
+    grid-row: 5/7;
+}
+.gerComer{
+    background-color: rgb(24, 99, 212);
+    padding-top: 35px;
+    grid-column: 52/64;
+    grid-row: 2/5;
+}
+.salaReunion{
+    background-color: rgb(24, 99, 212);
+    padding-top: 35px;
+    grid-column: 40/52;
+    grid-row: 2/5;
+}
+.jefe2{
+    background-color: rgb(121, 17, 153);
+    font-size: 10px;
+    padding-top: 12px;
+    grid-column: 36/38;
+    grid-row: 2/4;
+}
+.jefe1{
+    background-color: rgb(121, 17, 153);
+    font-size: 10px;
+    padding-top: 12px;
+    grid-column: 32/34;
+    grid-row: 2/4;
+}
+.escalera{
+    background-color: rgb(147, 181, 231);
+    padding-top: 45px;
+    grid-column: 26/32;
+    grid-row: 1/5;
+}
+.textasc{
+    padding-top: 30px;
+    margin-top: 12px;
+    margin-left: -30px;
+    font-size: 9px;
+    transform: rotate(270deg);
+}
+.ascensor{
+    background-color: rgb(147, 181, 231);    
+    grid-column: 22/24;
+    grid-row: 1/4;
+}
+.callA{
+    background-color: rgb(28, 25, 201);
+    font-size: 20px;
+    padding-top: 40px;
+    grid-column: 8/22;
+    grid-row: 1/5;
+}
+.baño{
+    background-color: rgb(24, 99, 212);
+    padding-top: 45px;
+    grid-column: 4/8;
+    grid-row: 1/5;
+}
+/* Columna 2/4 */
+.element179{
+    background-color: rgb(128, 16, 16);
+    grid-column: 2/4;
+    grid-row: 16/17;
+}
+.element178{
+    background-color: rgb(128, 16, 16);
+    grid-column: 2/4;
+    grid-row: 15/16;
+}
+.element177{
+    background-color: rgb(128, 16, 16);
+    grid-column: 2/4;
+    grid-row: 14/15;
+}
+.element176{
+    background-color: rgb(128, 16, 16);
+    grid-column: 2/4;
+    grid-row: 13/14;
+}
+.element175{
+    background-color: rgb(128, 16, 16);
+    grid-column: 2/4;
+    grid-row: 12/13;
+}
+.element174{
+    background-color: rgb(128, 16, 16);
+    grid-column: 2/4;
+    grid-row: 11/12;
+}
+.element173{
+    background-color: rgb(128, 16, 16);
+    grid-column: 2/4;
+    grid-row: 10/11;
+}
+/* Columna 4/6 */
+.element166{
+    background-color: rgb(128, 16, 16);
+    grid-column: 4/6;
+    grid-row: 16/17;
+}
+.element167{
+    background-color: rgb(128, 16, 16);
+    grid-column: 4/6;
+    grid-row: 15/16;
+}
+.element168{
+    background-color: rgb(128, 16, 16);
+    grid-column: 4/6;
+    grid-row: 14/15;
+}
+.element169{
+    background-color: rgb(128, 16, 16);
+    grid-column: 4/6;
+    grid-row: 13/14;
+}
+.element170{
+    background-color: rgb(128, 16, 16);
+    grid-column: 4/6;
+    grid-row: 12/13;
+}
+.element171{
+    background-color: rgb(128, 16, 16);
+    grid-column: 4/6;
+    grid-row: 11/12;
+}
+.element172{
+    background-color: rgb(128, 16, 16);
+    grid-column: 4/6;
+    grid-row: 10/11;
+}
+/* Columna 8/10 */
+.element165{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 16/17;
+}
+.element164{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 15/16;
+}
+.element163{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 14/15;
+}
+.element162{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 13/14;
+}
+.element161{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 12/13;
+}
+.element160{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 11/12;
+}
+.element159{
+    background-color: rgb(128, 16, 16);
+    grid-column: 8/10;
+    grid-row: 10/11;
+}
+/* Columna 10/12 */
+.element152{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/12;
+    grid-row: 16/17;
+}
+.element153{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/12;
+    grid-row: 15/16;
+}
+.element154{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/12;
+    grid-row: 14/15;
+}
+.element155{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/12;
+    grid-row: 13/14;
+}
+.element156{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/12;
+    grid-row: 12/13;
+}
+.element157{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/12;
+    grid-row: 11/12;
+}
+.element158{
+    background-color: rgb(128, 16, 16);
+    grid-column: 10/12;
+    grid-row: 10/11;
+}
+/* Columna 14/16 */
+.element151{
+    background-color: rgb(128, 16, 16);
+    grid-column: 14/16;
+    grid-row: 16/17;
+}
+.element150{
+    background-color: rgb(128, 16, 16);
+    grid-column: 14/16;
+    grid-row: 15/16;
+}
+.element149{
+    background-color: rgb(128, 16, 16);
+    grid-column: 14/16;
+    grid-row: 14/15;
+}
+.element148{
+    background-color: rgb(128, 16, 16);
+    grid-column: 14/16;
+    grid-row: 13/14;
+}
+.element147{
+    background-color: rgb(128, 16, 16);
+    grid-column: 14/16;
+    grid-row: 12/13;
+}
+.element146{
+    background-color: rgb(128, 16, 16);
+    grid-column: 14/16;
+    grid-row: 11/12;
+}
+.element145{
+    background-color: rgb(128, 16, 16);
+    grid-column: 14/16;
+    grid-row: 10/11;
+}
+/* Columna 16/18 */
+.element138{
+    background-color: rgb(128, 16, 16);
+    grid-column: 16/18;
+    grid-row: 16/17;
+}
+.element139{
+    background-color: rgb(128, 16, 16);
+    grid-column: 16/18;
+    grid-row: 15/16;
+}
+.element140{
+    background-color: rgb(128, 16, 16);
+    grid-column: 16/18;
+    grid-row: 14/15;
+}
+.element141{
+    background-color: rgb(128, 16, 16);
+    grid-column: 16/18;
+    grid-row: 13/14;
+}
+.element142{
+    background-color: rgb(128, 16, 16);
+    grid-column: 16/18;
+    grid-row: 12/13;
+}
+.element143{
+    background-color: rgb(128, 16, 16);
+    grid-column: 16/18;
+    grid-row: 11/12;
+}
+.element144{
+    background-color: rgb(128, 16, 16);
+    grid-column: 16/18;
+    grid-row: 10/11;
+}
+/* Columna 20/22 */
+.element137{
+    background-color: rgb(128, 16, 16);
+    grid-column: 20/22;
+    grid-row: 16/17;
+}
+.element136{
+    background-color: rgb(128, 16, 16);
+    grid-column: 20/22;
+    grid-row: 15/16;
+}
+.element135{
+    background-color: rgb(128, 16, 16);
+    grid-column: 20/22;
+    grid-row: 14/15;
+}
+.element134{
+    background-color: rgb(128, 16, 16);
+    grid-column: 20/22;
+    grid-row: 13/14;
+}
+.element133{
+    background-color: rgb(128, 16, 16);
+    grid-column: 20/22;
+    grid-row: 12/13;
+}
+.element132{
+    background-color: rgb(128, 16, 16);
+    grid-column: 20/22;
+    grid-row: 11/12;
+}
+.element131{
+    background-color: rgb(128, 16, 16);
+    grid-column: 20/22;
+    grid-row: 10/11;
+}
+/* Columna 22/24 */
+.element124{
+    background-color: rgb(128, 16, 16);
+    grid-column: 22/24;
+    grid-row: 16/17;
+}
+.element125{
+    background-color: rgb(128, 16, 16);
+    grid-column: 22/24;
+    grid-row: 15/16;
+}
+.element126{
+    background-color: rgb(128, 16, 16);
+    grid-column: 22/24;
+    grid-row: 14/15;
+}
+.element127{
+    background-color: rgb(128, 16, 16);
+    grid-column: 22/24;
+    grid-row: 13/14;
+}
+.element128{
+    background-color: rgb(128, 16, 16);
+    grid-column: 22/24;
+    grid-row: 12/13;
+}
+.element129{
+    background-color: rgb(128, 16, 16);
+    grid-column: 22/24;
+    grid-row: 11/12;
+}
+.element130{
+    background-color: rgb(128, 16, 16);
+    grid-column: 22/24;
+    grid-row: 10/11;
+}
+/* Columna 26/28 */
+.element123{
+    background-color: rgb(128, 16, 16);
+    grid-column: 26/28;
+    grid-row: 16/17;
+}
+.element122{
+    background-color: rgb(128, 16, 16);
+    grid-column: 26/28;
+    grid-row: 15/16;
+}
+.element121{
+    background-color: rgb(128, 16, 16);
+    grid-column: 26/28;
+    grid-row: 14/15;
+}
+.element120{
+    background-color: rgb(128, 16, 16);
+    grid-column: 26/28;
+    grid-row: 13/14;
+}
+.element119{
+    background-color: rgb(128, 16, 16);
+    grid-column: 26/28;
+    grid-row: 12/13;
+}
+.element118{
+    background-color: rgb(128, 16, 16);
+    grid-column: 26/28;
+    grid-row: 11/12;
+}
+.element117{
+    background-color: rgb(128, 16, 16);
+    grid-column: 26/28;
+    grid-row: 10/11;
+}
+/* Columna 28/30 */
+.element110{
+    background-color: rgb(128, 16, 16);
+    grid-column: 28/30;
+    grid-row: 16/17;
+}
+.element111{
+    background-color: rgb(128, 16, 16);
+    grid-column: 28/30;
+    grid-row: 15/16;
+}
+.element112{
+    background-color: rgb(128, 16, 16);
+    grid-column: 28/30;
+    grid-row: 14/15;
+}
+.element113{
+    background-color: rgb(128, 16, 16);
+    grid-column: 28/30;
+    grid-row: 13/14;
+}
+.element114{
+    background-color: rgb(128, 16, 16);
+    grid-column: 28/30;
+    grid-row: 12/13;
+}
+.element115{
+    background-color: rgb(128, 16, 16);
+    grid-column: 28/30;
+    grid-row: 11/12;
+}
+.element116{
+    background-color: rgb(128, 16, 16);
+    grid-column: 28/30;
+    grid-row: 10/11;
+}
+/* Columna 32/34 */
+.element109{
+    background-color: rgb(128, 16, 16);
+    grid-column: 32/34;
+    grid-row: 16/17;
+}
+.element108{
+    background-color: rgb(128, 16, 16);
+    grid-column: 32/34;
+    grid-row: 15/16;
+}
+.element107{
+    background-color: rgb(128, 16, 16);
+    grid-column: 32/34;
+    grid-row: 14/15;
+}
+.element106{
+    background-color: rgb(128, 16, 16);
+    grid-column: 32/34;
+    grid-row: 13/14;
+}
+.element105{
+    background-color: rgb(128, 16, 16);
+    grid-column: 32/34;
+    grid-row: 12/13;
+}
+.element104{
+    background-color: rgb(128, 16, 16);
+    grid-column: 32/34;
+    grid-row: 11/12;
+}
+.element103{
+    background-color: rgb(128, 16, 16);
+    grid-column: 32/34;
+    grid-row: 10/11;
+}
+/* Columna 34/36 */
+.element96{
+    background-color: rgb(128, 16, 16);
+    grid-column: 34/36;
+    grid-row: 16/17;
+}
+.element97{
+    background-color: rgb(128, 16, 16);
+    grid-column: 34/36;
+    grid-row: 15/16;
+}
+.element98{
+    background-color: rgb(128, 16, 16);
+    grid-column: 34/36;
+    grid-row: 14/15;
+}
+.element99{
+    background-color: rgb(128, 16, 16);
+    grid-column: 34/36;
+    grid-row: 13/14;
+}
+.element100{
+    background-color: rgb(128, 16, 16);
+    grid-column: 34/36;
+    grid-row: 12/13;
+}
+.element101{
+    background-color: rgb(128, 16, 16);
+    grid-column: 34/36;
+    grid-row: 11/12;
+}
+.element102{
+    background-color: rgb(128, 16, 16);
+    grid-column: 34/36;
+    grid-row: 10/11;
+}
+/* Columna 38/40 */
+.element95{
+    background-color: rgb(128, 16, 16);
+    grid-column: 38/40;
+    grid-row: 16/17;
+}
+.element94{
+    background-color: rgb(128, 16, 16);
+    grid-column: 38/40;
+    grid-row: 15/16;
+}
+.element93{
+    background-color: rgb(128, 16, 16);
+    grid-column: 38/40;
+    grid-row: 14/15;
+}
+.element92{
+    background-color: rgb(128, 16, 16);
+    grid-column: 38/40;
+    grid-row: 13/14;
+}
+.element91{
+    background-color: rgb(128, 16, 16);
+    grid-column: 38/40;
+    grid-row: 12/13;
+}
+.element90{
+    background-color: rgb(128, 16, 16);
+    grid-column: 38/40;
+    grid-row: 11/12;
+}
+.element89{
+    background-color: rgb(128, 16, 16);
+    grid-column: 38/40;
+    grid-row: 10/11;
+}
+.element88{
+    background-color: rgb(128, 16, 16);
+    grid-column: 38/40;
+    grid-row: 09/10;
+}
+.element87{
+    background-color: rgb(128, 16, 16);
+    grid-column: 38/40;
+    grid-row: 08/09;
+}
+/* Columna 40/42 */
+.element78{
+    background-color: rgb(128, 16, 16);
+    grid-column: 40/42;
+    grid-row: 16/17;
+}
+.element79{
+    background-color: rgb(128, 16, 16);
+    grid-column: 40/42;
+    grid-row: 15/16;
+}
+.element80{
+    background-color: rgb(128, 16, 16);
+    grid-column: 40/42;
+    grid-row: 14/15;
+}
+.element81{
+    background-color: rgb(128, 16, 16);
+    grid-column: 40/42;
+    grid-row: 13/14;
+}
+.element82{
+    background-color: rgb(128, 16, 16);
+    grid-column: 40/42;
+    grid-row: 12/13;
+}
+.element83{
+    background-color: rgb(128, 16, 16);
+    grid-column: 40/42;
+    grid-row: 11/12;
+}
+.element84{
+    background-color: rgb(128, 16, 16);
+    grid-column: 40/42;
+    grid-row: 10/11;
+}
+.element85{
+    background-color: rgb(128, 16, 16);
+    grid-column: 40/42;
+    grid-row: 09/10;
+}
+.element86{
+    background-color: rgb(128, 16, 16);
+    grid-column: 40/42;
+    grid-row: 08/09;
+}
+/* Columna 44/46 */
+.element77{
+    background-color: rgb(128, 16, 16);
+    grid-column: 44/46;
+    grid-row: 16/17;
+}
+.element76{
+    background-color: rgb(128, 16, 16);
+    grid-column: 44/46;
+    grid-row: 15/16;
+}
+.element75{
+    background-color: rgb(128, 16, 16);
+    grid-column: 44/46;
+    grid-row: 14/15;
+}
+.element74{
+    background-color: rgb(128, 16, 16);
+    grid-column: 44/46;
+    grid-row: 13/14;
+}
+.element73{
+    background-color: rgb(128, 16, 16);
+    grid-column: 44/46;
+    grid-row: 12/13;
+}
+.element72{
+    background-color: rgb(128, 16, 16);
+    grid-column: 44/46;
+    grid-row: 11/12;
+}
+.element71{
+    background-color: rgb(128, 16, 16);
+    grid-column: 44/46;
+    grid-row: 10/11;
+}
+.element70{
+    background-color: rgb(128, 16, 16);
+    grid-column: 44/46;
+    grid-row: 09/10;
+}
+.element69{
+    background-color: rgb(128, 16, 16);
+    grid-column: 44/46;
+    grid-row: 08/09;
+}
+/* Columna 46/48 */
+.element61{
+    background-color: rgb(128, 16, 16);
+    grid-column: 46/48;
+    grid-row: 16/17;
+}
+.element62{
+    background-color: rgb(128, 16, 16);
+    grid-column: 46/48;
+    grid-row: 15/16;
+}
+.element63{
+    background-color: rgb(128, 16, 16);
+    grid-column: 46/48;
+    grid-row: 14/15;
+}
+.element64{
+    background-color: rgb(128, 16, 16);
+    grid-column: 46/48;
+    grid-row: 13/14;
+}
+.col1{
+    background-color: rgb(48, 46, 46);
+    padding-top: 13px;
+    font-size: 7px;
+    grid-column: 46/48;
+    grid-row: 12/13;
+}
+.element65{
+    background-color: rgb(128, 16, 16);
+    grid-column: 46/48;
+    grid-row: 11/12;
+}
+.element66{
+    background-color: rgb(128, 16, 16);
+    grid-column: 46/48;
+    grid-row: 10/11;
+}
+.element67{
+    background-color: rgb(128, 16, 16);
+    grid-column: 46/48;
+    grid-row: 09/10;
+}
+.element68{
+    background-color: rgb(128, 16, 16);
+    grid-column: 46/48;
+    grid-row: 08/09;
+}
+/* Columna 50/52 */
+.element60{
+    background-color: rgb(128, 16, 16);
+    grid-column: 50/52;
+    grid-row: 16/17;
+}
+.element59{
+    background-color: rgb(128, 16, 16);
+    grid-column: 50/52;
+    grid-row: 15/16;
+}
+.element58{
+    background-color: rgb(128, 16, 16);
+    grid-column: 50/52;
+    grid-row: 14/15;
+}
+.element57{
+    background-color: rgb(128, 16, 16);
+    grid-column: 50/52;
+    grid-row: 13/14;
+}
+.element56{
+    background-color: rgb(128, 16, 16);
+    grid-column: 50/52;
+    grid-row: 12/13;
+}
+.element55{
+    background-color: rgb(128, 16, 16);
+    grid-column: 50/52;
+    grid-row: 11/12;
+}
+.element54{
+    background-color: rgb(128, 16, 16);
+    grid-column: 50/52;
+    grid-row: 10/11;
+}
+.element53{
+    background-color: rgb(128, 16, 16);
+    grid-column: 50/52;
+    grid-row: 09/10;
+}
+.lid1{
+    background-color: rgb(68, 15, 165);
+    padding-top: 7px;
+    font-size: 7px;    
+    grid-column: 50/52;
+    grid-row: 08/09;
+}
+/* Columna 52/54 */
+.element45{
+    background-color: rgb(128, 16, 16);
+    grid-column: 52/54;
+    grid-row: 16/17;
+}
+.element46{
+    background-color: rgb(128, 16, 16);
+    grid-column: 52/54;
+    grid-row: 15/16;
+}
+.element47{
+    background-color: rgb(128, 16, 16);
+    grid-column: 52/54;
+    grid-row: 14/15;
+}
+.element48{
+    background-color: rgb(128, 16, 16);
+    grid-column: 52/54;
+    grid-row: 13/14;
+}
+.element49{
+    background-color: rgb(128, 16, 16);
+    grid-column: 52/54;
+    grid-row: 12/13;
+}
+.element50{
+    background-color: rgb(128, 16, 16);
+    grid-column: 52/54;
+    grid-row: 11/12;
+}
+.element51{
+    background-color: rgb(128, 16, 16);
+    grid-column: 52/54;
+    grid-row: 10/11;
+}
+.element52{
+    background-color: rgb(128, 16, 16);
+    grid-column: 52/54;
+    grid-row: 09/10;
+}
+.lid2{
+    background-color: rgb(68, 15, 165);
+    padding-top: 7px;
+    font-size: 7px;    
+    grid-column: 52/54;
+    grid-row: 08/09;
+}
+/* Columna 56/58 */
+.element44{
+    background-color: rgb(128, 16, 16);
+    grid-column: 56/58;
+    grid-row: 16/17;
+}
+.element43{
+    background-color: rgb(128, 16, 16);
+    grid-column: 56/58;
+    grid-row: 15/16;
+}
+.element42{
+    background-color: rgb(128, 16, 16);
+    grid-column: 56/58;
+    grid-row: 14/15;
+}
+.element41{
+    background-color: rgb(128, 16, 16);
+    grid-column: 56/58;
+    grid-row: 13/14;
+}
+.element40{
+    background-color: rgb(128, 16, 16);
+    grid-column: 56/58;
+    grid-row: 12/13;
+}
+.element39{
+    background-color: rgb(128, 16, 16);
+    grid-column: 56/58;
+    grid-row: 11/12;
+}
+.element38{
+    background-color: rgb(128, 16, 16);
+    grid-column: 56/58;
+    grid-row: 10/11;
+}
+.element37{
+    background-color: rgb(128, 16, 16);
+    grid-column: 56/58;
+    grid-row: 09/10;
+}
+.element36{
+    background-color: rgb(128, 16, 16);
+    grid-column: 56/58;
+    grid-row: 08/09;
+}
+/* Columna 58/60 */
+.element28{
+    background-color: rgb(128, 16, 16);
+    grid-column: 58/60;
+    grid-row: 16/17;
+}
+.element29{
+    background-color: rgb(128, 16, 16);
+    grid-column: 58/60;
+    grid-row: 15/16;
+}
+.element30{
+    background-color: rgb(128, 16, 16);
+    grid-column: 58/60;
+    grid-row: 14/15;
+}
+.element31{
+    background-color: rgb(128, 16, 16);
+    grid-column: 58/60;
+    grid-row: 13/14;
+}
+.col2{
+    background-color: rgb(48, 46, 46);
+    padding-top: 13px;
+    font-size: 7px;
+    grid-column: 58/60;
+    grid-row: 12/13;
+}
+.element32{
+    background-color: rgb(128, 16, 16);
+    grid-column: 58/60;
+    grid-row: 11/12;
+}
+.element33{
+    background-color: rgb(128, 16, 16);
+    grid-column: 58/60;
+    grid-row: 10/11;
+}
+.element34{
+    background-color: rgb(128, 16, 16);
+    grid-column: 58/60;
+    grid-row: 09/10;
+}
+.element35{
+    background-color: rgb(128, 16, 16);
+    grid-column: 58/60;
+    grid-row: 08/09;
+}
+/* Columna 62/64 */
+.element27{
+    background-color: rgb(128, 16, 16);
+    grid-column: 62/64;
+    grid-row: 13/14;
+}
+.element26{
+    background-color: rgb(128, 16, 16);
+    grid-column: 62/64;
+    grid-row: 12/13;
+}
+.element25{
+    background-color: rgb(128, 16, 16);
+    grid-column: 62/64;
+    grid-row: 11/12;
+}
+.element24{
+    background-color: rgb(128, 16, 16);
+    grid-column: 62/64;
+    grid-row: 10/11;
+}
+.element23{
+    background-color: rgb(128, 16, 16);
+    grid-column: 62/64;
+    grid-row: 09/10;
+}
+.element22{
+    background-color: rgb(128, 16, 16);
+    grid-column: 62/64;
+    grid-row: 08/09;
+}
+.element21{
+    background-color: rgb(128, 16, 16);
+    grid-column: 62/64;
+    grid-row: 07/08;
+}
+/* Columna 64/66 */
+.element12{
+    background-color: rgb(128, 16, 16);
+    grid-column: 64/66;
+    grid-row: 13/14;
+}
+.element13{
+    background-color: rgb(128, 16, 16);
+    grid-column: 64/66;
+    grid-row: 12/13;
+}
+.element14{
+    background-color: rgb(128, 16, 16);
+    grid-column: 64/66;
+    grid-row: 11/12;
+}
+.element15{
+    background-color: rgb(128, 16, 16);
+    grid-column:64/66;
+    grid-row: 10/11;
+}
+.element16{
+    background-color: rgb(128, 16, 16);
+    grid-column: 64/66;
+    grid-row: 09/10;
+}
+.element17{
+    background-color: rgb(128, 16, 16);
+    grid-column: 64/66;
+    grid-row: 08/09;
+}
+.element18{
+    background-color: rgb(128, 16, 16);
+    grid-column: 64/66;
+    grid-row: 07/08;
+}
+.element19{
+    background-color: rgb(128, 16, 16);
+    grid-column:64/66;
+    grid-row: 04/05;
+}
+.element20{
+    background-color: rgb(128, 16, 16);
+    grid-column: 64/66;
+    grid-row: 03/04;
+}
+/* Columna 68/70 */
+.element11{
+    background-color: rgb(128, 16, 16);
+    grid-column: 68/70;
+    grid-row: 13/14;
+}
+.element10{
+    background-color: rgb(128, 16, 16);
+    grid-column: 68/70;
+    grid-row: 12/13;
+}
+.element9{
+    background-color: rgb(128, 16, 16);
+    grid-column: 68/70;
+    grid-row: 11/12;
+}
+.element8{
+    background-color: rgb(128, 16, 16);
+    grid-column: 68/70;
+    grid-row: 10/11;
+}
+.element7{
+    background-color: rgb(128, 16, 16);
+    grid-column: 68/70;
+    grid-row: 09/10;
+}
+.element6{
+    background-color: rgb(128, 16, 16);
+    grid-column: 68/70;
+    grid-row: 08/09;
+}
+.element5{
+    background-color: rgb(128, 16, 16);
+    grid-column: 68/70;
+    grid-row: 07/08;
+}
+.element4{
+    background-color: rgb(128, 16, 16);
+    grid-column: 68/70;
+    grid-row: 06/07;
+}
+.element3{
+    background-color: rgb(128, 16, 16);
+    grid-column: 68/70;
+    grid-row: 05/06;
+}
+.element2{
+    background-color: rgb(128, 16, 16);
+    grid-column: 68/70;
+    grid-row: 04/05;
+}
+.element1{
+    background-color: rgb(128, 16, 16);
+    grid-column: 68/70;
+    grid-row: 03/04;
+}

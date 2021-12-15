@@ -89,15 +89,18 @@
           <div class="callP">
           <label for="callT" class="callT">CALL</label>
                   <select name="call" id="call" class="call" aria-label="Default select example">                      
-                      <option value="calla" selected>Call A S.8</option>
-                      <option value="callb" selected>Call B S.8</option>
-                      <option value="callf" selected>Call F S.1</option> 
-                      <option value="calll" selected>Call L S.1</option> 
-                      <option value="callm" selected>Call M S.1</option> 
-                      <option value="calln" selected>Call N S.1</option> 
-                      <option value="callo" selected>Call O S.1</option> 
-                      <option value="callp" selected>Call P S.1</option>
-                      <option value="callsm" selected>Call SM S.1</option>                       
+                    <option value="calla" selected>Call A S.8</option>
+                    <option value="callb" selected>Call B S.8</option>
+                    <option value="callr" selected>Call A S.14</option>
+                    <option value="callt" selected>Call B S.14</option>
+                    <option value="callu" selected>Call C S.14</option>                     
+                    <option value="callf" selected>Call F S.1</option> 
+                    <option value="calll" selected>Call L S.1</option> 
+                    <option value="callm" selected>Call M S.1</option> 
+                    <option value="calln" selected>Call N S.1</option> 
+                    <option value="callo" selected>Call O S.1</option> 
+                    <option value="callp" selected>Call P S.1</option>
+                    <option value="callsm" selected>Call SM S.1</option>                       
                   </select>
                   <button class="valorC">Buscar</button>
           </div>
@@ -112,9 +115,9 @@
               <li class="nav-item">
                 <a class="nav-link active" id="mapaChaco" aria-current="page" href="/SM-Cordoba/smCordoba-rol.html">Mapa Cordóba SM</a>
               </li>
-              <!-- <li class="nav-item">
-                <a class="nav-link active" id="mapaChaco" aria-current="page" href="#">Mapa Rosario</a>
-              </li> -->
+              <li class="nav-item">
+                <a class="nav-link active" id="mapaChaco" aria-current="page" href="/rosario/rosario-rol.html">Mapa Rosario</a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link active" id="mapaChaco" aria-current="page" href="/register">Registrar Usuario</a>
               </li>
@@ -221,7 +224,13 @@
                 return '<a href="/editp/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
               }else if(valor == 'callsm' ){
                 return '<a href="/editsm/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
-              }   
+              }else if(valor == 'callr' ){
+                return '<a href="/editR/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
+              }else if(valor == 'callt' ){
+                return '<a href="/editT/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
+              }else if(valor == 'callu' ){
+                return '<a href="/editU/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
+              }  
             }
           }
             

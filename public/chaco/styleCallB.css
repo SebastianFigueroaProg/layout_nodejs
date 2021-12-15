@@ -16,36 +16,89 @@ body{
 }
 .h51{
     font-weight: bold;
-    margin-left: 295px;
+    margin-left: 298px;
 }
 .cuadro{    
     position: absolute;
     /* border: 2px #000 solid; */
     width: 400px;
     height: 100px;
-    margin-top: 20px;
+    margin-top: 15px;
     left: 290px;    
 }
 .pl1{
     position: absolute;
-    left: 250px;
-    top: 0px;
+    left: 30px;
+    top: 0;
     font-size: small;
     font-family: 'Times New Roman', Times, serif;
-
 }
 .pl2{
     position: absolute;
-    left: 250px;
-    top: 32px;
+    left: 30px;
+    top: 20px;
     font-size: small;
     font-family: 'Times New Roman', Times, serif;
 
 }
 .pl3{
     position: absolute;
-    left: 250px;
-    top: 70px;
+    left: 30px;
+    top: 40px;
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.pl4{
+    position: absolute;
+    left: 30px;
+    top: 60px;
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.pl5{
+    position: absolute;
+    left: 30px;
+    top: 80px;
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+}
+.pl6{
+    position: absolute;
+    left: 220px;
+    top: 0;
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+}
+.pl7{
+    position: absolute;
+    left: 220px;
+    top: 20px;
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.pl8{
+    position: absolute;
+    left: 220px;
+    top: 40px;
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.pl9{
+    position: absolute;
+    left: 220px;
+    top: 60px;
+    font-size: small;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.pl10{
+    position: absolute;
+    left: 220px;
+    top: 80px;
     font-size: small;
     font-family: 'Times New Roman', Times, serif;
 
@@ -54,46 +107,6 @@ body{
     font-weight: bold;
     margin-left: 705px;
     margin-top: -30px;
-}
-
-.descripcion{
-    background-color: rgb(168, 168, 168);
-    border: 2px #000 solid;
-    width: 400px;
-    height: 100px;
-    margin-left: 700px;
-    margin-top: 20px;    
-}
-.h53{
-    font-weight: bold;
-    position: absolute;
-    margin-left: 1125px;
-    margin-top: -145px;
-}
-.descripcion2{
-    background-color: rgb(168, 168, 168);
-    position: absolute;
-    border: 2px #000 solid;
-    width: 400px;
-    height: 100px;
-    margin-left: 1120px;
-    margin-top: -100px;   
-}
-.p1, .p2, .p3{
-    font-weight: bold;
-    color: #000;
-    margin-left: 5px;
-    margin-bottom: 10px;
-}
-span{
-    color: rgb(15, 54, 226);
-}
-.p{
-    font-size: small;
-    font-family: 'Times New Roman', Times, serif;
-    position: relative;
-    left: 40px;
-    bottom: 16px;    
 }
 .ref1{
     outline: 2px solid #000;
@@ -108,48 +121,117 @@ span{
 .ref2{
     outline: 2px solid #000;
     left: 10px;
-    bottom: 50px;    
+    top: 20px;    
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(206, 136, 57);
+}
+.ref3{
+    outline: 2px solid #000;
+    left: 10px;
+    top: 40px;    
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(42, 204, 204);
+}
+.ref4{
+    outline: 2px solid #000;
+    left: 10px;
+    top: 60px;    
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(200, 53, 219);
+
+}
+.ref5{
+    outline: 2px solid #000;
+    left: 10px;
+    top: 80px;    
     position: absolute;
     width: 15px;
     height: 15px;
     background-color: rgb(19, 173, 27);
 }
-.ref3{
+.mos1{
     outline: 2px solid #000;
-    left: 10px;
-    bottom: 15px;    
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: rgb(21, 122, 168);
-}
-.ref4{
-    outline: 2px solid #000;
-    left: 220px;
+    left: 200px;
     top: 0;
     position: absolute;
     width: 15px;
     height: 15px;
     background-color: rgb(151, 76, 14);
-
 }
-.ref5{
+.mos2{
     outline: 2px solid #000;
-    left: 220px;
-    bottom: 50px;    
+    left: 200px;
+    top: 20px;
     position: absolute;
     width: 15px;
     height: 15px;
     background-color: rgb(182, 166, 19);
 }
-.ref6{
+.mos3{
     outline: 2px solid #000;
-    left: 220px;
-    bottom: 15px;    
+    left: 200px;
+    top: 40px;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(105,21,214);
+}
+.mos4{
+    outline: 2px solid #000;
+    left: 200px;
+    top: 60px;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(21, 122, 168);
+}
+.mos5{
+    outline: 2px solid #000;
+    left: 200px;
+    top: 80px;
     position: absolute;
     width: 15px;
     height: 15px;
     background-color: rgb(76, 77, 85);
+}
+.descripcion{
+    background-color: rgb(168, 168, 168);
+    border: 2px #000 solid;
+    width: 465px;
+    height: 100px;
+    margin-left: 700px;
+    margin-top: 20px;    
+}
+.h53{
+    font-weight: bold;
+    position: absolute;
+    margin-left: 1200px;
+    margin-top: -145px;
+}
+.descripcion2{
+    background-color: rgb(168, 168, 168);
+    position: absolute;
+    border: 2px #000 solid;
+    width: 465px;
+    height: 100px;
+    margin-left: 1200px;
+    margin-top: -100px;   
+}
+.p1, .p2, .p3{
+    font-weight: bold;
+    color: #000;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+span{
+    color: rgb(15, 54, 226);
 }
 main{
     padding: 30px; 

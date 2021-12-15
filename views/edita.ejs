@@ -67,7 +67,7 @@
           <div class="card border-secondary">
               <div class="card-header">Editar Registro</div>
               <div class="card-body">
-                  <form action="/editar" method="POST">
+                  <form action="/edita" method="POST">
                     <input id="boxId" name="boxId" value="<%= boxId.boxId %>" hidden>
                                 
                 <div class="mb-3">
@@ -107,10 +107,6 @@
             <label for="boxId" class="form-label">JEFE</label>
             <input type="text" class="form-control" id="jefe" name="jefe" value="<%= boxId.jefe %>" tabindex="1">
         </div>
-        <div class="mb-3">
-          <label for="boxId" class="form-label">SITE</label>
-          <input type="text" class="form-control" id="sitio" name="sitio" value="<%= boxId.sitio %>" tabindex="1">
-      </div>
       <div class="mb-3">
         <label for="boxId" class="form-label">Servicio</label>
         <input type="text" class="form-control" id="servicio" name="servicio" value="<%= boxId.servicio %>" tabindex="1">
