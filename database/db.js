@@ -1,9 +1,9 @@
 const mysql = require("mysql2");
 
 const conexion = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'bianca893',
+    host: 'database-konecta.cz9xfbrvuo1l.sa-east-1.rds.amazonaws.com',
+    user: 'admin',
+    password: 'Konecta+2022',
     database: "crud_nodejs_db"
 });
 
