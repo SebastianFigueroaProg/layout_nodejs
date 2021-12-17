@@ -76,7 +76,7 @@ section{
 .descripcion{
     background-color: rgb(168, 168, 168);
     border: 2px #000 solid;
-    width: 400px;
+    width: 410px;
     height: 100px;
     margin-left: 40px;
     margin-top: 10px;    
@@ -91,7 +91,7 @@ section{
     background-color: rgb(168, 168, 168);
     position: absolute;
     border: 2px #000 solid;
-    width: 400px;
+    width: 410px;
     height: 100px;
     margin-left: 483px;
     margin-top: -100px;   
@@ -106,7 +106,7 @@ section{
     background-color: rgb(168, 168, 168);
     position: absolute;
     border: 2px #000 solid;
-    width: 400px;
+    width: 410px;
     height: 100px;
     margin-left: 925px;
     margin-top: -100px;   
@@ -120,7 +120,7 @@ section{
 .descripcion4{
     background-color: rgb(168, 168, 168);
     border: 2px #000 solid;
-    width: 400px;
+    width: 410px;
     height: 100px;
     margin-left: 40px; 
 }
@@ -134,7 +134,7 @@ section{
     background-color: rgb(168, 168, 168);
     position: absolute;
     border: 2px #000 solid;
-    width: 400px;
+    width: 410px;
     height: 100px;
     margin-left: 483px;
     margin-top: -100px;   
@@ -149,7 +149,7 @@ section{
     background-color: rgb(168, 168, 168);
     position: absolute;
     border: 2px #000 solid;
-    width: 400px;
+    width: 410px;
     height: 100px;
     margin-left: 925px;
     margin-top: -100px;   
