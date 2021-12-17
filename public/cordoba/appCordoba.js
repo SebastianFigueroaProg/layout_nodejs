@@ -495,7 +495,7 @@ const estadoBoxCallM =(data) =>{
                 divCallM[i].style.backgroundColor=ocupadoTm;
             }else if(arrayEstadoTt[i] === 'Disponible' && arrayEstadoTm[i] === 'Disponible'){
                 divCallM[i].style.backgroundColor=disponible;
-            }else if(arrayEstadoTt[i] === 'Disponible sin PC' && arrayEstadoTm[i] === 'Disponible sin PC'){
+            }else if(arrayEstadoTt[i] == 'Disponible sin PC' && arrayEstadoTm[i] == 'Disponible sin PC'){
                 divCallM[i].style.backgroundColor=DisponibleSinPC;
             }else if (arrayEstadoTt[i] === 'Por Ordenanza' && arrayEstadoTm[i] === 'Por Ordenanza'){
                 divCallM[i].style.backgroundColor=porOrdenanza;                        
