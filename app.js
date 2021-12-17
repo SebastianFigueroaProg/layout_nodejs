@@ -4,6 +4,9 @@ const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 const app = express();
 const ruta = require('./router');
+require('dotenv').config();
+
+const port = process.env.PORT;
 
 //seteamos el motor de plantilla ejs
 app.set('view engine', 'ejs');
@@ -33,6 +36,6 @@ app.use(function(req, res, next) {
 });
 
 
-app.listen(5000, ()=>{
-    console.log('SERVER corriendo en http://localhost:5000')
+app.listen(port, ()=>{
+    console.log(`SERVER corriendo en http://localhost:${port}`)
 });
