@@ -17,7 +17,7 @@ exports.register =  async (req, res)=>{
     
         conexion.query('INSERT INTO user SET ?',{user:user, name:name, pass:passHash, statu:statu},(error,result)=>{
             if (error) {console.log(error)}
-            res.redirect('/')
+            res.redirect('/superUser')
         })
         
     } catch (error) {
@@ -119,7 +119,29 @@ exports.changePass =  async (req, res)=>{
         console.log(error)               
     }
 }
+exports.changePassUser =  async (req, res)=>{
 
+    try {
+        const user = req.body.user; 
+        const passnew = req.body.passnew;
+        const pass = req.body.pass;
+
+        if (pass === passnew) {
+            let passHash = await bcryptjs.hash(pass, 8)
+            
+            conexion.query('UPDATE user SET ? WHERE user = ? ',[{pass:passHash},user],(error,result)=>{
+                if (error) {console.log(error)}
+                res.redirect('/login')
+            })
+            
+        }else{
+            res.redirect('/passUser')
+        }
+        
+    }catch (error) {
+        console.log(error)               
+    }
+}
 exports.changePassInv =  async (req, res)=>{
 
     try {

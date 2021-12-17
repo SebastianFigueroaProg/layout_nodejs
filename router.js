@@ -394,6 +394,10 @@ router.get('/register',authControllers.isAuthenticated,(req, res)=>{
     res.render('register',{user:req.user});
 })
 
+// Cambiar contraseña SuperAdmin
+router.get('/passUser', authControllers.isAuthenticated,(req, res)=>{
+    res.render('changePassRol', {user:req.user} );        
+})
 // Cambiar contraseña ADMIN
 router.get('/pass', authControllers.isAuthenticated,(req, res)=>{
     res.render('changePass', {user:req.user} );        
@@ -423,6 +427,8 @@ router.post('/register',authControllers.register);
 
 //Ruta Cambiar Contraseña
 router.post('/pass',authControllers.changePass);
+//Ruta Cambiar Contraseña SuperUser
+router.post('/passUser',authControllers.changePassUser);
 //Ruta Cambiar Contraseña Invitado
 router.post('/passInv',authControllers.changePassInv);
 

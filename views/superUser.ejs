@@ -79,7 +79,7 @@
     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"></nav> -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/pass"><% if ( user ) { %>
+          <a class="navbar-brand" href="/passUser"><% if ( user ) { %>
             <span ><%= user.name %></span>
             <% } %>
           </a>
@@ -117,9 +117,6 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link active" id="mapaChaco" aria-current="page" href="/rosario/rosario-rol.html">Mapa Rosario</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" id="mapaChaco" aria-current="page" href="/register">Registrar Usuario</a>
               </li>
               <li class="nav-item">                
                 <a href="logout" id="logout" class="btn btn-outline-info"><i class="fas fa-sign-out-alt"></i></a>

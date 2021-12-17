@@ -21,6 +21,10 @@
     .check{
         margin-left: 15px;
         margin-bottom: 15px;
+    }
+    .register{
+        margin-left: 74%;
+        background: #3142da
     }    
     </style>
     <title>Cambiar Contraseña</title>
@@ -35,7 +39,7 @@
               <div class="card-header bg-primary text-white">Cambiar Contrasena Usuario:
                   <% if ( user ) { %>
                 <span class="usuario"> <%= user.name %></span>
-                <% } %>
+                <% } %>                                
             </div>
             <div class="card-body text-primary">
                 <% if ( user ) { %>                        
@@ -59,8 +63,9 @@
                 <input class="input" type="checkbox" onclick="myFuntion()"> Ver Password <br> 
             </div>
             <div class="card-footer bg-transparent border-primary">
-                <a href="/" type="button" class="btn btn-secondary">Cancelar</a>
-                <button type="submit" class="btn btn-primary">Aceptar</button>            
+                <a href="/superUser" type="button" class="btn btn-secondary">Cancelar</a>
+                <button type="submit" class="btn btn-primary">Aceptar</button>
+                <a href="/register" type="button" class="btn btn-secondary register">Registrar Usuario</a>            
             </div>
             </form>
             
