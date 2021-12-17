@@ -17,6 +17,13 @@
 
     <title>Layout Konecta</title>
     <style>
+      body{
+        margin: 0;
+        background: #636363;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
       
       section{
         margin-left: 1%;
@@ -26,7 +33,7 @@
       
       nav{
         padding: 30px;
-        background-color: rgb(218, 210, 210);
+        background: linear-gradient(180deg,#028CAE,#25B5DB);
       }
         #user{
             width: 95%;
@@ -38,27 +45,47 @@
         }
         .navbar-brand{
           font-weight: bold;
+          margin-left: 5px;
+          color: #fff;
         }
         table th{
-          background-color: #337ab7 !important;
-          color: white;
+          background-color: #ffffff !important;
+          color: #000;
+          font-weight: 100;
         }
         table>tbody>tr>td{
           vertical-align: middle !important;
+          background: #fff !important;
+        }
+        .dataTables_info{
+          color: #fff;
+        }
+        label{
+          color: #fff;
         }
         .btn-group-verticalp{
           position: absolute !important;
         }
-        #logout{
+        #logout{          
           text-decoration: none;
           right: 1%;
           position: absolute;
-          margin-top: 9px;
+          margin-top: 4px;
+          color: #fff;
+        }
+        #logout i{
+          width: 8px;
+          height: 8px;
+          margin-right: 5px;
+        }
+        #logout:hover{
+          background: rgb(13, 48, 163);
         }
         #mapaChaco{
           margin-top: 7px;
           margin-left: 5px;
           font-weight: bold;
+          color: #fff;
         }
         .callP{
           margin-left: 5px;
@@ -67,18 +94,67 @@
         .callT{
           color: #0A58CA;
           font-weight: bold;
+          color: #fff;
         }
         .valorC{
-          background-color: #ccc5c5;
-          border-radius: 7px;
+          background: linear-gradient(180deg,#028CAE,#25B5DB);
+          border: none;
+          border-radius: 2%;
+          outline: none;
           margin-right: 5px;
-        }             
+          color: #fff;
+        }
+        ion-icon{
+          width: 20px;
+          height: 20px;
+          color: #fff;
+        }       
+        select{
+          background: transparent;
+          border: none;
+          outline: none;
+          color: #fff;
+        }
+        select option{
+          background: #25B5DB;
+        }
+        footer{
+          width: 100%;
+          height: 60px;
+          background: linear-gradient(180deg,#028CAE,#25B5DB);   
+          text-align: center;    
+          margin-top: auto;
+        }
+        .dev{
+          font-size: 20px;
+          padding-bottom: 0%;
+          color: #fff;
+          font-weight: bold;
+        }
+        .copy{
+          color: #fff;
+          font-size: 12px;
+          margin-top: -10px;
+          }
+          .vam1{
+            position: absolute;
+            width: 60px;
+            margin-top: 6px;
+            right: 6%;
+          }
+          .vam2{
+            position: absolute;
+            width: 60px;
+            margin-top: -58px;
+            right: 6%;
+          }
     </style>
   </head>
   <body>
     <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"></nav> -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
+          <ion-icon name="person-outline"></ion-icon>
           <a class="navbar-brand" href="/pass"><% if ( user ) { %>
             <span ><%= user.name %></span>
             <% } %>
@@ -87,7 +163,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="callP">
-          <label for="callT" class="callT">CALL</label>
+          <label for="callT" class="callT">CALL: </label>
                   <select name="call" id="call" class="call" aria-label="Default select example">                      
                       <option value="calla" selected>Call A S.8</option>
                       <option value="callb" selected>Call B S.8</option>
@@ -121,6 +197,9 @@
               <li class="nav-item">
                 <a class="nav-link active" id="mapaChaco" aria-current="page" href="/rosario/rosario.html">Mapa Rosario</a>
               </li>
+              <li class="nav-item">
+                <img class="vam1" src="/VAM logoyh.png" alt="">
+              </li>              
               <li class="nav-item">                
                 <a href="logout" id="logout" class="btn btn-outline-info"><i class="fas fa-sign-out-alt"></i></a>
               </li>              
@@ -130,10 +209,10 @@
       </nav>
 
       
-  <section>    
-    <table id="user" class="table table-bordered table-striped text-center mt-4 " >
+  <section>
+      <table id="user" class="table table-bordered table-striped text-center mt-4 ">
         <thead class="bg-primary text-white">
-            <th scope="col">BOX</th>
+          <th scope="col">BOX</th>
             <th scope="col">JORNADA</th>
             <th scope="col">ESTADO PC</th>
             <th scope="col">OBLEA PC</th>
@@ -147,14 +226,19 @@
             <th scope="col">SERVICIO</th>
             <th scope="col">MODALIDAD</th>
             <th scope="col">ACCION</th>
-        </thead>
-        <tbody>
+          </thead>
+          <tbody>
             
-        </tbody>
-    </table>  
-    
-  </section>  
+          </tbody>
+        </table>  
+      </section>
   
+      <footer class="footer">
+        <p class="dev">Desarrollado por VAM TECO - Konecta Argentina</p>
+        <p class="copy">&copy; VAM TECO Konecta - 2021 | Todos los derechos reservados</p>  
+        <img class="vam2" src="/VAM logoyh.png" alt="">
+      </footer>
+      
     <!-- DataTables -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
@@ -169,7 +253,10 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-
+    
+    <script  type = "module"  src = "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> 
+    <script  nomodule  src = "https: // unpkg .com / ionicons @ 5.5.2 / dist / ionicons / ionicons.js "></script>
+    
     <script >
 
       const boton = document.querySelector('.valorC');
