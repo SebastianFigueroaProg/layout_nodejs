@@ -2,7 +2,7 @@
     background-color: rgb(224, 222, 222);
     outline: 2px solid #000;
     margin: 10px;
-    width: 100%;
+    width: 98%;
     height: 400px; 
     display: grid;
     grid-template-columns: repeat(39, 1fr);
@@ -543,7 +543,7 @@
     background-color: rgb(224, 222, 222);
     outline: 2px solid #000;
     margin: 10px;
-    width: 100%;
+    width: 98%;
     height: 500px; 
     display: grid;
     grid-template-columns: repeat(43, 1fr);

@@ -3,27 +3,53 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    margin: 0;
+    background: #636363 !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 div{
     width: 100%;
     word-wrap: break-word;
+}
+.todoCon{
+    margin-top: 20px;
 }
 section{
     width: 100%;
     word-wrap: break-word;
 }
+.barra{
+    width: 100%;
+    height: 45px;
+    background: linear-gradient(180deg,#028CAE,#25B5DB);   
+    text-align: center;    
+    margin-top: auto;
+}
+.dev2{
+    font-size: 20px;
+    margin-top: 5px;
+    color: #fff;
+    font-weight: bold;
+}
 #boton{
-    background-color: aqua;
-    color: rgb(17, 17, 17);
-    padding: 4px;
+    background-color: rgb(53, 116, 209);
+    color: rgb(255, 255, 255);
+    padding: 5px;
     margin: 5px;
-    position: relative;
+    left: 10px;
+    position: absolute;
+    text-decoration: none;
+    border-radius: 10%;
 }
 .vam{
     position: absolute;
     left: 22%;
     width: 200px;
     height: 150px;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 .h51{
     font-weight: bold;
@@ -74,7 +100,7 @@ section{
 }
 
 .descripcion{
-    background-color: rgb(168, 168, 168);
+    background-color: rgb(207, 204, 204);
     border: 2px #000 solid;
     width: 410px;
     height: 100px;
@@ -84,31 +110,31 @@ section{
 .h53{
     font-weight: bold;
     position: absolute;
-    margin-left: 483px;
+    margin-left: 470px;
     margin-top: -135px;
 }
 .descripcion2{
-    background-color: rgb(168, 168, 168);
+    background-color: rgb(207, 204, 204);
     position: absolute;
     border: 2px #000 solid;
     width: 410px;
     height: 100px;
-    margin-left: 483px;
+    margin-left: 468px;
     margin-top: -100px;   
 }
 .h54{
     font-weight: bold;
     position: absolute;
-    margin-left: 928px;
+    margin-left: 897px;
     margin-top: -135px;
 }
 .descripcion3{
-    background-color: rgb(168, 168, 168);
+    background-color: rgb(207, 204, 204);
     position: absolute;
     border: 2px #000 solid;
     width: 410px;
     height: 100px;
-    margin-left: 925px;
+    margin-left: 895px;
     margin-top: -100px;   
 }
 .h55{
@@ -118,7 +144,7 @@ section{
     margin-left: 40px;
 }
 .descripcion4{
-    background-color: rgb(168, 168, 168);
+    background-color: rgb(207, 204, 204);
     border: 2px #000 solid;
     width: 410px;
     height: 100px;
@@ -128,30 +154,59 @@ section{
     font-weight: bold;
     position: absolute;
     margin-top: -135px;
-    margin-left: 483px;
+    margin-left: 470px;
 }
 .descripcion5{
-    background-color: rgb(168, 168, 168);
+    background-color: rgb(207, 204, 204);
     position: absolute;
     border: 2px #000 solid;
     width: 410px;
     height: 100px;
-    margin-left: 483px;
+    margin-left: 468px;
     margin-top: -100px;   
 }
 .h57{
     font-weight: bold;
     position: absolute;
     margin-top: -135px;
-    margin-left: 928px;
+    margin-left: 897px;
 }
 .descripcion6{
-    background-color: rgb(168, 168, 168);
+    background-color: rgb(207, 204, 204);
     position: absolute;
     border: 2px #000 solid;
     width: 410px;
     height: 100px;
-    margin-left: 925px;
+    margin-left: 895px;
+    margin-top: -100px;   
+}
+.h58{
+    font-weight: bold;
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 252px;
+}
+.descripcion7{
+    background-color: rgb(207, 204, 204);
+    border: 2px #000 solid;
+    width: 410px;
+    height: 100px;
+    margin-left: 250px;
+    margin-top: 50px;   
+}
+.h59{
+    font-weight: bold;
+    position: absolute;
+    margin-top:-135px;
+    margin-left: 697px;
+}
+.descripcion8{
+    background-color: rgb(207, 204, 204);
+    position: absolute;
+    border: 2px #000 solid;
+    width: 410px;
+    height: 100px;
+    margin-left: 695px;
     margin-top: -100px;   
 }
 .p1, .p2, .p3{
@@ -228,6 +283,7 @@ span{
 }
 main{
     padding: 30px; 
+    margin-top: 20px;
     display: flex;   
     flex-direction: column;       
     overflow: auto;
@@ -236,7 +292,7 @@ main{
     background-color: rgb(224, 222, 222);
     outline: 2px solid #000;
     margin: 10px;
-    width: 100%;
+    width: 98%;
     height: 400px; 
     display: grid;
     grid-template-columns: repeat(21, 1fr);
@@ -528,7 +584,7 @@ main{
     background-color: rgb(224, 222, 222);
     outline: 2px solid #000;
     margin: 10px;
-    width: 100%;
+    width: 98%;
     height: 500px; 
     display: grid;
     grid-template-columns: repeat(24, 1fr);
