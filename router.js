@@ -3,6 +3,7 @@ const router = express();
 const conexion = require('./database/db');
 const crud = require('.//controllers/crud');
 const authControllers = require('./controllers/authController');
+const { route } = require('express/lib/application');
 
 //index ADMIN
 router.get('/',authControllers.isAuthenticated,(req,res)=>{
@@ -73,6 +74,42 @@ router.get('/data/callb',(req,res)=>{
 
     })    
 })
+// Data Site 8
+router.get('/data/site8', (req,res)=>{
+
+    conexion.query('SELECT * FROM agentes_site8',(error, result)=>{
+
+        if (error) {
+            throw error;
+        } else {
+            data = JSON.stringify(result);
+            res.send(data);
+        }
+    })
+})
+// Data Site 14
+router.get('/data/site14',(req,res)=>{
+    conexion.query('SELECT * FROM agentes_site14',(error, result)=>{
+        if (error) {
+            throw error;
+        } else {
+            data = JSON.stringify(result);
+            res.send(data);
+        }
+    })
+})
+// Data Site 1
+router.get('/data/site1',(req,res)=>{
+    conexion.query('SELECT * FROM agentes_site1',(error, result)=>{
+        if (error) {
+            throw error;
+        } else {
+            data = JSON.stringify(result);
+            res.send(data);
+        }
+    })
+})
+
 //Data Call F
 router.get('/data/callf',(req,res)=>{
 
@@ -156,6 +193,19 @@ router.get('/data/callp',(req,res)=>{
         }
 
     })    
+})
+//Data Call D
+router.get('/data/calld',(req,res)=>{
+    
+    conexion.query('SELECT *FROM agentes_calld', (error,result)=>{
+
+        if (error) {
+            throw error;
+        } else {
+            data = JSON.stringify(result);
+            res.send(data);
+        }
+    })
 })
 //Data Call SM
 router.get('/data/callsm',(req,res)=>{
@@ -331,6 +381,19 @@ router.get('/editp/:boxId',authControllers.isAuthenticated,(req, res)=>{
         }
     })   
 })
+//Call D
+router.get('/editd/:boxId', authControllers.isAuthenticated,(req,res)=>{
+    const box = req.params.boxId;
+
+    conexion.query('SELECT * FROM agentes_calld WHERE boxId=?',[box],(error, result)=>{
+
+        if (error) {
+            throw error;
+        } else {
+            res.render('editd',{boxId:result[0],user:req.user});
+        }
+    })
+})
 //Call SM
 router.get('/editsm/:boxId',authControllers.isAuthenticated,(req, res)=>{
     const box = req.params.boxId;   
@@ -416,6 +479,7 @@ router.post('/editarl', crud.editarL); // call-L
 router.post('/editarm', crud.editarM); // call-M
 router.post('/editarn', crud.editarN); // call-M
 router.post('/editarp', crud.editarP); // call-P
+router.post('/editard', crud.editarD); // call-D
 router.post('/editaro', crud.editarO); // call-O
 router.post('/editarsm', crud.editarSm); // call-SM
 router.post('/editAros', crud.editAros); // call-A-Rosario

@@ -149,6 +149,10 @@
             margin-top: -58px;
             right: 6%;
           }
+          box-icon{
+            margin-top: 6px !important;            
+            align-items: center;
+          }
     </style>
   </head>
   <body>
@@ -171,13 +175,17 @@
                     <option value="callr" selected>Call A S.14</option>
                     <option value="callt" selected>Call B S.14</option>
                     <option value="callu" selected>Call C S.14</option>                     
+                    <option value="calld" selected>Call D S.1</option>
                     <option value="callf" selected>Call F S.1</option> 
                     <option value="calll" selected>Call L S.1</option> 
                     <option value="callm" selected>Call M S.1</option> 
                     <option value="calln" selected>Call N S.1</option> 
                     <option value="callo" selected>Call O S.1</option> 
                     <option value="callp" selected>Call P S.1</option>
-                    <option value="callsm" selected>Call SM S.1</option>                       
+                    <option value="callsm" selected>Call SM S.1</option>
+                    <option value="site8" selected>SITE CHACO</option>
+                    <option value="site1" selected>SITE CORDOBA</option>
+                    <option value="site14" selected>SITE ROSARIO</option>                       
                   </select>
                   <button class="valorC">Buscar</button>
           </div>
@@ -254,6 +262,7 @@
 
     <script  type = "module"  src = "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script> 
     <script  nomodule  src = "https: // unpkg .com / ionicons @ 5.5.2 / dist / ionicons / ionicons.js "></script>
+    <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
     
     <script >
 
@@ -305,6 +314,8 @@
                 return '<a href="/edito/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
               }else if(valor == 'callp' ){
                 return '<a href="/editp/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
+              }else if(valor == 'calld' ){
+                return '<a href="/editd/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
               }else if(valor == 'callsm' ){
                 return '<a href="/editsm/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
               }else if(valor == 'callr' ){
@@ -313,6 +324,12 @@
                 return '<a href="/editT/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
               }else if(valor == 'callu' ){
                 return '<a href="/editU/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
+              }else if(valor == 'site8' ){
+                return '<a href="#" id="editSite" class="btn btn-outline-danger"><box-icon name="x-circle"></box-icon></a>'                
+              }else if(valor == 'site1' ){
+                return '<a href="#" id="editSite" class="btn btn-outline-danger"><box-icon name="x-circle"></box-icon></a>'                
+              }else if(valor == 'site14' ){
+                return '<a href="#" id="editSite" class="btn btn-outline-danger"><box-icon name="x-circle"></box-icon></a>'                
               }  
             }
           }

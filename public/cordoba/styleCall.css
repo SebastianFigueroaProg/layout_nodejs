@@ -184,17 +184,17 @@ section{
     font-weight: bold;
     position: absolute;
     margin-top: -35px;
-    margin-left: 252px;
+    margin-left: 470px;
 }
 .descripcion7{
     background-color: rgb(207, 204, 204);
     border: 2px #000 solid;
     width: 410px;
     height: 100px;
-    margin-left: 250px;
+    margin-left: 468px;
     margin-top: 50px;   
 }
-.h59{
+/* .h59{
     font-weight: bold;
     position: absolute;
     margin-top:-135px;
@@ -208,7 +208,7 @@ section{
     height: 100px;
     margin-left: 695px;
     margin-top: -100px;   
-}
+} */
 .p1, .p2, .p3{
     font-weight: bold;
     color: #000;

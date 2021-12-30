@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Usamos BOXIcons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>CRUD</title>
+    <style>
+      body{
+        background: #636363;
+        }
+        nav{
+          background: linear-gradient(180deg,#028CAE,#25B5DB);
+        }
+        .table{
+            width: 82%;
+            margin-left: 9%;
+        }
+        .boxId-id{
+          margin-left: 7px;
+          margin-top: 20px !important;
+          font-weight: bold;
+          color: rgb(11, 25, 218);
+          margin-top: 5px;
+        }
+        .card-header{
+          background: linear-gradient(180deg,#028CAE,#25B5DB);
+          color: #fff;
+        }
+        .container{
+          margin-bottom: 40px;
+        }
+        #user{
+          margin-top: -3px;
+          color: #fff;
+        }
+        #volver{
+          background: rgb(53, 116, 209);
+          color: #fff;
+          border-radius: 10%;
+          padding: 4px;
+        }
+        .boxId-id{
+          color: #fff;
+        }
+        footer{
+          width: 100%;
+          height: 60px;
+          background: linear-gradient(180deg,#028CAE,#25B5DB);   
+          text-align: center;    
+          margin-top: auto;
+        }
+        .dev{
+          font-size: 20px;
+          padding-bottom: 0%;
+          color: #fff;
+          font-weight: bold;
+        }
+        .copy{
+          color: #fff;
+          font-size: 12px;
+          margin-top: -10px;
+          }
+          .vam1{
+            position: absolute;
+            width: 60px;
+            margin-top: 6px;
+            right: 6%;
+          }
+          .vam2{
+            position: absolute;
+            width: 60px;
+            margin-top: -58px;
+            right: 6%;
+          }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a id="user" class="navbar-brand" href="#"><% if ( user ) { %>
+            <span><%= user.name %></span>
+            <% } %>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a id="volver" class="nav-link active" aria-current="page" href="/">Volver</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <% if(boxId) {%>
+
+        <div>
+          <h4 class="boxId-id">BOX: <%=boxId.box%> // Turno: <%=boxId.jornada%></h4>
+        </div>
+
+      <div class="container mt-4">
+          <div class="card border-secondary">
+              <div class="card-header">Editar Registro</div>
+              <div class="card-body">
+                  <form action="/editard" method="POST" name="formulario" id="formulario">
+                    <input id="boxId" name="boxId" value="<%= boxId.boxId %>" hidden>
+                
+                
+                <div class="mb-3">
+                  <label for="user" class="form-label">ESTADO PC</label>
+                  <select name="estadoPc" id="estadoPc" class="form-select" aria-label="Default select example">                      
+                      <option <%= boxId.estadoPc=='Ocupado' ? "selected" : '' %> value="Ocupado" selected>Ocupado</option>
+                      <option <%= boxId.estadoPc=='Disponible sin PC' ? "selected" : '' %> value="Disponible sin PC" selected>Disponible sin PC</option>
+                      <option <%= boxId.estadoPc=='Por Ordenanza' ? "selected" : '' %> value="Por Ordenanza" selected>Por Ordenanza</option>
+                      <option <%= boxId.estadoPc=='Disponible' ? "selected" : '' %> value="Disponible" selected>Disponible</option>
+                  </select>
+              </div>
+              <div class="mb-3">
+                <label for="boxId" class="form-label">Oblea Pc</label>
+                <input type="text" class="form-control" id="obleaPc" name="obleaPc" value="<%= boxId.obleaPc %>" tabindex="1">
+            </div>
+                <div class="mb-3">
+                  <label for="boxId" class="form-label">DNI</label>
+                  <input type="text" class="form-control" id="DNI" name="DNI" value="<%= boxId.DNI %>" tabindex="1">
+              </div>
+              <div class="mb-3">
+                <label for="boxId" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" value="<%= boxId.nombre %>" tabindex="1">
+            </div>
+            <div class="mb-3">
+              <label for="boxId" class="form-label">Ingreso</label>
+              <input type="text" class="form-control" id="ingreso" name="ingreso" value="<%= boxId.ingreso %>" tabindex="1">
+          </div>
+          <div class="mb-3">
+            <label for="boxId" class="form-label">Egreso</label>
+            <input type="text" class="form-control" id="egreso" name="egreso" value="<%= boxId.egreso %>" tabindex="1">
+          </div>
+            <div class="mb-3">
+              <label for="boxId" class="form-label">Lider</label>
+              <input type="text" class="form-control" id="lider" name="lider" value="<%= boxId.lider %>" tabindex="1">
+          </div>
+          <div class="mb-3">
+            <label for="boxId" class="form-label">JEFE</label>
+            <input type="text" class="form-control" id="jefe" name="jefe" value="<%= boxId.jefe %>" tabindex="1">
+        </div>
+      <div class="mb-3">
+        <label for="boxId" class="form-label">Servicio</label>
+        <input type="text" class="form-control" id="servicio" name="servicio" value="<%= boxId.servicio %>" tabindex="1">
+    </div>
+    <div class="mb-3">
+      <label for="boxId" class="form-label">Modalidad TT</label>
+      <input type="text" class="form-control" id="modalidadTT" name="modalidadTT" value="<%= boxId.modalidadTT %>" tabindex="1">
+  </div>
+  <div class="user-edit">
+    <% if ( user ) { %>
+      <input type="text" class="form-control" id="editor" name="editor" value="<%= user.name %>" tabindex="1" hidden>
+      <% } %> 
+  </div>
+
+                <button type="submit" class="btn btn-primary" tabindex="5">Guardar</button>
+                <a href="/" class="btn btn-secondary">Cancelar</a>
+            </form>
+              </div>
+          </div>
+      </div>
+      <% } %>
+
+      <footer class="footer">
+        <p class="dev">Desarrollado por VAM TECO - Konecta Argentina</p>
+        <p class="copy">&copy; VAM TECO Konecta - 2021 | Todos los derechos reservados</p>  
+        <img class="vam2" src="/VAM logoyh.png" alt="">
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    
+    
+  </body>
+</html>
