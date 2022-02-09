@@ -184,17 +184,17 @@ section{
     font-weight: bold;
     position: absolute;
     margin-top: -35px;
-    margin-left: 470px;
+    margin-left: 267px;
 }
 .descripcion7{
     background-color: rgb(207, 204, 204);
     border: 2px #000 solid;
     width: 410px;
     height: 100px;
-    margin-left: 468px;
+    margin-left: 265px;
     margin-top: 50px;   
 }
-/* .h59{
+.h59{
     font-weight: bold;
     position: absolute;
     margin-top:-135px;
@@ -208,7 +208,7 @@ section{
     height: 100px;
     margin-left: 695px;
     margin-top: -100px;   
-} */
+}
 .p1, .p2, .p3{
     font-weight: bold;
     color: #000;
@@ -300,13 +300,18 @@ main{
     gap: 3px
 }
 .element{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 9px;
     color: #fff;
     font-family: sans-serif;
-    text-align: center;   
-    padding-top: 4px;    
+    text-align: center; 
 }
 .staff{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: small;
     color: #fff;
     font-family: sans-serif;
@@ -314,19 +319,16 @@ main{
 }
 .oficina{
     background-color: rgb(33, 153, 233);
-    padding-top: 45px;
     grid-column:17/22;
     grid-row: 1/5;
 }
 .rack{
     background-color: rgb(33, 153, 233);
-    padding-top: 45px;
     grid-column:13/17;
     grid-row: 1/5;
 }
 .call-L{
     background-color: rgb(14, 28, 160);
-    padding-top: 15px;
     grid-column: 1/6;
     grid-row: 1/3;
 }
@@ -562,19 +564,16 @@ main{
 }
 .BO1{
     background-color: rgb(202, 123, 19);
-    padding-top: 15px;
     grid-column: 3/4;
     grid-row: 3/5;
 }
 .BO2{
     background-color: rgb(202, 123, 19);
-    padding-top: 15px;
     grid-column: 4/5;
     grid-row: 3/5;
 }
 .BO3{
     background-color: rgb(202, 123, 19);
-    padding-top: 15px;
     grid-column: 5/6;
     grid-row: 3/5;
 }
@@ -599,49 +598,41 @@ main{
 }
 .guardia{
     background-color: rgb(33, 153, 233);
-    padding-top: 15px;
     grid-column: 1/5;
     grid-row: 1/3;
 }
 .baño1{
     background-color: rgb(33, 153, 233);
-    padding-top: 15px;
     grid-column: 21/25;
     grid-row: 1/3;
 }
 .baño2{
     background-color: rgb(33, 153, 233);
-    padding-top: 15px;
     grid-column: 23/25;
     grid-row: 3/5;
 }
 .rack2{
     background-color: rgb(33, 153, 233);
-    padding-top: 27px;
     grid-column: 23/25;
     grid-row: 5/8;
 }
 .salaR{
     background-color: rgb(33, 153, 233);
-    padding-top: 60px;
     grid-column: 23/25;
     grid-row: 8/14;
 }
 .salaB{
     background-color: rgb(33, 153, 233);
-    padding-top: 60px;
     grid-column: 23/25;
     grid-row: 14/-1;
 }
 .call-N{
     background-color: rgb(14, 28, 160);
-    padding-top: 15px;
     grid-column: 5/8;
     grid-row: 1/3;
 }
 .oficinaN{
     background-color: rgb(33, 153, 233);
-    padding-top: 15px;
     grid-column: 15/21;
     grid-row: 1/3;
 }
@@ -915,7 +906,6 @@ main{
 }
 .columna2{
     background-color: rgb(83, 79, 79);
-    padding-top: 18px;
     grid-column: 11/13;
     grid-row: 10/12;
 }
@@ -1139,7 +1129,6 @@ main{
 }
 .columna5{
     background-color: rgb(83, 79, 79);
-    padding-top: 18px;
     grid-column: 19/21;
     grid-row: 10/12;
 }

@@ -256,6 +256,18 @@ router.get('/data/callu',(req,res)=>{
         }
     })
 })
+//Data Call T Cordoba
+router.get('/data/callz', (req,res)=>{
+    conexion.query('SELECT * FROM agentes_callt', (error, result)=>{
+        if (error) {
+            throw error;
+        } else {
+            data = JSON.stringify(result);
+            res.send(data);
+        }
+    })
+})
+
 
 //Usuarios Registrados 
 router.get('/user',(req,res)=>{
@@ -446,7 +458,19 @@ router.get('/editU/:boxId',authControllers.isAuthenticated,(req, res)=>{
         }
     })   
 })
-
+//Call T Cordoba
+router.get('/editZ/:boxId',authControllers.isAuthenticated,(req, res)=>{
+    const box = req.params.boxId;   
+        
+    conexion.query('SELECT * FROM agentes_callt WHERE boxId=?',[box],(error,result)=>{
+    
+        if(error){
+            throw error;
+        }else{
+            res.render('editZ',{boxId:result[0],user:req.user});
+        }
+    })   
+})
 //Login
 router.get('/login',(req, res)=>{
     res.render('login',{alert:false});
@@ -485,6 +509,7 @@ router.post('/editarsm', crud.editarSm); // call-SM
 router.post('/editAros', crud.editAros); // call-A-Rosario
 router.post('/editBros', crud.editBros); // call-B-Rosario
 router.post('/editCros', crud.editCros); // call-C-Rosario
+router.post('/editTcor', crud.editTcor); // call-T
 
 //Ruta de registro de usuario
 router.post('/register',authControllers.register);

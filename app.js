@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 const app = express();
 const ruta = require('./router');
-require('dotenv').config();
+require('dotenv').config();   
 
 const port = process.env.PORT;
 

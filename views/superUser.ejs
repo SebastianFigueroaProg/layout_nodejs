@@ -183,6 +183,7 @@
                     <option value="callo" selected>Call O S.1</option> 
                     <option value="callp" selected>Call P S.1</option>
                     <option value="callsm" selected>Call SM S.1</option>
+                    <option value="callz" selected>Call T S.1</option>
                     <option value="site8" selected>SITE CHACO</option>
                     <option value="site1" selected>SITE CORDOBA</option>
                     <option value="site14" selected>SITE ROSARIO</option>                       
@@ -318,6 +319,8 @@
                 return '<a href="/editd/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
               }else if(valor == 'callsm' ){
                 return '<a href="/editsm/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
+              }else if(valor == 'callz' ){
+                return '<a href="/editZ/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
               }else if(valor == 'callr' ){
                 return '<a href="/editR/'+data.boxId+'"id="edit" class="btn btn-outline-info"><i class="far fa-edit"></i></a>'                
               }else if(valor == 'callt' ){
@@ -330,7 +333,7 @@
                 return '<a href="#" id="editSite" class="btn btn-outline-danger"><box-icon name="x-circle"></box-icon></a>'                
               }else if(valor == 'site14' ){
                 return '<a href="#" id="editSite" class="btn btn-outline-danger"><box-icon name="x-circle"></box-icon></a>'                
-              }  
+              }
             }
           }
             
